@@ -2,21 +2,21 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import { SectionTitle } from './SharedUI';
+import { SectionTitle, Container } from './SharedUI';
 
 const Benefits = () => {
   return (
-    <section className="py-32 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
-        <div className="lg:w-1/2 relative">
+    <section id="benefits" className="py-20 lg:py-32">
+      <Container className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 xl:gap-32">
+        <div className="w-full lg:w-1/2 relative">
            <div className="absolute -top-10 -left-10 w-40 h-40 bg-sky-100 rounded-full blur-3xl opacity-50" />
-           <div className="bg-slate-200 w-full aspect-square rounded-[3rem] shadow-2xl overflow-hidden flex items-center justify-center text-slate-400 italic p-10 relative z-10 border-4 border-white">
+           <div className="bg-slate-200 w-full aspect-square rounded-[2rem] sm:rounded-[3rem] shadow-2xl overflow-hidden flex items-center justify-center text-slate-400 italic p-10 relative z-10 border-4 border-white">
               [Placeholder: Ảnh Chị Mai đang tư vấn hoặc rãnh bụng 11]
            </div>
         </div>
-        <div className="lg:w-1/2">
+        <div className="w-full lg:w-1/2">
           <SectionTitle subtitle="BẠN SẼ NHẬN ĐƯỢC GÌ?">GIÁ TRỊ CHƯƠNG TRÌNH</SectionTitle>
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             {[
               "Giảm cân để tự tin hơn trong công việc và cuộc sống.",
               "Cơ thể cân đối, tràn đầy năng lượng đỉnh cao.",
@@ -42,7 +42,7 @@ const Benefits = () => {
             Bắt đầu hành trình của bạn
           </button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

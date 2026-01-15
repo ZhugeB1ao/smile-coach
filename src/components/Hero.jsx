@@ -2,20 +2,21 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
+import { Container } from './SharedUI';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 px-6 overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-sky-50 rounded-full blur-[120px] opacity-60 animate-pulse" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-[100px] opacity-50" />
       
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 text-center md:text-left">
+      <Container className="grid md:grid-cols-2 gap-12 items-center relative z-10 text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-8xl font-black leading-tight mb-8 text-sky-950">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black leading-tight mb-8 text-sky-950">
             DESIGN <span className="text-sky-500">BODY</span> <br />
             <span className="relative inline-block">
               THEO CÁCH 
@@ -23,7 +24,7 @@ const Hero = () => {
             </span> <br />
             BẠN MONG MUỐN
           </h1>
-          <p className="text-xl text-slate-600 mb-10 max-w-lg mx-auto md:mx-0 font-medium leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-10 max-w-lg mx-auto md:mx-0 font-medium leading-relaxed">
             Chào bạn, tôi là <span className="text-sky-600 font-extrabold uppercase tracking-tight underline decoration-sky-200 underline-offset-4">Huỳnh Ngọc Mai</span> - HLV dinh dưỡng chuyên nghiệp với hơn 15 năm kinh nghiệm kiến tạo BODY không dao kéo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -57,7 +58,7 @@ const Hero = () => {
             </div>
           </motion.div>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

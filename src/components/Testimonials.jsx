@@ -1,13 +1,13 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { Card, SectionTitle } from './SharedUI';
+import { Card, SectionTitle, Container } from './SharedUI';
 
 const Testimonials = () => {
   return (
-    <section className="py-32 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="py-20 lg:py-32 bg-white">
+      <Container>
         <SectionTitle subtitle="THÀNH CÔNG TỪ HỌC VIÊN">HỌ ĐÃ LÀM ĐƯỢC - BẠN CŨNG VẬY!</SectionTitle>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
           {[
             { name: "NGUYỄN THỊ TUYẾT THANH", job: "Nội trợ", content: "Giảm cân và cải thiện vấn đề xương khớp nặng sau bao năm vô vọng chạy chữa khắp nơi." },
             { name: "ĐOÀN THỊ KIM CƯƠNG", job: "Dược sĩ", content: "Là Dược sĩ nhưng không tự kiểm soát được cân nặng. Đã giảm 12kg và cải thiện táo bón tự nhiên." },
@@ -34,7 +34,7 @@ const Testimonials = () => {
             </Card>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
