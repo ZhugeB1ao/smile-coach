@@ -31,7 +31,7 @@ const Navbar = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const sections = ['hero', 'pain-points', 'benefits', 'timeline', 'testimonials', 'about'];
+    const sections = ['hero', 'pain-points', 'benefits', 'timeline', 'offer', 'testimonials', 'about'];
     
     sections.forEach((id) => {
       const el = document.getElementById(id);
@@ -49,6 +49,7 @@ const Navbar = () => {
     { name: 'Vấn đề', id: 'pain-points' },
     { name: 'Giá trị', id: 'benefits' },
     { name: 'Lộ trình', id: 'timeline' },
+    { name: 'Ưu đãi', id: 'offer' },
     { name: 'Kết quả', id: 'testimonials' },
     { name: 'Về Chị Mai', id: 'about' },
   ];
@@ -60,12 +61,12 @@ const Navbar = () => {
       }`}
     >
       <Container className="flex items-center justify-between">
-        <a href="#hero" className="text-2xl font-black text-sky-600 tracking-tighter">
+        <a href="#hero" className="text-2xl font-black tracking-tighter text-sky-600">
           SMILE<span className="text-sky-950">COACH</span>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="items-center hidden xl:flex gap-7">
           {navLinks.map((link) => (
             <a 
               key={link.id} 
@@ -80,14 +81,14 @@ const Navbar = () => {
               }`} />
             </a>
           ))}
-          <button className="px-6 py-3 bg-sky-500 text-white rounded-full font-bold hover:bg-sky-600 transition-all shadow-lg shadow-sky-100 flex items-center gap-2 group">
-            Đăng ký ngay <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          <button className="flex items-center gap-2 px-6 py-3 font-bold text-white transition-all rounded-full shadow-lg bg-sky-500 hover:bg-sky-600 shadow-sky-100 group">
+            Đăng ký ngay <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </button>
         </div>
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden text-slate-900"
+          className="xl:hidden text-slate-900"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -101,9 +102,9 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-slate-100 overflow-hidden"
+            className="overflow-hidden bg-white border-t lg:hidden border-slate-100"
           >
-            <div className="flex flex-col p-6 gap-6">
+            <div className="flex flex-col gap-6 p-6">
               {navLinks.map((link) => (
                 <a 
                   key={link.id} 
@@ -116,7 +117,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <button className="w-full px-6 py-4 bg-sky-500 text-white rounded-2xl font-bold hover:bg-sky-600 transition-all shadow-lg shadow-sky-100 flex items-center justify-center gap-2">
+              <button className="flex items-center justify-center w-full gap-2 px-6 py-4 font-bold text-white transition-all shadow-lg bg-sky-500 rounded-2xl hover:bg-sky-600 shadow-sky-100">
                 Đăng ký ngay <ArrowRight size={18} />
               </button>
             </div>
