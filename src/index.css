@@ -14,14 +14,24 @@ body {
   overflow-x: hidden;
 }
 
-.glass-morphism {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+/* Scroll margin for anchor links under fixed navbar */
+[id] {
+  scroll-margin-top: 5rem;
 }
 
-.text-gradient {
-  background: linear-gradient(to right, #0EA5E9, #2563EB);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Skip rendering off-screen sections until they scroll into view */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Respect reduced motion preference for CSS animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

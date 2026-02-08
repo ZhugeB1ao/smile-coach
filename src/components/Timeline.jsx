@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Clock, Utensils, Dumbbell, Sparkles, Award } from 'lucide-react';
@@ -63,7 +62,7 @@ const Timeline = () => {
                         {i + 1}
                       </div>
                       <div className="flex items-center gap-3">
-                        <IconComponent className="w-8 h-8 text-sky-200" />
+                        <IconComponent className="w-8 h-8 text-sky-200" aria-hidden="true" />
                         <span className="text-sm font-black tracking-widest uppercase text-sky-200">{step.week}</span>
                       </div>
                     </div>
@@ -95,7 +94,7 @@ const Timeline = () => {
             {/* Result Content */}
             <div className="w-full text-center lg:w-1/2 lg:text-left">
               <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-white rounded-full shadow-2xl lg:mx-0">
-                <Award className="w-10 h-10 text-sky-600" />
+                <Award className="w-10 h-10 text-sky-600" aria-hidden="true" />
               </div>
               <h3 className="mb-6 text-3xl font-bold lg:text-4xl">
                 SAU 3 TUẦN, bạn sẽ...
@@ -114,14 +113,14 @@ const Timeline = () => {
             className="bg-white p-8 sm:p-12 rounded-[2.5rem] sm:rounded-[4rem] text-sky-950 text-center shadow-3xl shadow-sky-900/50"
           >
             <p className="mb-4 text-lg font-bold line-through opacity-50 sm:text-xl">HỌC PHÍ GỐC: 10,500,000Đ</p>
-            <h2 className="mb-6 text-4xl font-black tracking-tighter sm:text-5xl lg:text-6xl text-sky-600">MIỄN PHÍ 0Đ</h2>
+            <h3 className="mb-6 text-4xl font-black tracking-tighter sm:text-5xl lg:text-6xl text-sky-600">MIỄN PHÍ 0Đ</h3>
             <p className="mb-10 text-base font-bold leading-relaxed uppercase sm:text-xl text-slate-600">Trải nghiệm khóa học 2 ngày đầu tiên để thấy sự thay đổi!</p>
-            <p className="flex items-center justify-center gap-2 mb-10 text-base font-black text-red-500 sm:text-lg animate-bounce">
-              <Clock className="w-6 h-6"/> CHỈ CÒN 20 SUẤT CUỐI CÙNG TRONG THÁNG 3
+            <p className="flex items-center justify-center gap-2 mb-10 text-base font-black text-red-500 sm:text-lg">
+              <Clock className="w-6 h-6" aria-hidden="true" /> SỐ LƯỢNG CÓ HẠN — ĐĂNG KÝ NGAY!
             </p>
-            <button className="w-full px-12 py-5 text-xl font-black text-white transition-all rounded-full shadow-2xl sm:w-auto sm:py-6 bg-sky-500 sm:text-2xl hover:bg-sky-600 hover:scale-105 shadow-sky-200">
-              ĐĂNG KÝ NGAY BÂY GIỜ
-            </button>
+            <a href="#offer" className="w-full px-12 py-5 text-xl font-black text-white transition-[color,background-color,transform] rounded-full shadow-2xl sm:w-auto sm:py-6 bg-sky-500 sm:text-2xl hover:bg-sky-600 hover:scale-105 active:scale-100 shadow-sky-200 inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+              ĐĂNG KÝ NGAY BÂY GIờ
+            </a>
           </motion.div>
         </div>
       </Container>

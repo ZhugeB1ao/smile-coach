@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
@@ -67,8 +66,8 @@ const Testimonials = () => {
                   <h4 className="mb-1 text-sm font-black tracking-tight uppercase text-sky-950">{feed.name}</h4>
                   <p className="text-xs font-bold tracking-widest uppercase text-sky-600">{feed.job}</p>
                 </div>
-                <div className="flex gap-0.5 text-yellow-500">
-                  {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                <div className="flex gap-0.5 text-yellow-500" role="img" aria-label="5 sao">
+                  {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="currentColor" aria-hidden="true" />)}
                 </div>
               </div>
 
@@ -81,7 +80,7 @@ const Testimonials = () => {
 
               {/* Content */}
               <div className="relative flex-1 mb-6">
-                <Quote className="absolute w-8 h-8 -top-2 -left-2 text-sky-100" />
+                <Quote className="absolute w-8 h-8 -top-2 -left-2 text-sky-100" aria-hidden="true" />
                 <p className="pl-6 leading-relaxed text-slate-600">{feed.content}</p>
               </div>
 
@@ -109,9 +108,9 @@ const Testimonials = () => {
           <p className="mb-6 text-xl font-medium lg:text-2xl text-sky-950">
             Bạn cũng có thể trở thành <span className="font-bold text-sky-600">câu chuyện thành công</span> tiếp theo!
           </p>
-          <button className="px-10 py-5 text-lg font-bold tracking-tight text-white uppercase transition-all rounded-full shadow-xl bg-sky-500 hover:bg-sky-600 shadow-sky-200">
+          <a href="#offer" className="px-10 py-5 text-lg font-bold tracking-tight text-white uppercase transition-colors rounded-full shadow-xl bg-sky-500 hover:bg-sky-600 shadow-sky-200 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
             Tôi muốn thay đổi ngay
-          </button>
+          </a>
         </motion.div>
       </Container>
     </section>

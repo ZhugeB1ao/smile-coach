@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { CheckCircle2, Heart, Target, Users, Clock, Sparkles } from 'lucide-react';
@@ -20,7 +19,7 @@ const About = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mb-4 text-3xl font-bold text-white uppercase md:text-5xl"
+            className="mb-4 text-3xl font-bold text-white uppercase md:text-5xl text-balance"
           >
             HUỲNH NGỌC MAI, TÔI LÀ AI?
           </motion.h2>
@@ -62,16 +61,16 @@ const About = () => {
               </p>
 
               <p className="mb-6 leading-relaxed text-slate-300">
-                Lập ra website <span className="font-bold text-sky-400">"www.smilecoach.vn"</span>, tôi có 2 mục tiêu chính:
+                Lập ra website <a href="https://www.smilecoach.vn" target="_blank" rel="noopener noreferrer" className="font-bold text-sky-400 underline underline-offset-4 hover:text-sky-300">“www.smilecoach.vn”<span className="inline-block ml-1" aria-hidden="true">↗</span></a>, tôi có 2 mục tiêu chính:
               </p>
 
               <div className="grid grid-cols-1 gap-4 mb-8 sm:grid-cols-2">
                 <div className="flex items-center gap-3 p-4 border bg-slate-800/50 rounded-xl border-slate-700">
-                  <Target className="w-8 h-8 shrink-0 text-sky-400" />
+                  <Target className="w-8 h-8 shrink-0 text-sky-400" aria-hidden="true" />
                   <span className="font-bold text-white">1. TÁI CẤU TRÚC CƠ THỂ</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 border bg-slate-800/50 rounded-xl border-slate-700">
-                  <Sparkles className="w-8 h-8 shrink-0 text-sky-400" />
+                  <Sparkles className="w-8 h-8 shrink-0 text-sky-400" aria-hidden="true" />
                   <span className="font-bold text-white">2. TRUYỀN CẢM HỨNG</span>
                 </div>
               </div>
@@ -126,19 +125,19 @@ const About = () => {
             <div className="p-6 border bg-sky-500/10 rounded-2xl border-sky-500/20">
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400">✗</span>
+                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
                   <span>Không thể có 1 cơ thể khỏe mạnh trên 1 thân hình đầy mỡ</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400">✗</span>
+                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
                   <span>Không thể có 1 sự tự tin trên thân hình quá khổ</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400">✗</span>
+                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
                   <span>Không thể có 1 năng lượng đỉnh cao trên một thân thể nặng nề</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400">✗</span>
+                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
                   <span>Không thể có hạnh phúc gia đình trọn vẹn trên một cơ thể béo phì đầy bệnh tật</span>
                 </li>
               </ul>
@@ -168,7 +167,7 @@ const About = () => {
               "Ăn uống có MỤC TIÊU"
             ].map((item, i) => (
               <div key={i} className="p-4 text-center border lg:p-5 bg-slate-800 rounded-2xl border-slate-700">
-                <CheckCircle2 className="w-8 h-8 mx-auto mb-3 text-sky-400" />
+                <CheckCircle2 className="w-8 h-8 mx-auto mb-3 text-sky-400" aria-hidden="true" />
                 <p className="text-sm font-semibold text-white lg:text-base">{item}</p>
               </div>
             ))}
@@ -184,7 +183,7 @@ const About = () => {
               { icon: Clock, label: "4. Thời gian" }
             ].map((item, i) => (
               <div key={i} className="p-5 text-center border lg:p-6 bg-sky-500/10 rounded-2xl border-sky-500/20">
-                <item.icon className="w-10 h-10 mx-auto mb-3 text-sky-400" />
+                <item.icon className="w-10 h-10 mx-auto mb-3 text-sky-400" aria-hidden="true" />
                 <p className="font-bold text-sky-400">{item.label}</p>
               </div>
             ))}

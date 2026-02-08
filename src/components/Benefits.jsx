@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock, Briefcase, Heart, Users } from 'lucide-react';
@@ -38,10 +37,10 @@ const Benefits = () => {
           className="max-w-4xl mx-auto mb-16 text-center"
         >
           <p className="mb-4 font-semibold tracking-widest uppercase text-sky-600">Chương trình đặc biệt</p>
-          <h2 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl xl:text-5xl text-sky-950">
+          <h3 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl xl:text-5xl text-sky-950">
             THAY ĐỔI TƯ DUY ĂN UỐNG,<br />
             <span className="text-sky-600">KIỂM SOÁT CÂN NẶNG TRỌN ĐỜI</span>
-          </h2>
+          </h3>
           <p className="text-xl italic font-medium lg:text-2xl text-slate-600">
             "Thay Thói Quen, Đổi Sức Khỏe."
           </p>
@@ -67,7 +66,7 @@ const Benefits = () => {
                   className="flex items-start gap-5 group"
                 >
                   <div className="p-2 mt-1 text-white transition-transform shrink-0 bg-sky-500 rounded-xl group-hover:scale-110">
-                    <CheckCircle2 size={24} />
+                    <CheckCircle2 size={24} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-lg font-bold leading-tight transition-colors lg:text-xl text-slate-800 group-hover:text-sky-600">{item.title}</p>
@@ -91,21 +90,21 @@ const Benefits = () => {
           <div className="grid grid-cols-1 gap-6 mb-10 md:grid-cols-3">
             <div className="p-6 text-center transition-shadow bg-white shadow-lg rounded-2xl shadow-sky-100/50 hover:shadow-xl">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-sky-100">
-                <Heart className="w-8 h-8 text-sky-600" />
+                <Heart className="w-8 h-8 text-sky-600" aria-hidden="true" />
               </div>
               <h4 className="mb-2 text-xl font-bold text-sky-950">Người Nội Trợ</h4>
               <p className="text-sm text-slate-600">Bận rộn với gia đình nhưng vẫn muốn chăm sóc bản thân</p>
             </div>
             <div className="p-6 text-center transition-shadow bg-white shadow-lg rounded-2xl shadow-sky-100/50 hover:shadow-xl">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-                <Briefcase className="w-8 h-8 text-blue-600" />
+                <Briefcase className="w-8 h-8 text-blue-600" aria-hidden="true" />
               </div>
               <h4 className="mb-2 text-xl font-bold text-sky-950">Nhân Viên Văn Phòng</h4>
               <p className="text-sm text-slate-600">Ngồi nhiều, ít vận động và muốn cải thiện sức khỏe</p>
             </div>
             <div className="p-6 text-center transition-shadow bg-white shadow-lg rounded-2xl shadow-sky-100/50 hover:shadow-xl">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-sky-100">
-                <Users className="w-8 h-8 text-sky-600" />
+                <Users className="w-8 h-8 text-sky-600" aria-hidden="true" />
               </div>
               <h4 className="mb-2 text-xl font-bold text-sky-950">CEO / Doanh Nhân</h4>
               <p className="text-sm text-slate-600">Bận rộn không có thời gian chăm sóc bản thân</p>
@@ -118,7 +117,7 @@ const Benefits = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             className="p-6 text-center text-white bg-linear-to-r from-sky-600 to-blue-600 rounded-2xl lg:p-8"
           >
-            <Clock className="w-12 h-12 mx-auto mb-4 opacity-90" />
+            <Clock className="w-12 h-12 mx-auto mb-4 opacity-90" aria-hidden="true" />
             <p className="mb-2 text-lg lg:text-xl">Bạn chỉ cần đầu tư</p>
             <p className="mb-2 text-4xl font-bold lg:text-5xl">30 phút mỗi sáng</p>
             <p className="text-lg text-sky-100">để chúng ta gặp nhau và bắt đầu hành trình thay đổi!</p>
@@ -127,9 +126,9 @@ const Benefits = () => {
 
         {/* CTA Button */}
         <div className="mt-12 text-center">
-          <button className="px-10 py-5 text-lg font-bold tracking-tighter text-white uppercase transition-all rounded-full shadow-xl bg-sky-950 hover:bg-black">
+          <a href="#offer" className="px-10 py-5 text-lg font-bold tracking-tighter text-white uppercase transition-colors rounded-full shadow-xl bg-sky-950 hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
             Bắt đầu hành trình của bạn
-          </button>
+          </a>
         </div>
       </Container>
     </section>

@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
@@ -19,7 +18,7 @@ export const SectionTitle = ({ children, subtitle }) => (
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-3xl md:text-5xl font-bold mb-4 text-sky-950 uppercase"
+      className="text-3xl md:text-5xl font-bold mb-4 text-sky-950 uppercase text-balance"
     >
       {children}
     </motion.h2>
