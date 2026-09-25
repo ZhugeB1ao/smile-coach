@@ -55,6 +55,8 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                     alt={`Hình ảnh chuyển đổi của học viên ${feed.name}`}
                     className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                     loading="lazy"
+                    width="500"
+                    height="500"
                   />
                 </div>
               ) : (

@@ -36,7 +36,7 @@
       "href": "#offer"
     },
     "image": {
-      "src": "hlv-mai-1.jpg",
+      "src": "hlv-mai-1.webp",
       "placeholder": "[Placeholder: Ảnh Chị Huỳnh Ngọc Mai - Vóc dáng chuẩn rãnh 11]",
       "alt": "HLV Huỳnh Ngọc Mai"
     },
@@ -96,7 +96,7 @@
     "subtitle": "BẠN SẼ NHẬN ĐƯỢC GÌ?",
     "title": "GIÁ TRỊ CHƯƠNG TRÌNH",
     "image": {
-      "src": "hlv-mai-2.jpg",
+      "src": "hlv-mai-2.webp",
       "placeholder": "[Placeholder: Ảnh Chị Mai đang tư vấn hoặc rãnh bụng 11]",
       "alt": "Chị Mai tư vấn dinh dưỡng"
     },
@@ -160,7 +160,7 @@
         "title": "BÍ MẬT CÔNG THỨC ĂN UỐNG KHOA HỌC",
         "subtitle": "Để có vòng eo 56 của những ngôi sao hạng A",
         "desc": "Tôi sẽ cung cấp cho bạn phương pháp khoa học để ăn uống ĐỦ CHẤT mà không có thời gian nấu nướng.",
-        "image": "tuan-1.jpg"
+        "image": "tuan-1.webp"
       },
       {
         "week": "TUẦN 2",
@@ -168,7 +168,7 @@
         "title": "BÍ MẬT GIẢM 4KG/3 TUẦN",
         "subtitle": "Một cách an toàn",
         "desc": "Hiểu được cách vận động hợp lý để lấy lại vòng eo mà không cần luyện tập quá nhiều.",
-        "image": "tuan-2.jpg"
+        "image": "tuan-2.webp"
       },
       {
         "week": "TUẦN 3",
@@ -176,7 +176,7 @@
         "title": "KIẾN TẠO ĐƯỜNG CONG CƠ THỂ",
         "subtitle": "Theo cách bạn mong muốn",
         "desc": "Bạn sẽ có được kết quả tuyệt vời, một nền tảng kiến thức cơ bản để kiểm soát hoàn toàn cân nặng mà không cần mất hàng trăm triệu đồng để can thiệp hút mỡ đau đớn.",
-        "image": "tuan-3.jpg"
+        "image": "tuan-3.webp"
       }
     ],
     "result": {
@@ -186,7 +186,7 @@
       "descPrefix": "Trở nên ",
       "descMid": ", năng lượng hơn, và luôn luôn được bạn bè thu hút bởi sự thay đổi và trầm trồ với ",
       "descSuffix": ".",
-      "image": "tuan-4.jpg"
+      "image": "tuan-4.webp"
     },
     "pricingCard": {
       "originalPrice": "HỌC PHÍ GỐC: 10,500,000Đ",
@@ -213,9 +213,9 @@
         "highlight": "đến trọn đời",
         "descPrefix": "Sẵn sàng hỗ trợ đồng hành anh chị em ",
         "descSuffix": ".",
-        "avatar": "hlv-chau-1.jpg",
-        "image1": "hlv-chau-1.jpg",
-        "image2": "hlv-chau-2.jpg",
+        "avatar": "hlv-chau-1.webp",
+        "image1": "hlv-chau-1.webp",
+        "image2": "hlv-chau-2.webp",
         "imagePlaceholder1": "[Hình HLV 1]",
         "imagePlaceholder2": "[Hình HLV 2]"
       },
@@ -294,28 +294,28 @@
         "job": "Nội trợ",
         "highlight": "Giảm cân & cải thiện xương khớp",
         "content": "Nhờ tham gia lớp học ăn mà tôi đã giảm cân và cải thiện được vấn đề xương khớp nặng của mình, sau bao năm tưởng chừng như vô vọng chạy chữa khắp nơi. Cảm ơn cô Mai rất nhiều.",
-        "image": "hv-tuyet-thanh.jpg"
+        "image": "hv-tuyet-thanh.webp"
       },
       {
         "name": "ĐOÀN THỊ KIM CƯƠNG",
         "job": "Dược sĩ",
         "highlight": "Giảm 12kg & hết táo bón",
         "content": "Mặc dù là Dược sĩ, nhưng tôi vẫn không tự kiểm soát được cân nặng của mình. Thừa cân và táo bón. May mắn được người bạn chia sẻ tôi đến với lớp học ăn của SMILECOACH, tôi đã giảm được 12kg và cải thiện tình trạng táo bón một cách tự nhiên. Vô cùng biết ơn chương trình, đặc biệt là biết ơn A/c HLV Mai - Châu đã đồng hành cùng em trong suốt thời gian qua.",
-        "image": "hv-kim-cuong.jpg"
+        "image": "hv-kim-cuong.webp"
       },
       {
         "name": "ĐINH THỊ NGỪNG",
         "job": "Buôn bán tự do",
         "highlight": "Giảm 8kg & đẹp da",
         "content": "Nghề chính là bán bánh bò, nên thức khuya dậy sớm, không hiểu cách ăn uống dẫn đến thừa cân và bệnh tật, nặng nhất là đau nhức xương sống. May mắn được người chị dâu là công an chia sẻ nên tin tưởng và trải nghiệm thử, tôi đã giảm 8kg và cải thiện hoàn toàn vấn đề sức khỏe của mình. Đặc biệt, cải thiện luôn làn da. Thật vui sướng lắm!",
-        "image": "hv-ngung.jpg"
+        "image": "hv-ngung.webp"
       },
       {
         "name": "NGUYỄN VĂN CHÍ",
         "job": "Y sĩ",
         "highlight": "Tăng 5kg & hồi phục 90%",
         "content": "Là một y sĩ, tôi nghĩ là mình biết tất cả, nhưng mọi chuyện đổ vỡ khi tôi rơi vào hoàn cảnh suy nhược cơ thể trầm trọng, chỉ khoảng 6 tháng suy nhược, mất ngủ, ăn không được… tôi đã tụt hơn 9kg. Vào một ngày đẹp trời, may mắn biết được chương trình học ăn tại SMILECOACH. Chưa tròn 1 tuần trải nghiệm, tôi đã dần khỏe lên rất nhiều. Hiện tại, tôi đã tăng được 5kg và cải thiện hơn 90% vấn đề sức khỏe của mình.",
-        "image": "hv-chi.jpg"
+        "image": "hv-chi.webp"
       },
       {
         "name": "NGUYỄN BÙI GIA HIẾU",
@@ -343,7 +343,7 @@
   "about": {
     "badge": "Người sáng lập SmileCoach",
     "title": "HUỲNH NGỌC MAI, TÔI LÀ AI?",
-    "photo": "hlv-mai-3.jpg",
+    "photo": "hlv-mai-3.webp",
     "photoAlt": "HLV Huỳnh Ngọc Mai - U50 Năng Lượng",
     "photoPlaceholder": "[Placeholder: Ảnh Chị Huỳnh Ngọc Mai - U50 Năng Lượng]",
     "stats": [
@@ -439,19 +439,19 @@
     },
     "gallery": [
       {
-        "src": "hlv-mai-4.jpg",
+        "src": "hlv-mai-4.webp",
         "alt": "HLV Huỳnh Ngọc Mai thời điểm chưa kiểm soát vóc dáng"
       },
       {
-        "src": "hlv-mai-5.jpg",
+        "src": "hlv-mai-5.webp",
         "alt": "HLV Huỳnh Ngọc Mai thời trẻ"
       },
       {
-        "src": "hlv-mai-6.jpg",
+        "src": "hlv-mai-6.webp",
         "alt": "HLV Huỳnh Ngọc Mai vóc dáng thon gọn, eo chuẩn"
       },
       {
-        "src": "1789956915207_8756299554153306106_8756299554153306106_8129169b8b47e6bbc1353a87ce0fcefb.jpg",
+        "src": "1789956915207_8756299554153306106_8756299554153306106_8129169b8b47e6bbc1353a87ce0fcefb.webp",
         "alt": "HLV Huỳnh Ngọc Mai rạng rỡ về đích Marathon"
       }
     ],

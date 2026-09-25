@@ -36,6 +36,8 @@ const About = ({ data = defaultContent.about }) => {
                   alt={data.photoAlt || data.title}
                   className="object-cover object-center w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                   loading="lazy"
+                  width="600"
+                  height="400"
                 />
               ) : (
                 <div className="flex items-center justify-center h-full p-8 text-[#524b63] italic text-center">
@@ -278,6 +280,8 @@ const About = ({ data = defaultContent.about }) => {
                     alt={imgItem.alt || `Huỳnh Ngọc Mai ${i + 1}`}
                     className={`object-cover ${focalPositions[i] || 'object-center'} w-full h-full transition-transform duration-500 ease-out group-hover:scale-105`}
                     loading="lazy"
+                    width="400"
+                    height="600"
                   />
                 ) : (
                   <div className="flex items-center justify-center w-full h-full text-xs italic text-[#524b63]/60">

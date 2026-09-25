@@ -37,6 +37,8 @@ const Benefits = ({ data = defaultContent.benefits }) => {
                     alt={data.image.alt || 'Chị Mai tư vấn dinh dưỡng'}
                     className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                     loading="lazy"
+                    width="600"
+                    height="750"
                   />
                 ) : (
                   <div className="p-10 flex items-center justify-center h-full text-[#524b63] italic text-center">

@@ -29,6 +29,8 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                           alt={step.title}
                           className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                           loading="lazy"
+                          width="500"
+                          height="350"
                         />
                       ) : (
                         <div className="w-full aspect-4/3 flex items-center justify-center text-xs italic text-[#524b63]/60">
@@ -74,6 +76,8 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                     alt={data.result.title}
                     className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                     loading="lazy"
+                    width="500"
+                    height="350"
                   />
                 ) : (
                   <div className="w-full aspect-4/3 flex items-center justify-center text-xs italic text-[#524b63]/60">

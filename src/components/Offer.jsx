@@ -36,6 +36,8 @@ const Offer = ({ data = defaultContent.offer }) => {
                           alt={data.bonus.coach.name}
                           className="object-cover object-top w-full h-full"
                           loading="lazy"
+                          width="112"
+                          height="112"
                         />
                       ) : (
                         <div className="text-xs italic text-[#524b63]/60">[Avatar]</div>
@@ -61,6 +63,8 @@ const Offer = ({ data = defaultContent.offer }) => {
                       alt={`${data.bonus.coach.name} 1`}
                       className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                       loading="lazy"
+                      width="400"
+                      height="500"
                     />
                   ) : (
                     <p className="px-4 text-xs italic text-center text-[#524b63]">{data.bonus.coach.imagePlaceholder1}</p>
@@ -73,6 +77,8 @@ const Offer = ({ data = defaultContent.offer }) => {
                       alt={`${data.bonus.coach.name} 2`}
                       className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                       loading="lazy"
+                      width="400"
+                      height="500"
                     />
                   ) : (
                     <p className="px-4 text-xs italic text-center text-[#524b63]">{data.bonus.coach.imagePlaceholder2}</p>
