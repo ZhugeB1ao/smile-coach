@@ -1,117 +1,94 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { SectionTitle, Container } from './SharedUI';
+import { getImage } from '../utils/images';
+import defaultContent from '../data/content.json';
 
-const Testimonials = () => {
-  const testimonials = [
-    { 
-      name: "NGUYỄN THỊ TUYẾT THANH", 
-      job: "Nội trợ", 
-      highlight: "Giảm cân & cải thiện xương khớp",
-      content: "Nhờ tham gia lớp học ăn mà tôi đã giảm cân và cải thiện được vấn đề xương khớp nặng của mình, sau bao năm tưởng chừng như vô vọng chạy chữa khắp nơi. Cảm ơn cô Mai rất nhiều." 
-    },
-    { 
-      name: "ĐOÀN THỊ KIM CƯƠNG", 
-      job: "Dược sĩ", 
-      highlight: "Giảm 12kg & hết táo bón",
-      content: "Mặc dù là Dược sĩ, nhưng tôi vẫn không tự kiểm soát được cân nặng của mình. Thừa cân và táo bón. May mắn được người bạn chia sẻ tôi đến với lớp học ăn của SMILECOACH, tôi đã giảm được 12kg và cải thiện tình trạng táo bón một cách tự nhiên. Vô cùng biết ơn chương trình, đặc biệt là biết ơn A/c HLV Mai - Châu đã đồng hành cùng em trong suốt thời gian qua." 
-    },
-    { 
-      name: "ĐINH THỊ NGỪNG", 
-      job: "Buôn bán tự do", 
-      highlight: "Giảm 8kg & đẹp da",
-      content: "Nghề chính là bán bánh bò, nên thức khuya dậy sớm, không hiểu cách ăn uống dẫn đến thừa cân và bệnh tật, nặng nhất là đau nhức xương sống. May mắn được người chị dâu là công an chia sẻ nên tin tưởng và trải nghiệm thử, tôi đã giảm 8kg và cải thiện hoàn toàn vấn đề sức khỏe của mình. Đặc biệt, cải thiện luôn làn da. Thật vui sướng lắm!" 
-    },
-    { 
-      name: "NGUYỄN VĂN CHÍ", 
-      job: "Y sĩ", 
-      highlight: "Tăng 5kg & hồi phục 90%",
-      content: "Là một y sĩ, tôi nghĩ là mình biết tất cả, nhưng mọi chuyện đổ vỡ khi tôi rơi vào hoàn cảnh suy nhược cơ thể trầm trọng, chỉ khoảng 6 tháng suy nhược, mất ngủ, ăn không được… tôi đã tụt hơn 9kg. Vào một ngày đẹp trời, may mắn biết được chương trình học ăn tại SMILECOACH. Chưa tròn 1 tuần trải nghiệm, tôi đã dần khỏe lên rất nhiều. Hiện tại, tôi đã tăng được 5kg và cải thiện hơn 90% vấn đề sức khỏe của mình." 
-    },
-    { 
-      name: "NGUYỄN BÙI GIA HIẾU", 
-      job: "Lao động tự do", 
-      highlight: "Tăng 8kg & bỏ game, thuốc lá",
-      content: "Do không ý thức được sức khỏe nên mê game, hút thuốc, thức khuya… dẫn đến cơ thể suy nhược và thiếu cân trầm trọng. May mắn được mẹ dẫn đến môi trường lành mạnh, tôi đã tham gia lớp học ăn và tăng được 8kg và bỏ được thói quen xấu là game và thuốc lá, ngủ sớm hơn, sống lành mạnh hơn." 
-    },
-    { 
-      name: "ĐẶNG THỊ GIÀO", 
-      job: "Thợ nấu, Kinh doanh", 
-      highlight: "Tái sinh năng lượng & hết nám",
-      content: "Mặc dù U40, nhưng vô cùng mệt mỏi uể oải, không biết rồi có thể bám trụ công việc kinh doanh bếp đến khi nào. May mắn được biết đến chương trình học ăn tại SM, dần lột xác và tái sinh năng lượng, đặc biệt là cải thiện làn da xạm nám của mình tưởng chừng không lối thoát. Vô cùng biết ơn chương trình và các HLV. Yêu lắm!" 
-    }
-  ];
-
+const Testimonials = ({ data = defaultContent.testimonials }) => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-50/50 lg:py-32">
+    <section id="testimonials" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
       <Container>
-        <SectionTitle subtitle="THÀNH CÔNG TỪ HỌC VIÊN">HỌ ĐÃ LÀM ĐƯỢC - BẠN CŨNG VẬY!</SectionTitle>
+        <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
         
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
-          {testimonials.map((feed, i) => (
-            <motion.div 
+        <div className="grid grid-cols-1 gap-6 lg:gap-8 md:grid-cols-2">
+          {(data.items || []).filter(item => !item.hidden).map((feed, i) => (
+            <div 
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="flex flex-col p-6 bg-white border shadow-xl rounded-4xl lg:p-8 shadow-sky-50 border-sky-100"
+              className="flex flex-col justify-between p-6 sm:p-8 bg-white border border-[#e7e7ec] rounded-[28px] shadow-[0_4px_16px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 group"
             >
-              {/* Header with avatar and info */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex items-center justify-center text-xl font-bold shrink-0 w-14 h-14 bg-sky-100 rounded-2xl text-sky-600">
-                  {feed.name[0]}
+              <div>
+                {/* Header with avatar, name, and rating */}
+                <div className="flex items-center justify-between gap-4 mb-5">
+                  <div className="flex items-center gap-3.5">
+                    <div className="flex items-center justify-center text-base font-black shrink-0 w-11 h-11 bg-[#0d0c22] text-white rounded-2xl shadow-sm transition-transform duration-300 group-hover:scale-105">
+                      {feed.name[0]}
+                    </div>
+                    <div>
+                      <h4 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#ea4c89] transition-colors duration-200">{feed.name}</h4>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-[#ea4c89] mt-0.5">{feed.job}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-1 text-[#ea4c89]" role="img" aria-label="5 sao">
+                    {Array(5).fill(0).map((_, starIndex) => (
+                      <Star key={starIndex} size={15} fill="currentColor" aria-hidden="true" />
+                    ))}
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h4 className="mb-1 text-sm font-black tracking-tight uppercase text-sky-950">{feed.name}</h4>
-                  <p className="text-xs font-bold tracking-widest uppercase text-sky-600">{feed.job}</p>
-                </div>
-                <div className="flex gap-0.5 text-yellow-500" role="img" aria-label="5 sao">
-                  {Array(5).fill(0).map((_, i) => <Star key={i} size={16} fill="currentColor" aria-hidden="true" />)}
+
+                {/* Highlight text without border/bg */}
+                <p className="mb-3 text-xs font-black uppercase tracking-wider text-[#ea4c89]">
+                  {feed.highlight}
+                </p>
+
+                {/* Content */}
+                <div className="mb-6">
+                  <p className="text-sm sm:text-base leading-relaxed text-[#524b63] italic">
+                    &ldquo;{feed.content}&rdquo;
+                  </p>
                 </div>
               </div>
 
-              {/* Highlight badge */}
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 text-sm font-bold rounded-full bg-sky-100 text-sky-700">
-                  ✨ {feed.highlight}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="relative flex-1 mb-6">
-                <Quote className="absolute w-8 h-8 -top-2 -left-2 text-sky-100" aria-hidden="true" />
-                <p className="pl-6 leading-relaxed text-slate-600">{feed.content}</p>
-              </div>
-
-              {/* Before/After Image Placeholder */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="flex flex-col items-center justify-center border bg-slate-100 rounded-xl aspect-4/3 border-slate-200">
-                  <p className="mb-1 text-xs font-bold uppercase text-slate-400">Trước</p>
-                  <p className="text-xs italic text-slate-300">[Hình ảnh]</p>
+              {/* Before/After or Transformation Image - object-top to ensure full face/body visibility */}
+              {getImage(feed.image) ? (
+                <div className="overflow-hidden border border-[#e7e7ec] aspect-square rounded-[20px] bg-[#f8f7fa] group shadow-inner">
+                  <img
+                    src={getImage(feed.image)}
+                    alt={`Hình ảnh chuyển đổi của học viên ${feed.name}`}
+                    className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="flex flex-col items-center justify-center border bg-sky-50 rounded-xl aspect-4/3 border-sky-200">
-                  <p className="mb-1 text-xs font-bold uppercase text-sky-500">Sau</p>
-                  <p className="text-xs italic text-sky-300">[Hình ảnh]</p>
+              ) : (
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="flex flex-col items-center justify-center border border-[#e7e7ec] bg-[#f3f3f6] rounded-[16px] aspect-4/3">
+                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#524b63]">Trước</p>
+                    <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
+                  </div>
+                  <div className="flex flex-col items-center justify-center border border-[#e7e7ec] bg-[#f8f7fa] rounded-[16px] aspect-4/3">
+                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#ea4c89]">Sau</p>
+                    <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              )}
+            </div>
           ))}
         </div>
 
         {/* CTA after testimonials */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-16 text-center"
+        <div 
+          className="mt-16 text-center max-w-2xl mx-auto"
         >
-          <p className="mb-6 text-xl font-medium lg:text-2xl text-sky-950">
-            Bạn cũng có thể trở thành <span className="font-bold text-sky-600">câu chuyện thành công</span> tiếp theo!
+          <p className="mb-6 text-lg sm:text-xl font-medium text-[#0d0c22]">
+            {data.cta.descPrefix}
+            <span className="font-extrabold text-[#ea4c89]">{data.cta.highlight}</span>
+            {data.cta.descSuffix}
           </p>
-          <a href="#offer" className="px-10 py-5 text-lg font-bold tracking-tight text-white uppercase transition-colors rounded-full shadow-xl bg-sky-500 hover:bg-sky-600 shadow-sky-200 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
-            Tôi muốn thay đổi ngay
+          <a 
+            href={data.cta.href} 
+            className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white transition-all duration-200 rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_10px_28px_rgba(13,12,34,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+          >
+            {data.cta.text}
           </a>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

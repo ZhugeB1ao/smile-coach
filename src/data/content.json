@@ -1,0 +1,509 @@
+{
+  "navbar": {
+    "brand": {
+      "prefix": "SMILE",
+      "suffix": "COACH",
+      "href": "#hero"
+    },
+    "navLinks": [
+      { "name": "Khởi đầu", "id": "hero" },
+      { "name": "Vấn đề", "id": "pain-points" },
+      { "name": "Giá trị", "id": "benefits" },
+      { "name": "Lộ trình", "id": "timeline" },
+      { "name": "Ưu đãi", "id": "offer" },
+      { "name": "Kết quả", "id": "testimonials" },
+      { "name": "Về Chị Mai", "id": "about" }
+    ],
+    "cta": {
+      "text": "Đăng ký ngay",
+      "href": "#offer"
+    }
+  },
+  "hero": {
+    "title": {
+      "line1": "DESIGN",
+      "highlight": "BODY",
+      "line2": "THEO CÁCH",
+      "line3": "BẠN MONG MUỐN"
+    },
+    "subtitle": {
+      "prefix": "Chào bạn, tôi là",
+      "author": "Huỳnh Ngọc Mai",
+      "desc": "- HLV dinh dưỡng chuyên nghiệp với hơn 16 năm kinh nghiệm kiến tạo BODY không dao kéo."
+    },
+    "cta": {
+      "text": "Đăng ký trải nghiệm 2 ngày 0đ",
+      "href": "#offer"
+    },
+    "image": {
+      "src": "hlv-mai-1.jpg",
+      "placeholder": "[Placeholder: Ảnh Chị Huỳnh Ngọc Mai - Vóc dáng chuẩn rãnh 11]",
+      "alt": "HLV Huỳnh Ngọc Mai"
+    },
+    "badge": {
+      "stat": "1,000+",
+      "label": "Học viên thay đổi vóc dáng"
+    }
+  },
+  "painPoints": {
+    "subtitle": "CÂU CHUYỆN CỦA CHÚNG TA",
+    "title": "CÓ PHẢI BẠN ĐANG...",
+    "cards": [
+      {
+        "icon": "Smile",
+        "title": "Chiếc váy size M vẫn nằm yên trong tủ?",
+        "desc": "Bạn rất muốn có body chuẩn để mặc chiếc váy size M đã nằm yên trong tủ quần áo bao lâu nay, nhưng hầu như là vô vọng?"
+      },
+      {
+        "icon": "Frown",
+        "title": "Tự ti mỗi khi đứng trước gương?",
+        "desc": "Mỗi lần đứng trước gương, bạn luôn tự ti về thân hình đồ sộ của mình và cảm thấy già hơn so với người bạn đời?"
+      },
+      {
+        "icon": "Zap",
+        "title": "Thèm khát sự thay đổi ngoạn mục?",
+        "desc": "Muốn biến tủ đồ nhàm chán đen kịt, tối thui thành màu sắc năng động trẻ trung, chuyển từ size XXL sang size M?"
+      }
+    ],
+    "story": {
+      "quote": "\"Tôi cũng đã từng giống như bạn. Tôi đã từng bị sồ sề khi sinh bé thứ 3 ở độ tuổi 42, nhìn cái rổ mỡ, cảm giác tự ti và luôn sợ già hơn so với người bạn đời của mình.\"",
+      "paragraph1": "Vì bận chăm bé nhỏ, tôi không có thời gian tập thể dục, nên chỉ tập trung vào việc ĂN ĐÚNG là chủ yếu. Sau khi về cân nặng chuẩn, tôi tranh thủ sắp xếp 45 phút mỗi ngày để tập thêm 5-6 bài vận động siết cơ bụng tạo rãnh 11.",
+      "paragraph2": "Tôi đã tìm ra phương pháp ăn uống để giảm vòng eo mà không cần luyện tập quá nhiều, cũng không sợ đau đớn vì phẫu thuật thẩm mỹ.",
+      "author": "- Huỳnh Ngọc Mai"
+    },
+    "stats": [
+      {
+        "icon": "Target",
+        "value": "8kg",
+        "label": "Mỡ thừa & độc tố đã loại bỏ"
+      },
+      {
+        "icon": "Zap",
+        "value": "2 tháng",
+        "label": "Thời gian đạt kết quả"
+      }
+    ],
+    "empathy": {
+      "paragraph1": "Tôi biết rằng, ngoài kia có rất nhiều Phụ Nữ sau khi được thiên chức làm mẹ, đã phải chịu rất nhiều nỗi đau, trong đó là RỔ MỠ BỤNG và RẠN DA GHÊ GỚM.",
+      "paragraph2": "Và tôi đã đóng gói toàn bộ quá trình ăn uống cũng như tập luyện để có kết quả vượt trội một cách ngoạn mục!"
+    }
+  },
+  "benefits": {
+    "badge": "Chương trình đặc biệt",
+    "heading": "THAY ĐỔI TƯ DUY ĂN UỐNG,",
+    "headingHighlight": "KIỂM SOÁT CÂN NẶNG TRỌN ĐỜI",
+    "quote": "\"Thay Thói Quen, Đổi Sức Khỏe.\"",
+    "subtitle": "BẠN SẼ NHẬN ĐƯỢC GÌ?",
+    "title": "GIÁ TRỊ CHƯƠNG TRÌNH",
+    "image": {
+      "src": "hlv-mai-2.jpg",
+      "placeholder": "[Placeholder: Ảnh Chị Mai đang tư vấn hoặc rãnh bụng 11]",
+      "alt": "Chị Mai tư vấn dinh dưỡng"
+    },
+    "benefitsList": [
+      {
+        "title": "Tự tin hơn trong công việc",
+        "desc": "Giảm cân để tự tin hơn, tỏa sáng trong mọi cuộc họp và giao tiếp."
+      },
+      {
+        "title": "Cơ thể cân đối, tràn đầy năng lượng",
+        "desc": "Lúc nào cũng tràn đầy năng lượng để làm bất cứ việc gì bạn muốn."
+      },
+      {
+        "title": "Quyến rũ hơn, hạnh phúc hơn",
+        "desc": "Tự tin và quyến rũ hơn trong chuyện phòng the, giữ lửa hạnh phúc gia đình."
+      },
+      {
+        "title": "Thân hình rắn chắc, năng động",
+        "desc": "Giảm mỡ tăng cơ để có được thân hình rắn chắc, tự tin yêu đời trong cuộc sống."
+      },
+      {
+        "title": "Bà nội trợ thông thái",
+        "desc": "Nắm được bí mật của thức ăn - người nắm giữ cán cân sức khỏe cho bản thân và cả gia đình."
+      }
+    ],
+    "targetAudienceTitle": "Chương trình phù hợp với bạn nếu bạn là...",
+    "targetAudiences": [
+      {
+        "icon": "Heart",
+        "title": "Người Nội Trợ",
+        "desc": "Bận rộn với gia đình nhưng vẫn muốn chăm sóc bản thân"
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Nhân Viên Văn Phòng",
+        "desc": "Ngồi nhiều, ít vận động và muốn cải thiện sức khỏe"
+      },
+      {
+        "icon": "Users",
+        "title": "CEO / Doanh Nhân",
+        "desc": "Bận rộn không có thời gian chăm sóc bản thân"
+      }
+    ],
+    "timeCommitment": {
+      "prefix": "Bạn chỉ cần đầu tư",
+      "highlight": "30 phút mỗi sáng",
+      "suffix": "để chúng ta gặp nhau và bắt đầu hành trình thay đổi!"
+    },
+    "cta": {
+      "text": "Bắt đầu hành trình của bạn",
+      "href": "#offer"
+    }
+  },
+  "timeline": {
+    "subtitle": "LỘ TRÌNH 21 NGÀY",
+    "title": "THAY ĐỔI VÓC DÁNG NGOẠN MỤC",
+    "weeks": [
+      {
+        "week": "TUẦN 1",
+        "icon": "Utensils",
+        "title": "BÍ MẬT CÔNG THỨC ĂN UỐNG KHOA HỌC",
+        "subtitle": "Để có vòng eo 56 của những ngôi sao hạng A",
+        "desc": "Tôi sẽ cung cấp cho bạn phương pháp khoa học để ăn uống ĐỦ CHẤT mà không có thời gian nấu nướng.",
+        "image": "tuan-1.jpg"
+      },
+      {
+        "week": "TUẦN 2",
+        "icon": "Dumbbell",
+        "title": "BÍ MẬT GIẢM 4KG/3 TUẦN",
+        "subtitle": "Một cách an toàn",
+        "desc": "Hiểu được cách vận động hợp lý để lấy lại vòng eo mà không cần luyện tập quá nhiều.",
+        "image": "tuan-2.jpg"
+      },
+      {
+        "week": "TUẦN 3",
+        "icon": "Sparkles",
+        "title": "KIẾN TẠO ĐƯỜNG CONG CƠ THỂ",
+        "subtitle": "Theo cách bạn mong muốn",
+        "desc": "Bạn sẽ có được kết quả tuyệt vời, một nền tảng kiến thức cơ bản để kiểm soát hoàn toàn cân nặng mà không cần mất hàng trăm triệu đồng để can thiệp hút mỡ đau đớn.",
+        "image": "tuan-3.jpg"
+      }
+    ],
+    "result": {
+      "title": "SAU 3 TUẦN, bạn sẽ...",
+      "highlight1": "SĂN CHẮC HƠN",
+      "highlight2": "vóc dáng mà bất kỳ người phụ nữ nào cũng mong muốn",
+      "descPrefix": "Trở nên ",
+      "descMid": ", năng lượng hơn, và luôn luôn được bạn bè thu hút bởi sự thay đổi và trầm trồ với ",
+      "descSuffix": ".",
+      "image": "tuan-4.jpg"
+    },
+    "pricingCard": {
+      "originalPrice": "HỌC PHÍ GỐC: 10,500,000Đ",
+      "specialPrice": "MIỄN PHÍ 0Đ",
+      "trialDesc": "Trải nghiệm khóa học 2 ngày đầu tiên để thấy sự thay đổi!",
+      "urgency": "SỐ LƯỢNG CÓ HẠN - ĐĂNG KÝ NGAY!",
+      "cta": {
+        "text": "ĐĂNG KÝ NGAY BÂY GIỜ",
+        "href": "#offer"
+      }
+    }
+  },
+  "offer": {
+    "subtitle": "ƯU ĐÃI ĐẶC BIỆT",
+    "title": "BONUS DÀNH CHO BẠN",
+    "bonus": {
+      "badge1": "ĐẶC BIỆT",
+      "badge2": "BONUS FREE 100%",
+      "title": "1. PT Gym 1:1 đồng hành trong suốt",
+      "titleBreak": "hành trình chuyển đổi vóc dáng",
+      "coach": {
+        "name": "HLV Bùi Thái Châu",
+        "title": "Học trò chính quy của nhà vô địch Lý Đức",
+        "highlight": "đến trọn đời",
+        "descPrefix": "Sẵn sàng hỗ trợ đồng hành anh chị em ",
+        "descSuffix": ".",
+        "avatar": "hlv-chau-1.jpg",
+        "image1": "hlv-chau-1.jpg",
+        "image2": "hlv-chau-2.jpg",
+        "imagePlaceholder1": "[Hình HLV 1]",
+        "imagePlaceholder2": "[Hình HLV 2]"
+      },
+      "extraBonuses": [
+        {
+          "number": "02",
+          "tag": "QUÀ TẶNG 2",
+          "title": "2. Tặng Quy trình chăm sóc da đẹp tự nhiên ko cần son phấn",
+          "desc": "Bí quyết giúp làn da sáng khỏe, mịn màng tự nhiên từ sâu bên trong thông qua dinh dưỡng và thói quen sinh hoạt khoa học, rạng rỡ mà không cần phụ thuộc vào son phấn hay mỹ phẩm đắt tiền."
+        },
+        {
+          "number": "03",
+          "tag": "QUÀ TẶNG 3",
+          "title": "3. Tặng Quy trình chăm con bằng sữa mẹ \"con khỏe-mẹ xinh-dáng chuẩn\"",
+          "desc": "Bộ cẩm nang dinh dưỡng và lộ trình thực chiến giúp mẹ nuôi con bằng nguồn sữa mẹ dồi dào, bé phát triển toàn diện, đồng thời mẹ nhanh chóng lấy lại vòng eo và vóc dáng son rỗi một cách an toàn."
+        }
+      ]
+    },
+    "tuition": {
+      "intro": "Ban đầu, chương trình này có mức học phí là",
+      "originalPrice": "12,000,000đ/tháng",
+      "highlight": "ĐẸP HƠN THỜI CON GÁI",
+      "descPrefix": "Để giúp bạn sở hữu được những điều trên, thậm chí ",
+      "descSuffix": ", tiết kiệm thời gian đi đến phòng tập hay những giải pháp can thiệp dao kéo đau đớn và lo âu."
+    },
+    "specialPromotion": {
+      "badge": "Nhân dịp kỷ niệm 16 năm hành trình HLV chăm sóc sức khỏe cá nhân",
+      "heading": "TUY NHIÊN, toàn bộ chương trình sẽ là...",
+      "options": [
+        {
+          "icon": "Calendar",
+          "title": "Trải nghiệm thử",
+          "descPrefix": "Khóa học ONLINE ",
+          "highlight": "2 ngày",
+          "descSuffix": ""
+        },
+        {
+          "icon": "Users",
+          "title": "HOẶC Tư vấn",
+          "descPrefix": "OFFLINE ",
+          "highlight": "hoàn toàn miễn phí!",
+          "descSuffix": ""
+        },
+        {
+          "icon": "Trophy",
+          "title": "Học ĂN 30 NGÀY",
+          "descPrefix": "",
+          "highlight": "CAM KẾT ĐẦU RA",
+          "descSuffix": " + quà tặng hấp dẫn!"
+        }
+      ],
+      "announcement": {
+        "subtitle": "Bạn không nghe nhầm đâu!",
+        "price": "HOÀN TOÀN MIỄN PHÍ!",
+        "note": "Và đây là chương trình rất hiếm khi tôi tổ chức với số lượng học viên có hạn."
+      },
+      "urgency": {
+        "label": "Số lượng có hạn!",
+        "prefix": "Chương trình sẽ khép lại khi có ",
+        "highlight": "20 học viên",
+        "suffix": " tham dự"
+      },
+      "cta": {
+        "note": "Hãy nhanh chóng bấm vào nút bên dưới để trở thành một trong những người nhanh nhất giành vé tham dự!",
+        "text": "ĐĂNG KÝ NGAY BÂY GIỜ",
+        "href": "#offer"
+      }
+    }
+  },
+  "testimonials": {
+    "subtitle": "THÀNH CÔNG TỪ HỌC VIÊN",
+    "title": "HỌ ĐÃ LÀM ĐƯỢC - BẠN CŨNG VẬY!",
+    "items": [
+      {
+        "name": "NGUYỄN THỊ TUYẾT THANH",
+        "job": "Nội trợ",
+        "highlight": "Giảm cân & cải thiện xương khớp",
+        "content": "Nhờ tham gia lớp học ăn mà tôi đã giảm cân và cải thiện được vấn đề xương khớp nặng của mình, sau bao năm tưởng chừng như vô vọng chạy chữa khắp nơi. Cảm ơn cô Mai rất nhiều.",
+        "image": "hv-tuyet-thanh.jpg"
+      },
+      {
+        "name": "ĐOÀN THỊ KIM CƯƠNG",
+        "job": "Dược sĩ",
+        "highlight": "Giảm 12kg & hết táo bón",
+        "content": "Mặc dù là Dược sĩ, nhưng tôi vẫn không tự kiểm soát được cân nặng của mình. Thừa cân và táo bón. May mắn được người bạn chia sẻ tôi đến với lớp học ăn của SMILECOACH, tôi đã giảm được 12kg và cải thiện tình trạng táo bón một cách tự nhiên. Vô cùng biết ơn chương trình, đặc biệt là biết ơn A/c HLV Mai - Châu đã đồng hành cùng em trong suốt thời gian qua.",
+        "image": "hv-kim-cuong.jpg"
+      },
+      {
+        "name": "ĐINH THỊ NGỪNG",
+        "job": "Buôn bán tự do",
+        "highlight": "Giảm 8kg & đẹp da",
+        "content": "Nghề chính là bán bánh bò, nên thức khuya dậy sớm, không hiểu cách ăn uống dẫn đến thừa cân và bệnh tật, nặng nhất là đau nhức xương sống. May mắn được người chị dâu là công an chia sẻ nên tin tưởng và trải nghiệm thử, tôi đã giảm 8kg và cải thiện hoàn toàn vấn đề sức khỏe của mình. Đặc biệt, cải thiện luôn làn da. Thật vui sướng lắm!",
+        "image": "hv-ngung.jpg"
+      },
+      {
+        "name": "NGUYỄN VĂN CHÍ",
+        "job": "Y sĩ",
+        "highlight": "Tăng 5kg & hồi phục 90%",
+        "content": "Là một y sĩ, tôi nghĩ là mình biết tất cả, nhưng mọi chuyện đổ vỡ khi tôi rơi vào hoàn cảnh suy nhược cơ thể trầm trọng, chỉ khoảng 6 tháng suy nhược, mất ngủ, ăn không được… tôi đã tụt hơn 9kg. Vào một ngày đẹp trời, may mắn biết được chương trình học ăn tại SMILECOACH. Chưa tròn 1 tuần trải nghiệm, tôi đã dần khỏe lên rất nhiều. Hiện tại, tôi đã tăng được 5kg và cải thiện hơn 90% vấn đề sức khỏe của mình.",
+        "image": "hv-chi.jpg"
+      },
+      {
+        "name": "NGUYỄN BÙI GIA HIẾU",
+        "job": "Lao động tự do",
+        "highlight": "Tăng 8kg & bỏ game, thuốc lá",
+        "content": "Do không ý thức được sức khỏe nên mê game, hút thuốc, thức khuya… dẫn đến cơ thể suy nhược và thiếu cân trầm trọng. May mắn được mẹ dẫn đến môi trường lành mạnh, tôi đã tham gia lớp học ăn và tăng được 8kg và bỏ được thói quen xấu là game và thuốc lá, ngủ sớm hơn, sống lành mạnh hơn.",
+        "hidden": true
+      },
+      {
+        "name": "ĐẶNG THỊ GIÀO",
+        "job": "Thợ nấu, Kinh doanh",
+        "highlight": "Tái sinh năng lượng & hết nám",
+        "content": "Mặc dù U40, nhưng vô cùng mệt mỏi uể oải, không biết rồi có thể bám trụ công việc kinh doanh bếp đến khi nào. May mắn được biết đến chương trình học ăn tại SM, dần lột xác và tái sinh năng lượng, đặc biệt là cải thiện làn da xạm nám của mình tưởng chừng không lối thoát. Vô cùng biết ơn chương trình và các HLV. Yêu lắm!",
+        "hidden": true
+      }
+    ],
+    "cta": {
+      "descPrefix": "Bạn cũng có thể trở thành ",
+      "highlight": "câu chuyện thành công",
+      "descSuffix": " tiếp theo!",
+      "text": "Tôi muốn thay đổi ngay",
+      "href": "#offer"
+    }
+  },
+  "about": {
+    "badge": "Người sáng lập SmileCoach",
+    "title": "HUỲNH NGỌC MAI, TÔI LÀ AI?",
+    "photo": "hlv-mai-3.jpg",
+    "photoAlt": "HLV Huỳnh Ngọc Mai - U50 Năng Lượng",
+    "photoPlaceholder": "[Placeholder: Ảnh Chị Huỳnh Ngọc Mai - U50 Năng Lượng]",
+    "stats": [
+      { "value": "1,000+", "label": "Học viên toàn cầu" },
+      { "value": "16+", "label": "Năm kinh nghiệm" }
+    ],
+    "greeting": "Xin chào các bạn,",
+    "intro": {
+      "prefix": "Tôi là ",
+      "author": "Huỳnh Ngọc Mai",
+      "details": ", 48 tuổi (1978), tôi đã có gia đình và 3 con. Hiện tại đang sinh sống và làm việc tại ",
+      "location": "Tri Tôn, An Giang",
+      "suffix": "."
+    },
+    "websiteIntro": "Lập ra website ",
+    "websiteUrl": "https://www.smilecoach.vn",
+    "websiteLabel": "“www.smilecoach.vn”",
+    "websiteGoals": ", tôi có 2 mục tiêu chính:",
+    "goals": [
+      { "icon": "Target", "title": "1. TÁI CẤU TRÚC CƠ THỂ" },
+      { "icon": "Sparkles", "title": "2. TRUYỀN CẢM HỨNG" }
+    ],
+    "currentStatus": "Hiện tại, tôi không thừa hay thiếu cân, sức khỏe và năng lượng tuyệt vời. Và cũng bởi vì là một HLV sức khỏe cá nhân, nên việc kiểm soát cân nặng và sức khỏe thì không vấn đề gì phải lo lắng.",
+    "pastStory": {
+      "prefix": "Cách nay hơn 16 năm, là một nhân viên văn phòng, với tính chất và thói quen ăn uống không lành mạnh, thời điểm 32 tuổi tôi cũng gặp khá nhiều vấn đề sức khỏe như ",
+      "healthIssue": "ĐẠI TRÀNG (táo bón)",
+      "suffix": ", thiếu năng lượng trầm trọng, mệt mỏi uể oải hay ngáp vặt, khớp nhẹ, đặc biệt làn da cực kỳ xấu nên ảnh hưởng đến năng suất làm việc."
+    },
+    "turningPoint": {
+      "content": "May mắn, biết đến cộng đồng sống khỏe sống lành mạnh, tôi đã học và điều chỉnh thói quen ăn uống, thay đổi lối sống sinh hoạt không tốt của mình theo hướng lành mạnh hơn. Sau một thời gian ngắn tôi đã cải thiện khá nhiều: năng lượng hơn, làn da tươi sáng hơn... từ đó tôi đã chung tay lan tỏa thông điệp, kiến thức, sự trải nghiệm để giúp nhiều người hơn nữa trong việc kiểm soát cân nặng và vóc dáng trong hơn 16 năm qua! ",
+      "highlight": "Tôi biết ơn và yêu công việc này."
+    },
+    "mindsetHeading": {
+      "prefix": "Những suy nghĩ ",
+      "highlight": "cần thay đổi..."
+    },
+    "mindsetIntro": "Là một người phụ nữ trung niên, có 3 con, tôi hiểu được sự lão hóa theo thời gian của cơ thể về sức khỏe, sắc đẹp, năng lượng... từ đó ảnh hưởng đến chất lượng cuộc sống bản thân, gia đình.",
+    "mindsetQuotes": [
+      "\"Có rất nhiều trường hợp tự ti 'đã lớn tuổi', nên an phận quanh quẩn bên căn bếp gia đình, lam lũ bên ruộng đồng, tất bật bán buôn mà quên đi bản thân mình...\"",
+      "\"Họ thả trôi cho việc chăm lo bản thân, chỉ biết tập trung lo cho chồng, chăm cho con, vì họ nghĩ rằng như vậy là hạnh phúc!\""
+    ],
+    "mindsetTransition": "Và điều gì đến sẽ đến...",
+    "mindsetConsequences": [
+      "Không thể có 1 cơ thể khỏe mạnh trên 1 thân hình đầy mỡ",
+      "Không thể có 1 sự tự tin trên thân hình quá khổ",
+      "Không thể có 1 năng lượng đỉnh cao trên một thân thể nặng nề",
+      "Không thể có hạnh phúc gia đình trọn vẹn trên một cơ thể béo phì đầy bệnh tật"
+    ],
+    "solutionHeading": {
+      "prefix": "Giải pháp là ",
+      "highlight": "THÓI QUEN MỚI"
+    },
+    "solutionDesc": {
+      "prefix": "Thật ra, nếu hiểu và có ",
+      "highlight1": "KIẾN THỨC",
+      "mid": " về dinh dưỡng thì để kiểm soát cân nặng và chăm sóc sức khỏe chủ động cho bản thân là không hề khó, quan trọng là đúng phương pháp khoa học, đúng giáo án, phù hợp từng cá nhân hóa... và điều cốt lõi đó là ",
+      "highlight2": "THÓI QUEN!"
+    },
+    "solutionPillars": [
+      "Ăn uống có KIẾN THỨC",
+      "Ăn uống có CHỦ ĐỘNG",
+      "Ăn uống có CHỦ ĐÍCH",
+      "Ăn uống có MỤC TIÊU"
+    ],
+    "habitRequirementsIntro": "Và để thay đổi thói quen, cần có:",
+    "habitRequirements": [
+      { "icon": "Target", "label": "1. Kiến thức" },
+      { "icon": "Users", "label": "2. Môi trường" },
+      { "icon": "Heart", "label": "3. Người đồng hành" },
+      { "icon": "Clock", "label": "4. Thời gian" }
+    ],
+    "philosophyQuote": {
+      "prefix": "\"Tập luyện là ",
+      "highlight1": "VUA",
+      "mid": ", dinh dưỡng là ",
+      "highlight2": "HOÀNG HẬU",
+      "suffix": "\"",
+      "descPrefix": "Hiểu được triết lý này, thì tất cả mọi người, đặc biệt phụ nữ trung niên, những người mẹ vĩ đại đều có thể dễ dàng ",
+      "descHighlight": "\"tìm lại chính mình\"",
+      "descSuffix": "."
+    },
+    "responsibility": {
+      "title": "TRÁCH NHIỆM",
+      "paragraph1": "Hơn ai hết, là người phụ nữ, là người nội trợ, là bếp chính trong gia đình, là người nắm cán cân sức khỏe của gia đình thì thiết nghĩ hơn ai hết, bản thân chúng ta cần có tinh thần TRÁCH NHIỆM.",
+      "quote": "\"Những gì bạn ăn là con của bạn ăn, chồng của bạn ăn và ba mẹ của bạn ăn!\"",
+      "paragraph2": "Phụ nữ là tấm gương: tấm gương trong ăn uống, tấm gương trong lối sống sinh hoạt, tấm gương trong lối suy nghĩ lối tư duy, tấm gương trong THÓI QUEN hàng ngày... cho các thành viên trong gia đình đặc biệt là con trẻ."
+    },
+    "lifeValues": {
+      "heading": "GIÁ TRỊ SỐNG",
+      "paragraph1": "Dù ở bất kỳ độ tuổi nào, dù giới tính nam hay nữ... đã là con người đều có giá trị riêng trên cuộc đời này. Cho nên, liên tục học hỏi và phấn đấu không ngừng để lan tỏa điều tích cực nhất giúp mình giúp người giúp cộng đồng, xã hội... không dừng lại!",
+      "paragraph2": "Và hãy sống có giá trị, hãy trở thành phiên bản tốt hơn của chính mình để lan tỏa, cho đi, phụng sự và cống hiến những giá trị tuyệt vời của một người phụ nữ. Đời người ai cũng chỉ có 1 lần để sống, hãy sống xứng đáng, hãy sống cuộc đời tốt nhất có thể.",
+      "mission": "Đó cũng chính là mục tiêu theo đuổi trên hành trình cuộc đời mang tên Huỳnh Ngọc Mai."
+    },
+    "gallery": [
+      {
+        "src": "hlv-mai-4.jpg",
+        "alt": "HLV Huỳnh Ngọc Mai thời điểm chưa kiểm soát vóc dáng"
+      },
+      {
+        "src": "hlv-mai-5.jpg",
+        "alt": "HLV Huỳnh Ngọc Mai thời trẻ"
+      },
+      {
+        "src": "hlv-mai-6.jpg",
+        "alt": "HLV Huỳnh Ngọc Mai vóc dáng thon gọn, eo chuẩn"
+      },
+      {
+        "src": "1789956915207_8756299554153306106_8756299554153306106_8129169b8b47e6bbc1353a87ce0fcefb.jpg",
+        "alt": "HLV Huỳnh Ngọc Mai rạng rỡ về đích Marathon"
+      }
+    ],
+    "galleryPlaceholders": [
+      "[Ảnh 1]",
+      "[Ảnh 2]",
+      "[Ảnh 3]",
+      "[Ảnh 4]"
+    ],
+    "finalQuote": {
+      "quote": "\"Tôi - phụ nữ 48 tuổi (U50), tôi làm được thì ai cũng sẽ làm được!\"",
+      "author": "- Huỳnh Ngọc Mai -"
+    }
+  },
+  "footer": {
+    "subtitle": "LIÊN HỆ VỚI TÔI",
+    "title": "BẮT ĐẦU NGAY HÔM NAY",
+    "contactCards": [
+      {
+        "icon": "MessageCircle",
+        "title": "Zalo Tư vấn",
+        "desc": "Giảm 4kg/ 3 tuần an toàn",
+        "href": "#",
+        "ariaLabel": "Zalo Tư vấn",
+        "color": "sky"
+      },
+      {
+        "icon": "Users",
+        "title": "Facebook",
+        "desc": "Cộng đồng khỏe đẹp",
+        "href": "#",
+        "ariaLabel": "Facebook - Cộng đồng khỏe đẹp",
+        "color": "blue"
+      },
+      {
+        "icon": "Play",
+        "title": "Youtube",
+        "desc": "Bí mật dinh dưỡng",
+        "href": "#",
+        "ariaLabel": "Youtube - Bí mật dinh dưỡng",
+        "color": "red"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Đặt lịch 1:1",
+        "desc": "Online & Offline",
+        "href": "#",
+        "ariaLabel": "Đặt lịch 1:1 - Online & Offline",
+        "color": "primary"
+      }
+    ],
+    "network": "SMILECOACH GLOBAL NETWORK: VIỆT NAM • MỸ • ÚC • CANADA • SINGAPORE • HÀN QUỐC • NHẬT BẢN",
+    "copyright": "© 2026 SMILECOACH BY HUYNH NGOC MAI. DESIGNED WITH PRECISION."
+  }
+}

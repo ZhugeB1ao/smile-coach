@@ -1,43 +1,32 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
 
 export const Card = ({ children, className = "" }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className={`p-6 rounded-2xl bg-white shadow-xl shadow-sky-100 border border-sky-50 ${className}`}
+  <div 
+    className={`p-6 sm:p-8 rounded-[24px] bg-white border border-[#e7e7ec] shadow-[0_2px_4px_rgba(6,3,24,0.04)] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:border-[#0d0c22]/20 transition-all duration-200 ${className}`}
   >
     {children}
-  </motion.div>
+  </div>
 );
 
-export const SectionTitle = ({ children, subtitle }) => (
-  <div className="text-center mb-16 px-4">
-    <motion.h2 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-3xl md:text-5xl font-bold mb-4 text-sky-950 uppercase text-balance"
+export const SectionTitle = ({ children, subtitle, dark = false }) => (
+  <div className="px-4 mb-14 text-center">
+    <h2 
+      className={`text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight uppercase text-balance ${dark ? 'text-white' : 'text-[#0d0c22]'}`}
     >
       {children}
-    </motion.h2>
+    </h2>
     {subtitle && (
-      <motion.p 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-        className="text-sky-600 font-bold tracking-widest text-sm md:text-base underline underline-offset-8 decoration-sky-100"
+      <p 
+        className={`mt-3 text-xs sm:text-sm font-black uppercase tracking-widest ${dark ? 'text-[#ecebf0]/75' : 'text-[#ea4c89]'}`}
       >
         {subtitle}
-      </motion.p>
+      </p>
     )}
   </div>
 );
 
 export const Container = ({ children, className = "" }) => (
-  <div className={`max-w-7xl mx-auto px-6 lg:px-8 ${className}`}>
+  <div className={`max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
     {children}
   </div>
 );
+

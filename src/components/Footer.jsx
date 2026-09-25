@@ -1,42 +1,59 @@
 import { MessageCircle, Users, Play, Calendar } from 'lucide-react';
 import { SectionTitle, Container } from './SharedUI';
+import defaultContent from '../data/content.json';
 
-const Footer = () => {
+const footerIconMap = {
+  MessageCircle,
+  Users,
+  Play,
+  Calendar
+};
+
+const Footer = ({ data = defaultContent.footer }) => {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-20 lg:py-32">
+    <footer className="bg-[#0d0c22] border-t border-white/10 py-20 lg:py-28 text-white">
       <Container className="flex flex-col items-center text-center">
-        <SectionTitle subtitle="LIÊN HỆ VỚI TÔI">BẮT ĐẦU NGAY HÔM NAY</SectionTitle>
+        <SectionTitle subtitle={data.subtitle} dark>{data.title}</SectionTitle>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-5xl mb-16 lg:mb-20 text-white">
-          <a href="#" aria-label="Zalo Tư vấn" className="p-6 lg:p-8 bg-slate-800 rounded-2xl lg:rounded-3xl border border-slate-700 hover:border-sky-500 transition-colors group overflow-hidden relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
-             <div className="absolute inset-0 bg-sky-500 opacity-0 group-hover:opacity-5 transition-opacity" />
-             <MessageCircle className="mx-auto mb-4 w-8 h-8 lg:w-10 lg:h-10 text-sky-500" aria-hidden="true" />
-             <h4 className="font-bold mb-2 text-sm lg:text-base">Zalo Tư vấn</h4>
-             <p className="text-[10px] lg:text-xs text-slate-500">Giảm 4kg/ 3 tuần an toàn</p>
-          </a>
-          <a href="#" aria-label="Facebook - Cộng đồng khỏe đẹp" className="p-6 lg:p-8 bg-slate-800 rounded-2xl lg:rounded-3xl border border-slate-700 hover:border-sky-500 transition-colors group overflow-hidden relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
-             <div className="absolute inset-0 bg-sky-500 opacity-0 group-hover:opacity-5 transition-opacity" />
-             <Users className="mx-auto mb-4 w-8 h-8 lg:w-10 lg:h-10 text-blue-500" aria-hidden="true" />
-             <h4 className="font-bold mb-2 text-sm lg:text-base">Facebook</h4>
-             <p className="text-[10px] lg:text-xs text-slate-500">Cộng đồng khỏe đẹp</p>
-          </a>
-          <a href="#" aria-label="Youtube - Bí mật dinh dưỡng" className="p-6 lg:p-8 bg-slate-800 rounded-2xl lg:rounded-3xl border border-slate-700 hover:border-sky-500 transition-colors group overflow-hidden relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
-             <div className="absolute inset-0 bg-sky-500 opacity-0 group-hover:opacity-5 transition-opacity" />
-             <Play className="mx-auto mb-4 w-8 h-8 lg:w-10 lg:h-10 text-red-500" aria-hidden="true" />
-             <h4 className="font-bold mb-2 text-sm lg:text-base">Youtube</h4>
-             <p className="text-[10px] lg:text-xs text-slate-500">Bí mật dinh dưỡng</p>
-          </a>
-          <a href="#" aria-label="Đặt lịch 1:1 - Online & Offline" className="p-6 lg:p-8 bg-sky-500 rounded-2xl lg:rounded-3xl transition-transform hover:scale-105 active:scale-100 shadow-2xl shadow-sky-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-             <Calendar className="mx-auto mb-4 w-8 h-8 lg:w-10 lg:h-10 text-white" aria-hidden="true" />
-             <h4 className="font-bold mb-2 text-sm lg:text-base text-white">Đặt lịch 1:1</h4>
-             <p className="text-[10px] lg:text-xs text-sky-100 italic">Online & Offline</p>
-          </a>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-5xl mb-16 lg:mb-20">
+          {data.contactCards.map((card, i) => {
+            const Icon = footerIconMap[card.icon] || MessageCircle;
+            const isHighlight = card.color === 'primary';
+            
+            if (isHighlight) {
+              return (
+                <a 
+                  key={i}
+                  href={card.href} 
+                  aria-label={card.ariaLabel} 
+                  className="p-6 lg:p-8 bg-[#ea4c89] rounded-[24px] transition-all duration-300 hover:bg-[#f082ac] hover:shadow-[0_12px_28px_rgba(234,76,137,0.4)] hover:-translate-y-1 active:scale-95 flex flex-col items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ea4c89] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22] group"
+                >
+                  <Icon className="w-8 h-8 lg:w-9 lg:h-9 mx-auto mb-3.5 text-white transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
+                  <h4 className="font-bold mb-1.5 text-sm lg:text-base text-white">{card.title}</h4>
+                  <p className="text-xs text-white/90 italic font-medium">{card.desc}</p>
+                </a>
+              );
+            }
+
+            return (
+              <a 
+                key={i}
+                href={card.href} 
+                aria-label={card.ariaLabel} 
+                className="p-6 lg:p-8 bg-white/5 rounded-[24px] border border-white/10 hover:border-white/20 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22]"
+              >
+                <Icon className="w-8 h-8 lg:w-9 lg:h-9 mx-auto mb-3.5 text-[#ea4c89] transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
+                <h4 className="font-bold mb-1.5 text-sm lg:text-base text-white">{card.title}</h4>
+                <p className="text-xs text-[#ecebf0]/70 italic">{card.desc}</p>
+              </a>
+            );
+          })}
         </div>
 
-        <div className="text-slate-500 text-[10px] lg:text-sm font-medium tracking-widest uppercase px-4 leading-relaxed">
-          SMILECOACH GLOBAL NETWORK: VIỆT NAM • MỸ • ÚC • CANADA • SINGAPORE • HÀN QUỐC • NHẬT BẢN
+        <div className="text-[#ecebf0]/70 text-xs lg:text-sm font-medium tracking-wide px-4 leading-relaxed max-w-2xl">
+          {data.network}
         </div>
-        <p className="mt-8 text-slate-700 text-xs">© 2026 SMILECOACH BY HUYNH NGOC MAI. DESIGNED WITH PRECISION.</p>
+        <p className="mt-8 text-[#ecebf0]/40 text-xs font-medium">{data.copyright}</p>
       </Container>
     </footer>
   );

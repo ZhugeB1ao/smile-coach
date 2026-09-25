@@ -1,273 +1,305 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
-import { CheckCircle2, Heart, Target, Users, Clock, Sparkles } from 'lucide-react';
-import { SectionTitle, Container } from './SharedUI';
+import { FiCheck } from 'react-icons/fi';
+import { Container } from './SharedUI';
+import { getImage } from '../utils/images';
+import defaultContent from '../data/content.json';
 
-const About = () => {
+const About = ({ data = defaultContent.about }) => {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-slate-900 text-white rounded-t-[2.5rem] sm:rounded-t-[4rem]">
+    <section id="about" className="py-20 lg:py-28 bg-white border-t border-[#e7e7ec]">
       <Container>
         {/* Header */}
         <div className="mb-16 text-center">
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="mb-4 text-sm font-bold tracking-widest uppercase text-sky-400"
+          <h2 
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0d0c22] uppercase tracking-tight"
           >
-            Người sáng lập SmileCoach
-          </motion.p>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-4 text-3xl font-bold text-white uppercase md:text-5xl text-balance"
-          >
-            HUỲNH NGỌC MAI, TÔI LÀ AI?
-          </motion.h2>
+            {data.title}
+          </h2>
+          {data.badge && (
+            <p 
+              className="mt-3 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]"
+            >
+              {data.badge}
+            </p>
+          )}
         </div>
 
-        {/* Main Content */}
-        <div className="flex flex-col gap-12 mb-16 lg:flex-row lg:gap-16 xl:gap-24">
-          {/* Left - Photo & Stats */}
-          <div className="w-full lg:w-2/5">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              className="aspect-3/4 bg-slate-800 rounded-4xl sm:rounded-[3rem] flex items-center justify-center text-slate-500 italic p-8 border border-slate-700 mb-8"
+        {/* Main Content: Bio & Coach Photo */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mb-20">
+          {/* Left - Photo & Stats (Adjusted aspect to 3/2 to match hlv-mai-3.jpg 2000x1333 perfectly) */}
+          <div className="lg:col-span-5">
+            <div 
+              className="relative aspect-3/2 sm:aspect-4/3 lg:aspect-3/2 bg-[#f8f7fa] rounded-[28px] overflow-hidden border border-[#e7e7ec] shadow-[0_12px_32px_rgba(6,3,24,0.06)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.12)] transition-all duration-300 mb-6 group"
             >
-              [Placeholder: Ảnh Chị Huỳnh Ngọc Mai - U50 Năng Lượng]
-            </motion.div>
+              {getImage(data.photo) ? (
+                <img
+                  src={getImage(data.photo)}
+                  alt={data.photoAlt || data.title}
+                  className="object-cover object-center w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="flex items-center justify-center h-full p-8 text-[#524b63] italic text-center">
+                  {data.photoPlaceholder}
+                </div>
+              )}
+            </div>
             
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-5 text-center border lg:p-6 bg-slate-800 rounded-2xl border-slate-700">
-                <p className="text-2xl font-black text-sky-400 lg:text-3xl">1,000+</p>
-                <p className="mt-1 text-xs font-bold tracking-widest uppercase text-slate-500">Học viên toàn cầu</p>
-              </div>
-              <div className="p-5 text-center border lg:p-6 bg-slate-800 rounded-2xl border-slate-700">
-                <p className="text-2xl font-black text-sky-400 lg:text-3xl">15+</p>
-                <p className="mt-1 text-xs font-bold tracking-widest uppercase text-slate-500">Năm kinh nghiệm</p>
-              </div>
+              {data.stats.map((st, i) => (
+                <div 
+                  key={i} 
+                  className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_8px_20px_rgba(6,3,24,0.06)] hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-200">{st.value}</p>
+                  <p className="mt-1 text-xs font-bold tracking-wider uppercase text-[#524b63]">{st.label}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Right - Bio Content */}
-          <div className="w-full lg:w-3/5">
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="mb-6 text-xl font-medium text-white lg:text-2xl">
-                Xin chào các bạn,
+          <div className="lg:col-span-7">
+            <div className="space-y-6">
+              <p className="text-xl sm:text-2xl font-bold text-[#0d0c22] leading-snug">
+                {data.greeting}
               </p>
               
-              <p className="mb-6 leading-relaxed text-slate-300">
-                Tôi là <span className="font-bold text-sky-400">Huỳnh Ngọc Mai</span>, 48 tuổi (1978), tôi đã có gia đình và 3 con. Hiện tại đang sinh sống và làm việc tại <span className="font-semibold text-white">Tri Tôn, An Giang</span>.
+              <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
+                {data.intro.prefix}
+                <span className="font-bold text-[#0d0c22]">{data.intro.author}</span>
+                {data.intro.details}
+                <span className="font-semibold text-[#0d0c22]">{data.intro.location}</span>
+                {data.intro.suffix}
               </p>
 
-              <p className="mb-6 leading-relaxed text-slate-300">
-                Lập ra website <a href="https://www.smilecoach.vn" target="_blank" rel="noopener noreferrer" className="font-bold text-sky-400 underline underline-offset-4 hover:text-sky-300">“www.smilecoach.vn”<span className="inline-block ml-1" aria-hidden="true">↗</span></a>, tôi có 2 mục tiêu chính:
+              <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
+                {data.websiteIntro}
+                <a 
+                  href={data.websiteUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-bold text-[#ea4c89] underline decoration-[#ea4c89] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors"
+                >
+                  {data.websiteLabel}
+                  <span className="inline-block ml-1" aria-hidden="true">↗</span>
+                </a>
+                {data.websiteGoals}
               </p>
 
-              <div className="grid grid-cols-1 gap-4 mb-8 sm:grid-cols-2">
-                <div className="flex items-center gap-3 p-4 border bg-slate-800/50 rounded-xl border-slate-700">
-                  <Target className="w-8 h-8 shrink-0 text-sky-400" aria-hidden="true" />
-                  <span className="font-bold text-white">1. TÁI CẤU TRÚC CƠ THỂ</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 border bg-slate-800/50 rounded-xl border-slate-700">
-                  <Sparkles className="w-8 h-8 shrink-0 text-sky-400" aria-hidden="true" />
-                  <span className="font-bold text-white">2. TRUYỀN CẢM HỨNG</span>
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 pb-2">
+                {data.goals.map((goal, i) => (
+                  <div 
+                    key={i} 
+                    className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-0.5 transition-all duration-200 group"
+                  >
+                    <FiCheck className="w-5 h-5 text-[#ea4c89] shrink-0" strokeWidth={2.5} aria-hidden="true" />
+                    <span className="text-sm sm:text-base font-bold text-[#0d0c22]">{goal.title}</span>
+                  </div>
+                ))}
               </div>
 
-              <p className="mb-6 leading-relaxed text-slate-300">
-                Hiện tại, tôi không thừa hay thiếu cân, sức khỏe và năng lượng tuyệt vời. Và cũng bởi vì là một HLV sức khỏe cá nhân, nên việc kiểm soát cân nặng và sức khỏe thì không vấn đề gì phải lo lắng.
+              <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
+                {data.currentStatus}
               </p>
 
-              <p className="mb-6 leading-relaxed text-slate-300">
-                Cách nay hơn 15 năm, là một nhân viên văn phòng, với tính chất và thói quen ăn uống không lành mạnh, thời điểm 32 tuổi tôi cũng gặp khá nhiều vấn đề sức khỏe như <span className="font-semibold text-white">ĐẠI TRÀNG (táo bón)</span>, thiếu năng lượng trầm trọng, mệt mỏi uể oải hay ngáp vặt, khớp nhẹ, đặc biệt làn da cực kỳ xấu nên ảnh hưởng đến năng suất làm việc.
+              <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
+                {data.pastStory.prefix}
+                <span className="font-semibold text-[#0d0c22]">{data.pastStory.healthIssue}</span>
+                {data.pastStory.suffix}
               </p>
 
-              <p className="leading-relaxed text-slate-300">
-                May mắn, biết đến cộng đồng sống khỏe sống lành mạnh, tôi đã học và điều chỉnh thói quen ăn uống, thay đổi lối sống sinh hoạt không tốt của mình theo hướng lành mạnh hơn. Sau một thời gian ngắn tôi đã cải thiện khá nhiều: năng lượng hơn, làn da tươi sáng hơn... từ đó tôi đã chung tay lan tỏa thông điệp, kiến thức, sự trải nghiệm để giúp nhiều người hơn nữa trong việc kiểm soát cân nặng và vóc dáng trong hơn 15 năm qua! <span className="font-medium text-sky-400">Tôi biết ơn và yêu công việc này.</span>
+              <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
+                {data.turningPoint.content}
+                <span className="font-semibold text-[#ea4c89]">{data.turningPoint.highlight}</span>
               </p>
             </div>
           </div>
         </div>
 
         {/* Philosophy Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="bg-slate-800/50 rounded-4xl lg:rounded-[3rem] p-8 lg:p-12 border border-slate-700 mb-16"
+        <div 
+          className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec] mb-16"
         >
-          <h3 className="mb-8 text-2xl font-bold text-center text-white lg:text-3xl">
-            Những suy nghĩ <span className="text-sky-400">cần thay đổi...</span>
+          <h3 className="mb-8 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
+            {data.mindsetHeading.prefix}
+            <span className="text-[#ea4c89]">{data.mindsetHeading.highlight}</span>
           </h3>
 
-          <div className="space-y-6 leading-relaxed text-slate-300">
-            <p>
-              Là một người phụ nữ trung niên, có 3 con, tôi hiểu được sự lão hóa theo thời gian của cơ thể về sức khỏe, sắc đẹp, năng lượng... từ đó ảnh hưởng đến chất lượng cuộc sống bản thân, gia đình.
+          <div className="space-y-6 leading-relaxed text-[#524b63] max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg">
+              {data.mindsetIntro}
             </p>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="p-6 border bg-slate-900/50 rounded-2xl border-slate-600">
-                <p className="italic text-slate-400">
-                  "Có rất nhiều trường hợp tự ti 'đã lớn tuổi', nên an phận quanh quẩn bên căn bếp gia đình, lam lũ bên ruộng đồng, tất bật bán buôn mà quên đi bản thân mình..."
-                </p>
-              </div>
-              <div className="p-6 border bg-slate-900/50 rounded-2xl border-slate-600">
-                <p className="italic text-slate-400">
-                  "Họ thả trôi cho việc chăm lo bản thân, chỉ biết tập trung lo cho chồng, chăm cho con, vì họ nghĩ rằng như vậy là hạnh phúc!"
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {data.mindsetQuotes.map((q, i) => (
+                <div key={i} className="p-6 bg-white rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300">
+                  <p className="italic text-[#524b63] text-sm sm:text-base leading-relaxed">&ldquo;{q}&rdquo;</p>
+                </div>
+              ))}
             </div>
 
-            <p className="py-4 text-lg font-semibold text-center text-white">
-              Và điều gì đến sẽ đến...
+            <p className="py-2 text-base sm:text-lg font-bold text-center text-[#0d0c22]">
+              {data.mindsetTransition}
             </p>
 
-            <div className="p-6 border bg-sky-500/10 rounded-2xl border-sky-500/20">
+            <div className="p-6 bg-white rounded-[20px] border border-rose-100">
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
-                  <span>Không thể có 1 cơ thể khỏe mạnh trên 1 thân hình đầy mỡ</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
-                  <span>Không thể có 1 sự tự tin trên thân hình quá khổ</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
-                  <span>Không thể có 1 năng lượng đỉnh cao trên một thân thể nặng nề</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-sky-400" aria-hidden="true">✗</span>
-                  <span>Không thể có hạnh phúc gia đình trọn vẹn trên một cơ thể béo phì đầy bệnh tật</span>
-                </li>
+                {data.mindsetConsequences.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm sm:text-base text-[#524b63]">
+                    <span className="mt-0.5 text-rose-500 font-bold" aria-hidden="true">✕</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Solution Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <div 
           className="mb-16"
         >
-          <h3 className="mb-8 text-2xl font-bold text-center text-white lg:text-3xl">
-            Giải pháp là <span className="text-sky-400">THÓI QUEN MỚI</span>
+          <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
+            {data.solutionHeading.prefix}
+            <span className="text-[#ea4c89]">{data.solutionHeading.highlight}</span>
           </h3>
 
-          <p className="max-w-4xl mx-auto mb-10 leading-relaxed text-center text-slate-300">
-            Thật ra, nếu hiểu và có <span className="font-bold text-sky-400">KIẾN THỨC</span> về dinh dưỡng thì để kiểm soát cân nặng và chăm sóc sức khỏe chủ động cho bản thân là không hề khó, quan trọng là đúng phương pháp khoa học, đúng giáo án, phù hợp từng cá nhân hóa... và điều cốt lõi đó là <span className="font-bold text-white">THÓI QUEN!</span>
+          <p className="max-w-3xl mx-auto mb-10 leading-relaxed text-center text-sm sm:text-base text-[#524b63]">
+            {data.solutionDesc.prefix}
+            <span className="font-bold text-[#0d0c22]">{data.solutionDesc.highlight1}</span>
+            {data.solutionDesc.mid}
+            <span className="font-bold text-[#0d0c22]">{data.solutionDesc.highlight2}</span>
           </p>
 
-          <div className="grid grid-cols-2 gap-4 mb-10 md:grid-cols-4">
-            {[
-              "Ăn uống có KIẾN THỨC",
-              "Ăn uống có CHỦ ĐỘNG",
-              "Ăn uống có CHỦ ĐÍCH",
-              "Ăn uống có MỤC TIÊU"
-            ].map((item, i) => (
-              <div key={i} className="p-4 text-center border lg:p-5 bg-slate-800 rounded-2xl border-slate-700">
-                <CheckCircle2 className="w-8 h-8 mx-auto mb-3 text-sky-400" aria-hidden="true" />
-                <p className="text-sm font-semibold text-white lg:text-base">{item}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {data.solutionPillars.map((item, i) => (
+              <div 
+                key={i} 
+                className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-1 transition-all duration-300 group"
+              >
+                <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <p className="text-xs sm:text-sm font-bold text-[#0d0c22]">{item}</p>
               </div>
             ))}
           </div>
 
-          <p className="mb-8 text-center text-slate-300">Và để thay đổi thói quen, cần có:</p>
+          <p className="mb-8 text-center text-sm sm:text-base font-medium text-[#524b63]">{data.habitRequirementsIntro}</p>
 
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {[
-              { icon: Target, label: "1. Kiến thức" },
-              { icon: Users, label: "2. Môi trường" },
-              { icon: Heart, label: "3. Người đồng hành" },
-              { icon: Clock, label: "4. Thời gian" }
-            ].map((item, i) => (
-              <div key={i} className="p-5 text-center border lg:p-6 bg-sky-500/10 rounded-2xl border-sky-500/20">
-                <item.icon className="w-10 h-10 mx-auto mb-3 text-sky-400" aria-hidden="true" />
-                <p className="font-bold text-sky-400">{item.label}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {data.habitRequirements.map((item, i) => (
+              <div 
+                key={i} 
+                className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+              >
+                <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors">{item.label}</p>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* Philosophy Quote */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="bg-linear-to-br from-sky-600 to-blue-700 rounded-4xl lg:rounded-[3rem] p-8 lg:p-12 text-center mb-16"
+        {/* Philosophy Quote: Dark High-Contrast Accent Banner */}
+        <div 
+          className="bg-[#0d0c22] text-white rounded-[32px] p-8 lg:p-14 text-center mb-16 shadow-[0_16px_40px_rgba(13,12,34,0.15)] hover:shadow-[0_24px_50px_rgba(13,12,34,0.25)] transition-shadow duration-300"
         >
-          <p className="mb-6 text-2xl font-bold leading-relaxed text-white lg:text-3xl">
-            "Tập luyện là <span className="text-sky-200">VUA</span>, dinh dưỡng là <span className="text-sky-200">HOÀNG HẬU</span>"
+          <p className="mb-6 text-2xl sm:text-3xl font-black leading-snug tracking-tight text-white max-w-3xl mx-auto">
+            {data.philosophyQuote.prefix}
+            <span className="text-[#ea4c89]">{data.philosophyQuote.highlight1}</span>
+            {data.philosophyQuote.mid}
+            <span className="text-[#ea4c89]">{data.philosophyQuote.highlight2}</span>
+            {data.philosophyQuote.suffix}
           </p>
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-sky-100">
-            Hiểu được triết lý này, thì tất cả mọi người, đặc biệt phụ nữ trung niên, những người mẹ vĩ đại đều có thể dễ dàng <span className="font-bold text-white">"tìm lại chính mình"</span>.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-[#ecebf0]/90">
+            {data.philosophyQuote.descPrefix}
+            <span className="font-bold text-white">{data.philosophyQuote.descHighlight}</span>
+            {data.philosophyQuote.descSuffix}
           </p>
-        </motion.div>
+        </div>
 
         {/* Responsibility Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="bg-slate-800/50 rounded-4xl lg:rounded-[3rem] p-8 lg:p-12 border border-slate-700 mb-16"
+        <div 
+          className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec] mb-16"
         >
-          <h3 className="mb-6 text-2xl font-bold text-center text-white lg:text-3xl">
-            Tinh thần <span className="text-sky-400">TRÁCH NHIỆM</span>
+          <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
+            Tinh thần <span className="text-[#ea4c89]">{data.responsibility.title}</span>
           </h3>
 
-          <div className="max-w-4xl mx-auto space-y-6 leading-relaxed text-slate-300">
+          <div className="max-w-3xl mx-auto space-y-6 leading-relaxed text-sm sm:text-base text-[#524b63]">
             <p className="text-center">
-              Hơn ai hết, là người phụ nữ, là người nội trợ, là bếp chính trong gia đình, là người nắm cán cân sức khỏe của gia đình thì thiết nghĩ hơn ai hết, bản thân chúng ta cần có tinh thần <span className="font-bold text-white">TRÁCH NHIỆM</span>.
+              {data.responsibility.paragraph1}
             </p>
 
-            <div className="p-6 text-center border bg-slate-900/50 rounded-2xl border-slate-600">
-              <p className="text-lg font-semibold text-sky-400">
-                "Những gì bạn ăn là con của bạn ăn, chồng của bạn ăn và ba mẹ của bạn ăn!"
+            <div className="p-6 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-sm hover:border-[#0d0c22] transition-colors">
+              <p className="text-base sm:text-lg font-bold text-[#0d0c22] italic">
+                &ldquo;{data.responsibility.quote}&rdquo;
               </p>
             </div>
 
             <p className="text-center">
-              <span className="font-bold text-sky-400">Phụ nữ là tấm gương:</span> tấm gương trong ăn uống, tấm gương trong lối sống sinh hoạt, tấm gương trong lối suy nghĩ lối tư duy, tấm gương trong THÓI QUEN hàng ngày... cho các thành viên trong gia đình đặc biệt là con trẻ.
+              {data.responsibility.paragraph2}
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Value & Gallery */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <div 
           className="mb-12 text-center"
         >
-          <h3 className="mb-6 text-2xl font-bold text-white lg:text-3xl">
-            GIÁ TRỊ SỐNG
+          <h3 className="mb-4 text-2xl sm:text-3xl font-black text-[#0d0c22] tracking-tight">
+            {data.lifeValues.heading}
           </h3>
-          <p className="max-w-4xl mx-auto mb-8 leading-relaxed text-slate-300">
-            Dù ở bất kỳ độ tuổi nào, dù giới tính nam hay nữ... đã là con người đều có giá trị riêng trên cuộc đời này. Cho nên, liên tục học hỏi và phấn đấu không ngừng để lan tỏa điều tích cực nhất giúp mình giúp người giúp cộng đồng, xã hội... không dừng lại!
+          <p className="max-w-3xl mx-auto mb-4 leading-relaxed text-sm sm:text-base text-[#524b63]">
+            {data.lifeValues.paragraph1}
           </p>
-          <p className="max-w-4xl mx-auto leading-relaxed text-slate-300">
-            Và hãy sống có giá trị, hãy trở thành phiên bản tốt hơn của chính mình để lan tỏa, cho đi, phụng sự và cống hiến những giá trị tuyệt vời của một người phụ nữ. Đời người ai cũng chỉ có 1 lần để sống, hãy sống xứng đáng, hãy sống cuộc đời tốt nhất có thể. <span className="text-sky-400">Đó cũng chính là mục tiêu theo đuổi trên hành trình cuộc đời mang tên Huỳnh Ngọc Mai.</span>
+          <p className="max-w-3xl mx-auto leading-relaxed text-sm sm:text-base text-[#524b63]">
+            {data.lifeValues.paragraph2}{' '}
+            <span className="font-bold text-[#ea4c89]">{data.lifeValues.mission}</span>
           </p>
-        </motion.div>
+        </div>
 
-        {/* Photo Gallery */}
-        <div className="grid grid-cols-2 gap-4 mb-12 md:grid-cols-4">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="flex items-center justify-center border aspect-square bg-slate-800 rounded-2xl border-slate-700">
-              <p className="text-sm italic text-slate-500">[Ảnh {i}]</p>
-            </div>
-          ))}
+        {/* Photo Gallery - Tailored aspect ratio and focal framing so all photos display fully without excessive cropping */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+          {(data.gallery || []).map((imgItem, i) => {
+            const focalPositions = [
+              'object-[center_15%]', // Photo 1: green top, thumbs up, smile
+              'object-top',          // Photo 2: full body green dress, handbag
+              'object-[center_72%]', // Photo 3: bikini, shorts, raised arm in sea
+              'object-[center_12%]', // Photo 4: finish line marathon, scarf, bib
+            ];
+
+            return (
+              <div 
+                key={i} 
+                className="overflow-hidden border border-[#e7e7ec] aspect-[2/3] sm:aspect-[3/5] bg-[#f8f7fa] rounded-[24px] group shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 relative"
+              >
+                {getImage(imgItem.src) ? (
+                  <img
+                    src={getImage(imgItem.src)}
+                    alt={imgItem.alt || `Huỳnh Ngọc Mai ${i + 1}`}
+                    className={`object-cover ${focalPositions[i] || 'object-center'} w-full h-full transition-transform duration-500 ease-out group-hover:scale-105`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full text-xs italic text-[#524b63]/60">
+                    {data.galleryPlaceholders?.[i] || `[Ảnh ${i + 1}]`}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Final Quote */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="p-8 lg:p-12 bg-sky-500/10 rounded-4xl lg:rounded-[3rem] border border-sky-500/30 text-center"
+        <div 
+          className="p-8 lg:p-12 bg-[#f8f7fa] rounded-[32px] border border-[#e7e7ec] text-center hover:shadow-[0_8px_24px_rgba(6,3,24,0.04)] transition-all duration-300"
         >
-          <p className="text-2xl italic font-black leading-relaxed text-sky-400 lg:text-4xl">
-            "Tôi - phụ nữ 48 tuổi (U50), tôi làm được thì ai cũng sẽ làm được!"
+          <p className="text-2xl sm:text-3xl font-black leading-relaxed text-[#0d0c22] italic max-w-3xl mx-auto">
+            &ldquo;{data.finalQuote.quote}&rdquo;
           </p>
-          <p className="mt-4 font-bold tracking-widest uppercase text-slate-400">- Huỳnh Ngọc Mai -</p>
-        </motion.div>
+          <p className="mt-4 font-bold tracking-widest uppercase text-xs sm:text-sm text-[#ea4c89]">
+            {data.finalQuote.author}
+          </p>
+        </div>
       </Container>
     </section>
   );

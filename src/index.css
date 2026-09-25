@@ -1,12 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --color-dribbble-dark: #0d0c22;
+  --color-dribbble-muted: #524b63;
+  --color-dribbble-subtle: #6e6d7a;
+  --color-dribbble-raised: #f3f3f6;
+  --color-dribbble-border: #e7e7ec;
+  --color-dribbble-pink: #ea4c89;
+  --color-dribbble-pink-hover: #f082ac;
+}
+
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-sans);
 }
 
 :root {
   background-color: #ffffff;
-  color: #0f172a;
+  color: #0d0c22;
 }
 
 body {
@@ -17,12 +29,6 @@ body {
 /* Scroll margin for anchor links under fixed navbar */
 [id] {
   scroll-margin-top: 5rem;
-}
-
-/* Skip rendering off-screen sections until they scroll into view */
-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
 }
 
 /* Respect reduced motion preference for CSS animations */
