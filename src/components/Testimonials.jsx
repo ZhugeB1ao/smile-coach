@@ -1,29 +1,30 @@
 import { Star } from 'lucide-react';
 import { SectionTitle, Container } from './SharedUI';
+import AnimatedSection from './AnimatedSection';
 import { getImage } from '../utils/images';
 import defaultContent from '../data/content.json';
 
 const Testimonials = ({ data = defaultContent.testimonials }) => {
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
+    <AnimatedSection id="testimonials" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
       <Container>
         <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
         
-        <div className="grid grid-cols-1 gap-6 lg:gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {(data.items || []).filter(item => !item.hidden).map((feed, i) => (
             <div 
               key={i}
-              className="flex flex-col justify-between p-6 sm:p-8 bg-white border border-[#e7e7ec] rounded-[28px] shadow-[0_4px_16px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 group"
+              className="flex flex-col justify-between p-6 sm:p-8 bg-white border border-[#e7e7ec] rounded-[28px] shadow-[0_4px_16px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
             >
               <div>
                 {/* Header with avatar, name, and rating */}
                 <div className="flex items-center justify-between gap-4 mb-5">
                   <div className="flex items-center gap-3.5">
-                    <div className="flex items-center justify-center text-base font-black shrink-0 w-11 h-11 bg-[#0d0c22] text-white rounded-2xl shadow-sm transition-transform duration-300 group-hover:scale-105">
+                    <div className="flex items-center justify-center text-base font-black shrink-0 w-11 h-11 bg-[#0d0c22] text-white rounded-2xl shadow-sm transition-transform duration-300 ease-out group-hover:scale-105">
                       {feed.name[0]}
                     </div>
                     <div>
-                      <h4 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#ea4c89] transition-colors duration-200">{feed.name}</h4>
+                      <h3 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{feed.name}</h3>
                       <p className="text-xs font-semibold uppercase tracking-wider text-[#ea4c89] mt-0.5">{feed.job}</p>
                     </div>
                   </div>
@@ -86,13 +87,13 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
           </p>
           <a 
             href={data.cta.href} 
-            className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white transition-all duration-200 rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_10px_28px_rgba(13,12,34,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+            className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_12px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
           >
             {data.cta.text}
           </a>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 };
 

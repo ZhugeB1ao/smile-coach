@@ -1,9 +1,10 @@
 import { SectionTitle, Container } from './SharedUI';
+import AnimatedSection from './AnimatedSection';
 import defaultContent from '../data/content.json';
 
 const PainPoints = ({ data = defaultContent.painPoints }) => {
   return (
-    <section id="pain-points" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
+    <AnimatedSection id="pain-points" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
       <Container>
         <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
         
@@ -12,10 +13,10 @@ const PainPoints = ({ data = defaultContent.painPoints }) => {
           {data.cards.map((card, i) => (
             <div
               key={i}
-              className="p-7 lg:p-8 rounded-[24px] bg-white border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
+              className="p-7 lg:p-8 rounded-[24px] bg-white border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between group"
             >
               <div>
-                <h3 className="mb-1 text-lg font-bold leading-snug lg:text-xl text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-200">
+                <h3 className="mb-1 text-lg font-bold leading-snug lg:text-xl text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">
                   {card.title}
                 </h3>
                 <p className="mb-4 text-xs font-black tracking-widest uppercase text-[#ea4c89]">
@@ -29,7 +30,7 @@ const PainPoints = ({ data = defaultContent.painPoints }) => {
         
         {/* Personal Story Section */}
         <div 
-          className="p-8 lg:p-12 bg-white rounded-[28px] border border-[#e7e7ec] shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:border-[#0d0c22] transition-all duration-300 max-w-4xl mx-auto relative overflow-hidden mb-12"
+          className="p-8 lg:p-12 bg-white rounded-[28px] border border-[#e7e7ec] shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out max-w-4xl mx-auto relative overflow-hidden mb-12"
         >
           <div className="relative z-10">
             <h3 className="mb-1 text-xl sm:text-2xl font-black text-[#0d0c22] tracking-tight">
@@ -61,9 +62,9 @@ const PainPoints = ({ data = defaultContent.painPoints }) => {
           {data.stats.map((stat, i) => (
             <div 
               key={i} 
-              className="p-8 text-center bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.04)] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 group"
+              className="p-8 text-center bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
             >
-              <p className="mb-1 text-4xl sm:text-5xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-200">{stat.value}</p>
+              <p className="mb-1 text-4xl sm:text-5xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{stat.value}</p>
               <p className="text-xs font-bold tracking-wider uppercase text-[#524b63]">{stat.label}</p>
             </div>
           ))}
@@ -71,7 +72,7 @@ const PainPoints = ({ data = defaultContent.painPoints }) => {
 
         {/* Empathy Message */}
         <div 
-          className="max-w-4xl p-8 mx-auto text-center bg-white border border-[#e7e7ec] rounded-[28px] shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:border-[#0d0c22] transition-all duration-300 lg:p-10"
+          className="max-w-4xl p-8 mx-auto text-center bg-white border border-[#e7e7ec] rounded-[28px] shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out lg:p-10"
         >
           <h3 className="mb-2 text-2xl sm:text-3xl font-black text-[#0d0c22] tracking-tight">
             ĐỒNG CẢM & THẤU HIỂU
@@ -87,7 +88,7 @@ const PainPoints = ({ data = defaultContent.painPoints }) => {
           </p>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 };
 

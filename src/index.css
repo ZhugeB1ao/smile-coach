@@ -7,8 +7,8 @@
   --color-dribbble-subtle: #6e6d7a;
   --color-dribbble-raised: #f3f3f6;
   --color-dribbble-border: #e7e7ec;
-  --color-dribbble-pink: #ea4c89;
-  --color-dribbble-pink-hover: #f082ac;
+  --color-dribbble-pink: #d62570;
+  --color-dribbble-pink-hover: #b81b5c;
 }
 
 html {
@@ -31,13 +31,66 @@ body {
   scroll-margin-top: 5rem;
 }
 
-/* Respect reduced motion preference for CSS animations */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+/* Ensure brand pink text meets WCAG AA contrast ratio (> 4.5:1) against white backgrounds */
+.text-\[\#ea4c89\] {
+  color: #d62570;
+}
+
+
+/* Section entrance animations & keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-150 { animation-delay: 150ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+
+/* Enhanced hover duration token and smooth interaction */
+.hover-smooth {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 300ms;
+}
+

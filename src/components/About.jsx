@@ -1,11 +1,12 @@
 import { FiCheck } from 'react-icons/fi';
 import { Container } from './SharedUI';
+import AnimatedSection from './AnimatedSection';
 import { getImage } from '../utils/images';
 import defaultContent from '../data/content.json';
 
 const About = ({ data = defaultContent.about }) => {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white border-t border-[#e7e7ec]">
+    <AnimatedSection id="about" className="py-20 lg:py-28 bg-white border-t border-[#e7e7ec]">
       <Container>
         {/* Header */}
         <div className="mb-16 text-center">
@@ -28,13 +29,13 @@ const About = ({ data = defaultContent.about }) => {
           {/* Left - Photo & Stats (Adjusted aspect to 3/2 to match hlv-mai-3.jpg 2000x1333 perfectly) */}
           <div className="lg:col-span-5">
             <div 
-              className="relative aspect-3/2 sm:aspect-4/3 lg:aspect-3/2 bg-[#f8f7fa] rounded-[28px] overflow-hidden border border-[#e7e7ec] shadow-[0_12px_32px_rgba(6,3,24,0.06)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.12)] transition-all duration-300 mb-6 group"
+              className="relative aspect-3/2 sm:aspect-4/3 lg:aspect-3/2 bg-[#f8f7fa] rounded-[28px] overflow-hidden border border-[#e7e7ec] shadow-[0_12px_32px_rgba(6,3,24,0.06)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.12)] hover:-translate-y-1 transition-all duration-500 ease-out mb-6 group"
             >
               {getImage(data.photo) ? (
                 <img
                   src={getImage(data.photo)}
                   alt={data.photoAlt || data.title}
-                  className="object-cover object-center w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
+                  className="object-cover object-center w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                   width="600"
                   height="400"
@@ -50,9 +51,9 @@ const About = ({ data = defaultContent.about }) => {
               {data.stats.map((st, i) => (
                 <div 
                   key={i} 
-                  className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_8px_20px_rgba(6,3,24,0.06)] hover:-translate-y-1 transition-all duration-300 group"
+                  className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
                 >
-                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-200">{st.value}</p>
+                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{st.value}</p>
                   <p className="mt-1 text-xs font-bold tracking-wider uppercase text-[#524b63]">{st.label}</p>
                 </div>
               ))}
@@ -80,7 +81,7 @@ const About = ({ data = defaultContent.about }) => {
                   href={data.websiteUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="font-bold text-[#ea4c89] underline decoration-[#ea4c89] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors"
+                  className="font-bold text-[#ea4c89] underline decoration-[#ea4c89] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors duration-300 ease-out"
                 >
                   {data.websiteLabel}
                   <span className="inline-block ml-1" aria-hidden="true">↗</span>
@@ -92,7 +93,7 @@ const About = ({ data = defaultContent.about }) => {
                 {data.goals.map((goal, i) => (
                   <div 
                     key={i} 
-                    className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-0.5 transition-all duration-200 group"
+                    className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                   >
                     <FiCheck className="w-5 h-5 text-[#ea4c89] shrink-0" strokeWidth={2.5} aria-hidden="true" />
                     <span className="text-sm sm:text-base font-bold text-[#0d0c22]">{goal.title}</span>
@@ -134,7 +135,7 @@ const About = ({ data = defaultContent.about }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {data.mindsetQuotes.map((q, i) => (
-                <div key={i} className="p-6 bg-white rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300">
+                <div key={i} className="p-6 bg-white rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:-translate-y-1 transition-all duration-300 ease-out">
                   <p className="italic text-[#524b63] text-sm sm:text-base leading-relaxed">&ldquo;{q}&rdquo;</p>
                 </div>
               ))}
@@ -177,7 +178,7 @@ const About = ({ data = defaultContent.about }) => {
             {data.solutionPillars.map((item, i) => (
               <div 
                 key={i} 
-                className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-1 transition-all duration-300 group"
+                className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
                 <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
                 <p className="text-xs sm:text-sm font-bold text-[#0d0c22]">{item}</p>
@@ -191,10 +192,10 @@ const About = ({ data = defaultContent.about }) => {
             {data.habitRequirements.map((item, i) => (
               <div 
                 key={i} 
-                className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+                className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
                 <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
-                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors">{item.label}</p>
+                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{item.label}</p>
               </div>
             ))}
           </div>
@@ -202,7 +203,7 @@ const About = ({ data = defaultContent.about }) => {
 
         {/* Philosophy Quote: Dark High-Contrast Accent Banner */}
         <div 
-          className="bg-[#0d0c22] text-white rounded-[32px] p-8 lg:p-14 text-center mb-16 shadow-[0_16px_40px_rgba(13,12,34,0.15)] hover:shadow-[0_24px_50px_rgba(13,12,34,0.25)] transition-shadow duration-300"
+          className="bg-[#0d0c22] text-white rounded-[32px] p-8 lg:p-14 text-center mb-16 shadow-[0_16px_40px_rgba(13,12,34,0.15)] hover:shadow-[0_24px_50px_rgba(13,12,34,0.25)] hover:-translate-y-1 transition-all duration-300 ease-out"
         >
           <p className="mb-6 text-2xl sm:text-3xl font-black leading-snug tracking-tight text-white max-w-3xl mx-auto">
             {data.philosophyQuote.prefix}
@@ -231,7 +232,7 @@ const About = ({ data = defaultContent.about }) => {
               {data.responsibility.paragraph1}
             </p>
 
-            <div className="p-6 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-sm hover:border-[#0d0c22] transition-colors">
+            <div className="p-6 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-sm hover:border-[#0d0c22] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 ease-out">
               <p className="text-base sm:text-lg font-bold text-[#0d0c22] italic">
                 &ldquo;{data.responsibility.quote}&rdquo;
               </p>
@@ -272,7 +273,7 @@ const About = ({ data = defaultContent.about }) => {
             return (
               <div 
                 key={i} 
-                className="overflow-hidden border border-[#e7e7ec] aspect-[2/3] sm:aspect-[3/5] bg-[#f8f7fa] rounded-[24px] group shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 relative"
+                className="overflow-hidden border border-[#e7e7ec] aspect-[2/3] sm:aspect-[3/5] bg-[#f8f7fa] rounded-[24px] group shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 ease-out relative"
               >
                 {getImage(imgItem.src) ? (
                   <img
@@ -295,7 +296,7 @@ const About = ({ data = defaultContent.about }) => {
 
         {/* Final Quote */}
         <div 
-          className="p-8 lg:p-12 bg-[#f8f7fa] rounded-[32px] border border-[#e7e7ec] text-center hover:shadow-[0_8px_24px_rgba(6,3,24,0.04)] transition-all duration-300"
+          className="p-8 lg:p-12 bg-[#f8f7fa] rounded-[32px] border border-[#e7e7ec] text-center hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:-translate-y-1 transition-all duration-300 ease-out"
         >
           <p className="text-2xl sm:text-3xl font-black leading-relaxed text-[#0d0c22] italic max-w-3xl mx-auto">
             &ldquo;{data.finalQuote.quote}&rdquo;
@@ -305,7 +306,7 @@ const About = ({ data = defaultContent.about }) => {
           </p>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 };
 

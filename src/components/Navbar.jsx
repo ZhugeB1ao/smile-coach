@@ -45,14 +45,14 @@ const Navbar = ({ data = defaultContent.navbar }) => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,box-shadow] duration-200 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,box-shadow,padding] duration-300 ease-out ${
         scrolled 
           ? 'bg-white/95 backdrop-blur-md border-b border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.04)] py-3.5' 
           : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-4'
       }`}
     >
       <Container className="flex items-center justify-between">
-        <a href={data.brand.href} className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group">
+        <a href={data.brand.href} className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group transition-transform duration-300 ease-out hover:scale-[1.02]">
           <span>{data.brand.prefix}</span>
           <span className="text-[#ea4c89]">{data.brand.suffix}</span>
         </a>
@@ -65,7 +65,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
               <a 
                 key={link.id} 
                 href={`#${link.id}`}
-                className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] ${
+                className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] ${
                   isActive 
                     ? 'bg-[#f3f3f6] text-[#0d0c22]' 
                     : 'text-[#524b63] hover:text-[#0d0c22] hover:bg-[#f3f3f6]/60'
@@ -78,7 +78,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
           <div className="pl-3 ml-2 border-l border-[#e7e7ec]">
             <a 
               href={data.cta.href} 
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-bold text-white transition-all duration-150 rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm hover:shadow active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm hover:shadow-md hover:scale-[1.03] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={15} aria-hidden="true" />
@@ -88,18 +88,19 @@ const Navbar = ({ data = defaultContent.navbar }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="p-2 transition-colors rounded-full xl:hidden text-[#0d0c22] hover:bg-[#f3f3f6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22]"
+          className="p-2 transition-colors duration-300 ease-out rounded-full xl:hidden text-[#0d0c22] hover:bg-[#f3f3f6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22]"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Đóng menu' : 'Mở menu'}
           aria-expanded={isOpen}
         >
+          <span className="sr-only">{isOpen ? 'Đóng menu' : 'Mở menu'}</span>
           {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </Container>
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-white border-b border-[#e7e7ec] shadow-lg xl:hidden transition-all duration-200 ease-in-out ${
+        className={`overflow-hidden bg-white border-b border-[#e7e7ec] shadow-lg xl:hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none border-transparent'
         }`}
       >
@@ -109,7 +110,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
               key={link.id} 
               href={`#${link.id}`}
               onClick={() => setIsOpen(false)}
-              className={`px-4 py-2.5 rounded-xl text-sm font-bold transition-colors ${
+              className={`px-4 py-2.5 rounded-xl text-sm font-bold transition-colors duration-300 ease-out ${
                 activeSection === link.id 
                   ? 'bg-[#f3f3f6] text-[#0d0c22]' 
                   : 'text-[#524b63] hover:text-[#0d0c22] hover:bg-[#f3f3f6]/60'
@@ -122,7 +123,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
             <a 
               href={data.cta.href} 
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center w-full gap-2 px-5 py-3.5 text-sm font-bold text-white transition-all duration-150 rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm active:scale-95"
+              className="flex items-center justify-center w-full gap-2 px-5 py-3.5 text-sm font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm hover:shadow active:scale-95"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={16} aria-hidden="true" />

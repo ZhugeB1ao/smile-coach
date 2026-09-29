@@ -1,7 +1,7 @@
 
 export const Card = ({ children, className = "" }) => (
   <div 
-    className={`p-6 sm:p-8 rounded-[24px] bg-white border border-[#e7e7ec] shadow-[0_2px_4px_rgba(6,3,24,0.04)] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:border-[#0d0c22]/20 transition-all duration-200 ${className}`}
+    className={`p-6 sm:p-8 rounded-[24px] bg-white border border-[#e7e7ec] shadow-[0_2px_4px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_32px_rgba(6,3,24,0.08)] hover:border-[#0d0c22]/20 hover:-translate-y-1 transition-all duration-300 ease-out ${className}`}
   >
     {children}
   </div>
@@ -16,7 +16,7 @@ export const SectionTitle = ({ children, subtitle, dark = false }) => (
     </h2>
     {subtitle && (
       <p 
-        className={`mt-3 text-xs sm:text-sm font-black uppercase tracking-widest ${dark ? 'text-[#ecebf0]/75' : 'text-[#ea4c89]'}`}
+        className={`mt-3 text-xs sm:text-sm font-black uppercase tracking-widest ${dark ? 'text-[#ecebf0]/90' : 'text-[#d62570]'}`}
       >
         {subtitle}
       </p>

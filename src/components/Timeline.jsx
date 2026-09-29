@@ -1,10 +1,11 @@
 import { SectionTitle, Container } from './SharedUI';
+import AnimatedSection from './AnimatedSection';
 import { getImage } from '../utils/images';
 import defaultContent from '../data/content.json';
 
 const Timeline = ({ data = defaultContent.timeline }) => {
   return (
-    <section id="timeline" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
+    <AnimatedSection id="timeline" className="py-20 lg:py-28 bg-[#f8f7fa] border-y border-[#e7e7ec]">
       <Container>
         <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
         
@@ -17,7 +18,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
             return (
               <div 
                 key={i}
-                className="group bg-white rounded-[28px] border border-[#e7e7ec] p-6 lg:p-10 shadow-[0_4px_16px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-[28px] border border-[#e7e7ec] p-6 lg:p-10 shadow-[0_4px_16px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 ease-out"
               >
                 <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 lg:gap-12`}>
                   {/* Image Side - Full Display Layout without cropping */}
@@ -27,7 +28,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                         <img 
                           src={imgSrc} 
                           alt={step.title}
-                          className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                          className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-105"
                           loading="lazy"
                           width="500"
                           height="350"
@@ -42,7 +43,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                   
                   {/* Content Side */}
                   <div className="w-full lg:w-1/2">
-                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#ea4c89] transition-colors duration-200">
+                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">
                       {step.title}
                     </h3>
                     
@@ -64,7 +65,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
 
         {/* Result After 3 Weeks */}
         <div 
-          className="group bg-white p-6 sm:p-8 lg:p-12 rounded-[32px] border-2 border-dribbble-border shadow-[0_8px_28px_rgba(6,3,24,0.06)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.1)] hover:-translate-y-1 transition-all duration-300 mb-16"
+          className="group bg-white p-6 sm:p-8 lg:p-12 rounded-[32px] border-2 border-dribbble-border shadow-[0_8px_28px_rgba(6,3,24,0.06)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.12)] hover:-translate-y-1.5 transition-all duration-300 ease-out mb-16"
         >
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
             {/* Result Image - Full Display */}
@@ -74,7 +75,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                   <img 
                     src={getImage(data.result.image)} 
                     alt={data.result.title}
-                    className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                    className="w-full h-auto max-h-[360px] sm:max-h-[420px] object-contain rounded-[16px] transition-transform duration-500 ease-out group-hover:scale-105"
                     loading="lazy"
                     width="500"
                     height="350"
@@ -109,7 +110,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
         {/* Pricing Card */}
         <div className="max-w-2xl mx-auto">
           <div 
-            className="bg-white p-8 sm:p-12 rounded-[32px] border border-[#e7e7ec] text-[#0d0c22] text-center shadow-[0_16px_40px_rgba(6,3,24,0.08)] hover:shadow-[0_24px_50px_rgba(6,3,24,0.12)] transition-all duration-300"
+            className="bg-white p-8 sm:p-12 rounded-[32px] border border-[#e7e7ec] text-[#0d0c22] text-center shadow-[0_16px_40px_rgba(6,3,24,0.08)] hover:shadow-[0_24px_50px_rgba(6,3,24,0.14)] hover:-translate-y-1 transition-all duration-300 ease-out"
           >
             <h3 className="mb-1 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0d0c22]">{data.pricingCard.specialPrice}</h3>
             <p className="mb-2 text-base sm:text-lg font-bold line-through text-[#524b63]/60">{data.pricingCard.originalPrice}</p>
@@ -119,7 +120,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
             <div>
               <a 
                 href={data.pricingCard.cta.href} 
-                className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 text-base sm:text-lg font-bold text-white transition-all duration-200 rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_10px_28px_rgba(13,12,34,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 text-base sm:text-lg font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_12px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
               >
                 {data.pricingCard.cta.text}
               </a>
@@ -127,7 +128,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
           </div>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 };
 

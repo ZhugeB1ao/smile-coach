@@ -1,10 +1,11 @@
 import { SectionTitle, Container } from './SharedUI';
+import AnimatedSection from './AnimatedSection';
 import { getImage } from '../utils/images';
 import defaultContent from '../data/content.json';
 
 const Offer = ({ data = defaultContent.offer }) => {
   return (
-    <section id="offer" className="py-20 lg:py-28 bg-white">
+    <AnimatedSection id="offer" className="py-20 lg:py-28 bg-white">
       <Container>
         <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
         
@@ -26,7 +27,7 @@ const Offer = ({ data = defaultContent.offer }) => {
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-10">
               {/* Coach Info */}
               <div className="w-full lg:w-1/2">
-                <div className="p-6 lg:p-8 bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:border-[#0d0c22] transition-all duration-300">
+                <div className="p-6 lg:p-8 bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out">
                   <div className="flex items-start gap-5">
                     {/* Coach Image */}
                     <div className="flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 overflow-hidden rounded-2xl border border-[#e7e7ec] shrink-0 bg-[#f3f3f6]">
@@ -56,7 +57,7 @@ const Offer = ({ data = defaultContent.offer }) => {
               
               {/* Coach Images - Adjusted aspect ratio to 4/5 with object-top and object-contain container so coach is fully visible */}
               <div className="grid w-full grid-cols-2 gap-4 lg:w-1/2">
-                <div className="group relative flex items-center justify-center overflow-hidden bg-[#f3f3f6] border border-[#e7e7ec] rounded-[24px] aspect-4/5 shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300">
+                <div className="group relative flex items-center justify-center overflow-hidden bg-[#f3f3f6] border border-[#e7e7ec] rounded-[24px] aspect-4/5 shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_32px_rgba(6,3,24,0.1)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out">
                   {getImage(data.bonus.coach.image1) ? (
                     <img
                       src={getImage(data.bonus.coach.image1)}
@@ -70,7 +71,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                     <p className="px-4 text-xs italic text-center text-[#524b63]">{data.bonus.coach.imagePlaceholder1}</p>
                   )}
                 </div>
-                <div className="group relative flex items-center justify-center overflow-hidden bg-[#f3f3f6] border border-[#e7e7ec] rounded-[24px] aspect-4/5 shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300">
+                <div className="group relative flex items-center justify-center overflow-hidden bg-[#f3f3f6] border border-[#e7e7ec] rounded-[24px] aspect-4/5 shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_32px_rgba(6,3,24,0.1)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out">
                   {getImage(data.bonus.coach.image2) ? (
                     <img
                       src={getImage(data.bonus.coach.image2)}
@@ -93,11 +94,11 @@ const Offer = ({ data = defaultContent.offer }) => {
                 {data.bonus.extraBonuses.map((item, i) => (
                   <div 
                     key={i}
-                    className="p-6 lg:p-8 bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+                    className="p-6 lg:p-8 bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
                   >
-                    <h4 className="mb-1 text-base sm:text-lg font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-200">
+                    <h3 className="mb-1 text-base sm:text-lg font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">
                       {item.title}
-                    </h4>
+                    </h3>
                     <div className="flex items-center gap-2 mb-3 text-xs font-black tracking-widest uppercase text-[#ea4c89]">
                       <span>{item.tag || `QUÀ TẶNG ${item.number}`}</span>
                       <span className="text-[#524b63]/40">•</span>
@@ -118,7 +119,7 @@ const Offer = ({ data = defaultContent.offer }) => {
         {/* Pricing Section */}
         <div className="max-w-4xl mx-auto">
           <div 
-            className="bg-[#f8f7fa] p-8 lg:p-10 rounded-[32px] border border-[#e7e7ec] text-center mb-10 hover:shadow-[0_8px_24px_rgba(6,3,24,0.04)] transition-all duration-300"
+            className="bg-[#f8f7fa] p-8 lg:p-10 rounded-[32px] border border-[#e7e7ec] text-center mb-10 hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:-translate-y-0.5 transition-all duration-300 ease-out"
           >
             <p className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-black line-through text-[#524b63]/40 tracking-tight">{data.tuition.originalPrice}</p>
             <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]">{data.tuition.intro}</p>
@@ -146,9 +147,9 @@ const Offer = ({ data = defaultContent.offer }) => {
                 {data.specialPromotion.options.map((opt, i) => (
                   <div 
                     key={i} 
-                    className="p-6 text-center border bg-white/5 backdrop-blur-sm rounded-[24px] border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group"
+                    className="p-6 text-center border bg-white/5 backdrop-blur-sm rounded-[24px] border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 ease-out group"
                   >
-                    <h4 className="mb-1 text-base font-bold text-white group-hover:text-[#ea4c89] transition-colors">{opt.title}</h4>
+                    <h4 className="mb-1 text-base font-bold text-white group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{opt.title}</h4>
                     <p className="mb-3 text-xs font-black tracking-widest uppercase text-[#ea4c89]">
                       ƯU ĐÃI 0{i + 1}
                     </p>
@@ -160,7 +161,7 @@ const Offer = ({ data = defaultContent.offer }) => {
               </div>
 
               {/* Free Announcement */}
-              <div className="p-8 mb-8 text-center bg-white shadow-xl rounded-[28px] lg:p-10 text-[#0d0c22] hover:shadow-2xl transition-shadow duration-300">
+              <div className="p-8 mb-8 text-center bg-white shadow-xl rounded-[28px] lg:p-10 text-[#0d0c22] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-out">
                 <h3 className="mb-2 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0d0c22]">{data.specialPromotion.announcement.price}</h3>
                 <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]">{data.specialPromotion.announcement.subtitle}</p>
                 <p className="max-w-xl mx-auto text-sm sm:text-base leading-relaxed text-[#524b63]">
@@ -185,7 +186,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                 </p>
                 <a 
                   href={data.specialPromotion.cta.href}
-                  className="inline-flex items-center justify-center px-10 py-5 text-base sm:text-lg font-bold text-white transition-all duration-200 rounded-full bg-[#ea4c89] hover:bg-[#f082ac] shadow-[0_8px_24px_rgba(234,76,137,0.35)] hover:shadow-[0_12px_32px_rgba(234,76,137,0.5)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ea4c89] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22]"
+                  className="inline-flex items-center justify-center px-10 py-5 text-base sm:text-lg font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#ea4c89] hover:bg-[#f082ac] shadow-[0_8px_24px_rgba(234,76,137,0.35)] hover:shadow-[0_14px_36px_rgba(234,76,137,0.55)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ea4c89] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22]"
                 >
                   {data.specialPromotion.cta.text}
                 </a>
@@ -194,7 +195,7 @@ const Offer = ({ data = defaultContent.offer }) => {
           </div>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 };
 

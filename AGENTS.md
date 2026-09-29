@@ -43,3 +43,148 @@ This project is indexed by GitNexus as **smile-coach** (52 symbols, 110 relation
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+# SEO Optimization Guide for a One-Page React Landing Page
+
+This document provides a set of lightweight, highly effective technical solutions and On-Page structures specifically tailored for a **One-Page Landing Page** built with React (Vite/CRA).
+
+---
+
+## 1. Fix the "Empty HTML File" Flaw (Pre-rendering)
+
+By default, a Client-Side Rendered (CSR) React app outputs an almost empty `index.html` file. Search engine bots have to wait for JavaScript to load and execute before seeing your content, which harms your SEO ranking. Since you only have a single page, you should generate static HTML at build time.
+
+* **If using Vite:** Install `vite-react-ssg` or configure a basic prerender script. When you run `npm run build`, it crawls your interface and injects the actual text and structure directly into `dist/index.html`.
+* **Alternative Solution:** Use a service like **Prerender.io** (free tier available for small sites). It detects search engine crawlers and serves them a fully pre-rendered static HTML snapshot automatically.
+
+---
+
+## 2. Configure Hardcoded Meta Tags Directly in `index.html`
+
+Because your landing page does not switch between different URLs or views, you **do not need** heavy runtime libraries like `react-helmet-async`. Simply open the `index.html` file at the root of your project and manually fill in these standard SEO tags:
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Title and Description -->
+  <title>Product/Service Name - The Biggest Benefit the User Gets</title>
+  <meta name="description" content="A compelling summary under 160 characters containing your target focus keyword to maximize your click-through rate (CTR)." />
+  
+  <!-- Canonical Tag to prevent duplicate content penalties from Ad campaigns (FB/Google Ads) -->
+  <link rel="canonical" href="https://yourdomain.com" />
+
+  <!-- Open Graph / Facebook (Ensures beautiful rich previews when shared on Social Media) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Catchy title for social media sharing" />
+  <meta property="og:description" content="Engaging summary for social media previews" />
+  <meta property="og:image" content="https://yourdomain.comthumbnail-share.jpg" />
+</head>
+```
+
+---
+
+## 3. Structure the Scrolling Flow Using Semantic HTML
+
+Organize your React components into a logical hierarchy using meaningful HTML tags. Make sure there is **exactly one `<h1>` tag** on the entire page.
+
+```jsx
+function LandingPage() {
+  return (
+    <>
+      {/* SECTION 1: Hero Section (Top of the page) */}
+      <header> 
+        {/* The single H1 tag containing your primary focus keyword */}
+        <h1>The Ultimate Sales Management Solution for Small Businesses</h1>
+        <button>Get Started Now</button>
+      </header>
+
+      <main>
+        {/* SECTION 2: Key Features / Benefits */}
+        <section id="features">
+          <h2>Our Core Features</h2> {/* Use H2 for main section titles */}
+          <div>
+            <h3>Automated Reporting</h3> {/* Use H3 for sub-features or points */}
+            <p>A detailed description highlighting how this feature solves a user pain point...</p>
+          </div>
+        </section>
+
+        {/* SECTION 3: Social Proof (Testimonials) */}
+        <section id="testimonials">
+          <h2>What Our Customers Say</h2>
+          {/* Always add descriptive alt attributes containing secondary keywords */}
+          <img src="user-avatar.webp" alt="Review from customer John Doe about our service" />
+        </section>
+
+        {/* SECTION 4: Frequently Asked Questions (FAQ) */}
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          {/* Place your FAQ Accordion items here */}
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2026 Your Brand Name. All rights reserved.</p>
+      </footer>
+    </>
+  );
+}
+```
+
+---
+
+## 4. Boost Loading Speed (Optimize Core Web Vitals)
+
+On a single-page site, all content lives on one page, meaning you must keep the initial JavaScript bundle as light as possible to score well on Largest Contentful Paint (LCP).
+
+* **Lazy Load Below-the-Fold Components:** Sections that are hidden when the page first loads (like *Testimonials* or the *FAQ* at the bottom) shouldn't block the initial render. Use `React.lazy()` and `Suspense`:
+
+  ```jsx
+  import React, { Suspense } from 'react';
+  const FAQSection = React.lazy(() => import('./components/FAQSection'));
+
+  function App() {
+    return (
+      <div>
+        {/* Critical top content loads instantly */}
+        <HeroSection />
+        
+        {/* Non-critical bottom content defers loading */}
+        <Suspense fallback={<div>Loading elements...</div>}>
+          <FAQSection />
+        </Suspense>
+      </div>
+    );
+  }
+  ```
+
+* **Optimize Images:** Convert all generic images (`.png`/`.jpg`) into next-gen formats like `.webp` or `.avif`. Add the `loading="lazy"` attribute to every image located outside the initial viewport.
+
+---
+
+## 5. Deploy `robots.txt` and `sitemap.xml` Manually
+
+Since your app contains exactly one URL, you do not need automated code scripts to build your sitemap. Write these two files by hand and drop them into the `public/` directory of your React project (Vite will move them to the root folder automatically upon building):
+
+### File: `public/robots.txt`
+```text
+User-agent: *
+Allow: /
+Sitemap: https://yourdomain.comsitemap.xml
+```
+
+### File: `public/sitemap.xml`
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+   <url>
+      <loc>https://yourdomain.com</loc>
+      <lastmod>2026-09-29</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+</urlset>
+```
+
+---
