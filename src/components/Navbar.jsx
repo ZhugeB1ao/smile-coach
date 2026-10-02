@@ -9,10 +9,18 @@ const Navbar = ({ data = defaultContent.navbar }) => {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 20;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Intersection Observer for active section
     const observerOptions = {
@@ -24,7 +32,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+          setActiveSection((prev) => (prev !== entry.target.id ? entry.target.id : prev));
         }
       });
     };
@@ -60,18 +68,32 @@ const Navbar = ({ data = defaultContent.navbar }) => {
     };
   }, [isOpen]);
 
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, '', `#${id}`);
+    }
+  };
+
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-out ${
+        className={`fixed top-0 left-0 w-full z-50 transition-[background-color,border-color,box-shadow] duration-200 ease-out ${
           scrolled || isOpen
             ? 'bg-white/95 backdrop-blur-md border-b border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.04)]' 
             : 'bg-white/80 backdrop-blur-sm border-b border-transparent'
         }`}
       >
-        <div className={`transition-[padding] duration-300 ${scrolled ? 'py-3' : 'py-3.5 sm:py-4'}`}>
+        <div className="py-3.5 sm:py-4">
           <Container className="flex items-center justify-between">
-            <a href={data.brand.href} className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group transition-transform duration-300 ease-out hover:scale-[1.02]">
+            <a 
+              href={data.brand.href} 
+              onClick={(e) => scrollToSection(e, 'hero')}
+              className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group transition-transform duration-300 ease-out hover:scale-[1.02]"
+            >
               <span>{data.brand.prefix}</span>
               <span className="text-[#0068A8]">{data.brand.suffix}</span>
             </a>
@@ -84,7 +106,8 @@ const Navbar = ({ data = defaultContent.navbar }) => {
                   <a 
                     key={link.id} 
                     href={`#${link.id}`}
-                    className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] ${
+                    onClick={(e) => scrollToSection(e, link.id)}
+                    className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] ${
                       isActive 
                         ? 'bg-[#f3f3f6] text-[#0d0c22]' 
                         : 'text-[#524b63] hover:text-[#0068A8] hover:bg-[#f3f3f6]/60'
@@ -108,7 +131,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
 
             {/* Mobile Toggle */}
             <button 
-              className="p-2 transition-colors duration-300 ease-out rounded-full xl:hidden text-[#0d0c22] hover:bg-[#f3f3f6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22]"
+              className="p-2 transition-colors duration-200 ease-out rounded-full xl:hidden text-[#0d0c22] hover:bg-[#f3f3f6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22]"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Đóng menu' : 'Mở menu'}
               aria-expanded={isOpen}
@@ -134,7 +157,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
                 <a 
                   key={link.id} 
                   href={`#${link.id}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => scrollToSection(e, link.id)}
                   className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-colors duration-200 ease-out ${
                     isActive 
                       ? 'bg-sky-50 text-[#0068A8]' 
