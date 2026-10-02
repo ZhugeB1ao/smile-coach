@@ -14,10 +14,10 @@ const Benefits = ({ data = defaultContent.benefits }) => {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#0d0c22] leading-[1.15] mb-3">
             {data.heading}{' '}
-            <span className="text-[#059669]">{data.headingHighlight}</span>
+            <span className="text-[#0068A8]">{data.headingHighlight}</span>
           </h2>
           {data.badge && (
-            <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]">
+            <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#0068A8]">
               {data.badge}
             </p>
           )}
@@ -59,9 +59,9 @@ const Benefits = ({ data = defaultContent.benefits }) => {
                   key={i}
                   className="flex items-start gap-3.5 p-4 rounded-[20px] border border-transparent hover:border-[#e7e7ec] hover:bg-[#f8f7fa] hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                 >
-                  <FiCheck className="w-5 h-5 text-[#059669] shrink-0 mt-1 transition-transform duration-300 ease-out group-hover:scale-110" strokeWidth={2.5} aria-hidden="true" />
+                  <FiCheck className="w-5 h-5 text-[#0068A8] shrink-0 mt-1 transition-transform duration-300 ease-out group-hover:scale-110" strokeWidth={2.5} aria-hidden="true" />
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d0c22] leading-snug group-hover:text-[#059669] transition-colors duration-300 ease-out">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0d0c22] leading-snug group-hover:text-[#0284c7] transition-colors duration-300 ease-out">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-sm sm:text-base text-[#524b63] leading-relaxed">
@@ -85,26 +85,26 @@ const Benefits = ({ data = defaultContent.benefits }) => {
             {data.targetAudiences.map((aud, i) => (
               <div 
                 key={i} 
-                className="p-6 sm:p-7 text-center bg-white rounded-[24px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
+                className="p-6 sm:p-7 text-center bg-white rounded-[24px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0068A8] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
               >
-                <span className="block text-2xl font-black text-[#059669] mb-2 tracking-tight transition-transform duration-300 ease-out group-hover:scale-105">
+                <span className="block text-2xl font-black text-[#0068A8] mb-2 tracking-tight transition-transform duration-300 ease-out group-hover:scale-105">
                   0{i + 1}
                 </span>
-                <h4 className="mb-2 text-lg font-bold text-[#0d0c22] group-hover:text-[#059669] transition-colors duration-300 ease-out">{aud.title}</h4>
+                <h4 className="mb-2 text-lg font-bold text-[#0d0c22] group-hover:text-[#0284c7] transition-colors duration-300 ease-out">{aud.title}</h4>
                 <p className="text-sm text-[#524b63] leading-relaxed">{aud.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Time Commitment Card */}
-          <div className="p-8 text-center text-white bg-[#0d0c22] rounded-[24px] shadow-[0_12px_32px_rgba(6,3,24,0.12)] hover:shadow-[0_20px_48px_rgba(6,3,24,0.22)] hover:-translate-y-1 transition-all duration-300 ease-out">
-            <p className="text-xs sm:text-sm uppercase tracking-widest text-[#ecebf0]/80 font-bold mb-1">
+          <div className="p-8 text-center text-white bg-gradient-to-br from-[#0c1f38] to-[#162d4d] border border-sky-500/20 rounded-[24px] shadow-[0_12px_32px_rgba(12,31,56,0.25)] hover:shadow-[0_20px_48px_rgba(12,31,56,0.35)] hover:-translate-y-1 transition-all duration-300 ease-out">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-sky-200/90 font-bold mb-1">
               {data.timeCommitment.prefix}
             </p>
             <p className="text-4xl sm:text-5xl font-black text-white tracking-tight my-2">
               {data.timeCommitment.highlight}
             </p>
-            <p className="text-sm sm:text-base text-[#ecebf0]/90">
+            <p className="text-sm sm:text-base text-slate-200/90">
               {data.timeCommitment.suffix}
             </p>
           </div>
@@ -114,7 +114,7 @@ const Benefits = ({ data = defaultContent.benefits }) => {
         <div className="mt-12 text-center">
           <a 
             href={data.cta.href} 
-            className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_12px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+            className="inline-flex items-center justify-center px-10 py-3.5 text-base font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
           >
             {data.cta.text}
           </a>

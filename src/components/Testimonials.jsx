@@ -20,15 +20,15 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                 {/* Header with avatar, name, and rating */}
                 <div className="flex items-center justify-between gap-4 mb-5">
                   <div className="flex items-center gap-3.5">
-                    <div className="flex items-center justify-center text-base font-black shrink-0 w-11 h-11 bg-[#0d0c22] text-white rounded-2xl shadow-sm transition-transform duration-300 ease-out group-hover:scale-105">
+                    <div className="flex items-center justify-center text-base font-black shrink-0 w-11 h-11 bg-gradient-to-br from-[#0284c7] to-[#0068a8] text-white rounded-2xl shadow-sm transition-transform duration-300 ease-out group-hover:scale-105">
                       {feed.name[0]}
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#059669] transition-colors duration-300 ease-out">{feed.name}</h3>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-[#059669] mt-0.5">{feed.job}</p>
+                      <h3 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#0284c7] transition-colors duration-300 ease-out">{feed.name}</h3>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-[#0068A8] mt-0.5">{feed.job}</p>
                     </div>
                   </div>
-                  <div className="flex gap-1 text-[#10b981]" role="img" aria-label="5 sao">
+                  <div className="flex gap-1 text-amber-400" role="img" aria-label="5 sao">
                     {Array(5).fill(0).map((_, starIndex) => (
                       <Star key={starIndex} size={15} fill="currentColor" aria-hidden="true" />
                     ))}
@@ -36,7 +36,7 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                 </div>
 
                 {/* Highlight text without border/bg */}
-                <p className="mb-3 text-xs font-black uppercase tracking-wider text-[#059669]">
+                <p className="mb-3 text-xs font-black uppercase tracking-wider text-[#0068A8]">
                   {feed.highlight}
                 </p>
 
@@ -67,7 +67,7 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                     <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
                   </div>
                   <div className="flex flex-col items-center justify-center border border-[#e7e7ec] bg-[#f8f7fa] rounded-[16px] aspect-4/3">
-                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#059669]">Sau</p>
+                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#0068A8]">Sau</p>
                     <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
                   </div>
                 </div>
@@ -82,12 +82,12 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
         >
           <p className="mb-6 text-lg sm:text-xl font-medium text-[#0d0c22]">
             {data.cta.descPrefix}
-            <span className="font-extrabold text-[#059669]">{data.cta.highlight}</span>
+            <span className="font-extrabold text-[#0068A8]">{data.cta.highlight}</span>
             {data.cta.descSuffix}
           </p>
           <a 
             href={data.cta.href} 
-            className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_12px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+            className="inline-flex items-center justify-center px-10 py-3.5 text-base font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
           >
             {data.cta.text}
           </a>

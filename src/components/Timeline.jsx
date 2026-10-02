@@ -43,12 +43,12 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                   
                   {/* Content Side */}
                   <div className="w-full lg:w-1/2">
-                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#059669] transition-colors duration-300 ease-out">
+                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#0284c7] transition-colors duration-300 ease-out">
                       {step.title}
                     </h3>
                     
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-black tracking-widest uppercase text-[#059669]">
+                      <span className="text-xs font-black tracking-widest uppercase text-[#0068A8]">
                         {step.week}
                       </span>
                       <span className="text-[#524b63]/40">•</span>
@@ -93,14 +93,14 @@ const Timeline = ({ data = defaultContent.timeline }) => {
               <h3 className="mb-2 text-2xl sm:text-3xl font-black text-[#0d0c22] tracking-tight">
                 {data.result.title}
               </h3>
-              <p className="mb-5 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]">
+              <p className="mb-5 text-xs sm:text-sm font-black uppercase tracking-widest text-[#0068A8]">
                 KẾT QUẢ VƯỢT TRỘI
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
                 {data.result.descPrefix}
-                <span className="font-bold text-[#0d0c22] underline decoration-[#059669] decoration-2 underline-offset-4">{data.result.highlight1}</span>
+                <span className="font-bold text-[#0d0c22] underline decoration-[#0068A8] decoration-2 underline-offset-4">{data.result.highlight1}</span>
                 {data.result.descMid}
-                <span className="font-bold text-[#0d0c22] underline decoration-[#059669] decoration-2 underline-offset-4">{data.result.highlight2}</span>
+                <span className="font-bold text-[#0d0c22] underline decoration-[#0068A8] decoration-2 underline-offset-4">{data.result.highlight2}</span>
                 {data.result.descSuffix}
               </p>
             </div>
@@ -114,13 +114,13 @@ const Timeline = ({ data = defaultContent.timeline }) => {
           >
             <h3 className="mb-1 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0d0c22]">{data.pricingCard.specialPrice}</h3>
             <p className="mb-2 text-base sm:text-lg font-bold line-through text-[#524b63]/60">{data.pricingCard.originalPrice}</p>
-            <p className="mb-3 text-xs sm:text-sm font-black tracking-widest uppercase text-[#059669]">{data.pricingCard.trialDesc}</p>
+            <p className="mb-3 text-xs sm:text-sm font-black tracking-widest uppercase text-[#0068A8]">{data.pricingCard.trialDesc}</p>
             <p className="mb-8 text-xs sm:text-sm font-bold text-rose-600 tracking-wide">{data.pricingCard.urgency}</p>
 
             <div>
               <a 
                 href={data.pricingCard.cta.href} 
-                className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 text-base sm:text-lg font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] hover:shadow-[0_12px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-3.5 text-base sm:text-lg font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
               >
                 {data.pricingCard.cta.text}
               </a>

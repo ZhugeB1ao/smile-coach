@@ -12,12 +12,12 @@ const Hero = ({ data = defaultContent.hero }) => {
       <Container className="grid items-center gap-10 lg:gap-14 md:grid-cols-12">
         <div className="text-center md:col-span-7 md:text-left">
           <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight text-[#0d0c22] text-balance animate-fade-in-up">
-            {data.title.line1} <span className="text-[#059669]">{data.title.highlight}</span> <br />
+            {data.title.line1} <span className="text-[#0068A8]">{data.title.highlight}</span> <br />
             {data.title.line2} <br className="hidden sm:inline" />
             {data.title.line3}
           </h1>
 
-          <p className="mb-6 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669] animate-fade-in-up animation-delay-100">
+          <p className="mb-6 text-xs sm:text-sm font-black uppercase tracking-widest text-[#0068A8] animate-fade-in-up animation-delay-100">
             SmileCoach 1:1 Experience
           </p>
 
@@ -28,7 +28,7 @@ const Hero = ({ data = defaultContent.hero }) => {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start animate-fade-in-up animation-delay-200">
             <a 
               href={data.cta.href} 
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-[0_8px_20px_rgba(13,12,34,0.18)] hover:shadow-[0_14px_32px_rgba(13,12,34,0.28)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2 group"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-base font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2 group"
             >
               <span>{data.cta.text}</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1.5" aria-hidden="true" />
@@ -59,8 +59,8 @@ const Hero = ({ data = defaultContent.hero }) => {
           
           {/* Clean Floating Badge with subtle indicator */}
           <div className="absolute items-center hidden gap-3.5 px-5 py-3.5 bg-white/95 backdrop-blur-md border border-[#e7e7ec] shadow-[0_12px_24px_rgba(6,3,24,0.08)] -bottom-6 -left-6 rounded-2xl sm:flex hover:scale-[1.05] hover:-translate-y-1.5 hover:shadow-[0_16px_32px_rgba(6,3,24,0.12)] transition-all duration-300 ease-out cursor-default animate-float-slow">
-            <div className="flex items-center justify-center w-10 h-10 text-white rounded-xl bg-[#0d0c22] font-black text-sm">
-              <span className="text-[#10b981]">★</span>
+            <div className="flex items-center justify-center w-10 h-10 text-white rounded-xl bg-[#0068A8] font-black text-sm">
+              <span className="text-amber-400">★</span>
             </div>
             <div>
               <p className="text-xl font-black tabular-nums text-[#0d0c22] leading-tight">{data.badge.stat}</p>

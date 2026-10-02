@@ -12,7 +12,7 @@ const footerIconMap = {
 
 const Footer = ({ data = defaultContent.footer }) => {
   return (
-    <AnimatedSection as="footer" className="bg-[#0d0c22] border-t border-white/10 py-20 lg:py-28 text-white">
+    <AnimatedSection as="footer" className="bg-[#0c192c] border-t border-slate-800/80 py-20 lg:py-28 text-white">
       <Container className="flex flex-col items-center text-center">
         <SectionTitle subtitle={data.subtitle} dark>{data.title}</SectionTitle>
         
@@ -31,7 +31,7 @@ const Footer = ({ data = defaultContent.footer }) => {
                   href={card.href} 
                   aria-label={card.ariaLabel} 
                   {...linkProps}
-                  className="p-6 lg:p-8 bg-brand-gradient rounded-[24px] transition-all duration-300 ease-out hover:opacity-95 hover:shadow-[0_16px_36px_rgba(2,132,199,0.35)] hover:-translate-y-1.5 active:scale-95 flex flex-col items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22] group"
+                  className="p-6 lg:p-8 bg-brand-gradient rounded-[24px] transition-all duration-300 ease-out hover:opacity-95 hover:shadow-[0_16px_36px_rgba(2,132,199,0.35)] hover:-translate-y-1.5 active:scale-95 flex flex-col items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c192c] group"
                 >
                   <Icon className="w-8 h-8 lg:w-9 lg:h-9 mx-auto mb-3.5 text-white transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true" />
                   <h3 className="font-bold mb-1.5 text-sm lg:text-base text-white">{card.title}</h3>
@@ -46,7 +46,7 @@ const Footer = ({ data = defaultContent.footer }) => {
                 href={card.href} 
                 aria-label={card.ariaLabel} 
                 {...linkProps}
-                className="p-6 lg:p-8 bg-white/5 rounded-[24px] border border-white/10 hover:border-white/20 hover:bg-white/10 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col items-center justify-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0c22]"
+                className="p-6 lg:p-8 bg-white/5 rounded-[24px] border border-white/10 hover:border-white/20 hover:bg-white/10 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col items-center justify-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c192c]"
               >
                 <Icon className="w-8 h-8 lg:w-9 lg:h-9 mx-auto mb-3.5 text-brand-accent transition-transform duration-300 ease-out group-hover:scale-110" aria-hidden="true" />
                 <h3 className="font-bold mb-1.5 text-sm lg:text-base text-white">{card.title}</h3>

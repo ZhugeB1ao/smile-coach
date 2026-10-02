@@ -17,7 +17,7 @@ const About = ({ data = defaultContent.about }) => {
           </h2>
           {data.badge && (
             <p 
-              className="mt-3 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]"
+              className="mt-3 text-xs sm:text-sm font-black uppercase tracking-widest text-[#0068A8]"
             >
               {data.badge}
             </p>
@@ -51,9 +51,9 @@ const About = ({ data = defaultContent.about }) => {
               {data.stats.map((st, i) => (
                 <div 
                   key={i} 
-                  className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
+                  className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0068A8] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
                 >
-                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#059669] transition-colors duration-300 ease-out">{st.value}</p>
+                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#0284c7] transition-colors duration-300 ease-out">{st.value}</p>
                   <p className="mt-1 text-xs font-bold tracking-wider uppercase text-[#524b63]">{st.label}</p>
                 </div>
               ))}
@@ -81,7 +81,7 @@ const About = ({ data = defaultContent.about }) => {
                   href={data.websiteUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="font-bold text-[#059669] underline decoration-[#059669] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors duration-300 ease-out"
+                  className="font-bold text-[#0068A8] underline decoration-[#0068A8] decoration-2 underline-offset-4 hover:text-[#0284c7] transition-colors duration-300 ease-out"
                 >
                   {data.websiteLabel}
                   <span className="inline-block ml-1" aria-hidden="true">↗</span>
@@ -93,9 +93,9 @@ const About = ({ data = defaultContent.about }) => {
                 {data.goals.map((goal, i) => (
                   <div 
                     key={i} 
-                    className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-0.5 transition-all duration-300 ease-out group"
+                    className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0068A8] hover:bg-white hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                   >
-                    <FiCheck className="w-5 h-5 text-[#059669] shrink-0" strokeWidth={2.5} aria-hidden="true" />
+                    <FiCheck className="w-5 h-5 text-[#0068A8] shrink-0" strokeWidth={2.5} aria-hidden="true" />
                     <span className="text-sm sm:text-base font-bold text-[#0d0c22]">{goal.title}</span>
                   </div>
                 ))}
@@ -113,7 +113,7 @@ const About = ({ data = defaultContent.about }) => {
 
               <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
                 {data.turningPoint.content}
-                <span className="font-semibold text-[#059669]">{data.turningPoint.highlight}</span>
+                <span className="font-semibold text-[#0068A8]">{data.turningPoint.highlight}</span>
               </p>
             </div>
           </div>
@@ -125,7 +125,7 @@ const About = ({ data = defaultContent.about }) => {
         >
           <h3 className="mb-8 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
             {data.mindsetHeading.prefix}
-            <span className="text-[#059669]">{data.mindsetHeading.highlight}</span>
+            <span className="text-[#0068A8]">{data.mindsetHeading.highlight}</span>
           </h3>
 
           <div className="space-y-6 leading-relaxed text-[#524b63] max-w-4xl mx-auto">
@@ -164,7 +164,7 @@ const About = ({ data = defaultContent.about }) => {
         >
           <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
             {data.solutionHeading.prefix}
-            <span className="text-[#059669]">{data.solutionHeading.highlight}</span>
+            <span className="text-[#0068A8]">{data.solutionHeading.highlight}</span>
           </h3>
 
           <p className="max-w-3xl mx-auto mb-10 leading-relaxed text-center text-sm sm:text-base text-[#524b63]">
@@ -178,9 +178,9 @@ const About = ({ data = defaultContent.about }) => {
             {data.solutionPillars.map((item, i) => (
               <div 
                 key={i} 
-                className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-1 transition-all duration-300 ease-out group"
+                className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0068A8] hover:bg-white hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
-                <FiCheck className="w-5 h-5 text-[#059669] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <FiCheck className="w-5 h-5 text-[#0068A8] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
                 <p className="text-xs sm:text-sm font-bold text-[#0d0c22]">{item}</p>
               </div>
             ))}
@@ -192,10 +192,10 @@ const About = ({ data = defaultContent.about }) => {
             {data.habitRequirements.map((item, i) => (
               <div 
                 key={i} 
-                className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
+                className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0068A8] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
-                <FiCheck className="w-5 h-5 text-[#059669] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
-                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#059669] transition-colors duration-300 ease-out">{item.label}</p>
+                <FiCheck className="w-5 h-5 text-[#0068A8] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#0284c7] transition-colors duration-300 ease-out">{item.label}</p>
               </div>
             ))}
           </div>
@@ -203,16 +203,16 @@ const About = ({ data = defaultContent.about }) => {
 
         {/* Philosophy Quote: Dark High-Contrast Accent Banner */}
         <div 
-          className="bg-[#0d0c22] text-white rounded-[32px] p-8 lg:p-14 text-center mb-16 shadow-[0_16px_40px_rgba(13,12,34,0.15)] hover:shadow-[0_24px_50px_rgba(13,12,34,0.25)] hover:-translate-y-1 transition-all duration-300 ease-out"
+          className="bg-gradient-to-br from-[#0c1f38] to-[#162d4d] border border-sky-500/20 text-white rounded-[32px] p-8 lg:p-14 text-center mb-16 shadow-[0_16px_40px_rgba(12,31,56,0.25)] hover:shadow-[0_24px_50px_rgba(12,31,56,0.35)] hover:-translate-y-1 transition-all duration-300 ease-out"
         >
           <p className="mb-6 text-2xl sm:text-3xl font-black leading-snug tracking-tight text-white max-w-3xl mx-auto">
             {data.philosophyQuote.prefix}
-            <span className="text-[#059669]">{data.philosophyQuote.highlight1}</span>
+            <span className="text-sky-300">{data.philosophyQuote.highlight1}</span>
             {data.philosophyQuote.mid}
-            <span className="text-[#059669]">{data.philosophyQuote.highlight2}</span>
+            <span className="text-sky-300">{data.philosophyQuote.highlight2}</span>
             {data.philosophyQuote.suffix}
           </p>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-[#ecebf0]/90">
+          <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-slate-200/90">
             {data.philosophyQuote.descPrefix}
             <span className="font-bold text-white">{data.philosophyQuote.descHighlight}</span>
             {data.philosophyQuote.descSuffix}
@@ -224,7 +224,7 @@ const About = ({ data = defaultContent.about }) => {
           className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec] mb-16"
         >
           <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
-            Tinh thần <span className="text-[#059669]">{data.responsibility.title}</span>
+            Tinh thần <span className="text-[#0068A8]">{data.responsibility.title}</span>
           </h3>
 
           <div className="max-w-3xl mx-auto space-y-6 leading-relaxed text-sm sm:text-base text-[#524b63]">
@@ -232,7 +232,7 @@ const About = ({ data = defaultContent.about }) => {
               {data.responsibility.paragraph1}
             </p>
 
-            <div className="p-6 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-sm hover:border-[#0d0c22] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 ease-out">
+            <div className="p-6 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-sm hover:border-[#0068A8] hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 ease-out">
               <p className="text-base sm:text-lg font-bold text-[#0d0c22] italic">
                 &ldquo;{data.responsibility.quote}&rdquo;
               </p>
@@ -256,7 +256,7 @@ const About = ({ data = defaultContent.about }) => {
           </p>
           <p className="max-w-3xl mx-auto leading-relaxed text-sm sm:text-base text-[#524b63]">
             {data.lifeValues.paragraph2}{' '}
-            <span className="font-bold text-[#059669]">{data.lifeValues.mission}</span>
+            <span className="font-bold text-[#0068A8]">{data.lifeValues.mission}</span>
           </p>
         </div>
 
@@ -273,7 +273,7 @@ const About = ({ data = defaultContent.about }) => {
             return (
               <div 
                 key={i} 
-                className="overflow-hidden border border-[#e7e7ec] aspect-[2/3] sm:aspect-[3/5] bg-[#f8f7fa] rounded-[24px] group shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0d0c22] hover:-translate-y-1.5 transition-all duration-300 ease-out relative"
+                className="overflow-hidden border border-[#e7e7ec] aspect-[2/3] sm:aspect-[3/5] bg-[#f8f7fa] rounded-[24px] group shadow-[0_4px_16px_rgba(6,3,24,0.04)] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:border-[#0068A8] hover:-translate-y-1.5 transition-all duration-300 ease-out relative"
               >
                 {getImage(imgItem.src) ? (
                   <img
@@ -301,7 +301,7 @@ const About = ({ data = defaultContent.about }) => {
           <p className="text-2xl sm:text-3xl font-black leading-relaxed text-[#0d0c22] italic max-w-3xl mx-auto">
             &ldquo;{data.finalQuote.quote}&rdquo;
           </p>
-          <p className="mt-4 font-bold tracking-widest uppercase text-xs sm:text-sm text-[#059669]">
+          <p className="mt-4 font-bold tracking-widest uppercase text-xs sm:text-sm text-[#0068A8]">
             {data.finalQuote.author}
           </p>
         </div>

@@ -16,7 +16,7 @@ export const SectionTitle = ({ children, subtitle, dark = false }) => (
     </h2>
     {subtitle && (
       <p 
-        className={`mt-3 text-xs sm:text-sm font-black uppercase tracking-widest ${dark ? 'text-[#ecebf0]/90' : 'text-[#059669]'}`}
+        className={`mt-3 text-xs sm:text-sm font-black uppercase tracking-widest ${dark ? 'text-[#ecebf0]/90' : 'text-[#0068A8]'}`}
       >
         {subtitle}
       </p>

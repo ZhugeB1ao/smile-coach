@@ -54,7 +54,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
       <Container className="flex items-center justify-between">
         <a href={data.brand.href} className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group transition-transform duration-300 ease-out hover:scale-[1.02]">
           <span>{data.brand.prefix}</span>
-          <span className="text-[#059669]">{data.brand.suffix}</span>
+          <span className="text-[#0068A8]">{data.brand.suffix}</span>
         </a>
 
         {/* Desktop Links */}
@@ -65,10 +65,10 @@ const Navbar = ({ data = defaultContent.navbar }) => {
               <a 
                 key={link.id} 
                 href={`#${link.id}`}
-                className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] ${
+                className={`text-[13px] font-bold px-3.5 py-2 rounded-full transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] ${
                   isActive 
                     ? 'bg-[#f3f3f6] text-[#0d0c22]' 
-                    : 'text-[#524b63] hover:text-[#0d0c22] hover:bg-[#f3f3f6]/60'
+                    : 'text-[#524b63] hover:text-[#0068A8] hover:bg-[#f3f3f6]/60'
                 }`}
               >
                 {link.name}
@@ -78,7 +78,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
           <div className="pl-3 ml-2 border-l border-[#e7e7ec]">
             <a 
               href={data.cta.href} 
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm hover:shadow-md hover:scale-[1.03] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d0c22] focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 px-5 py-2 text-[13px] font-bold text-[#0068A8] border-2 border-[#0068A8] bg-transparent hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-xs hover:shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={15} aria-hidden="true" />
@@ -123,7 +123,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
             <a 
               href={data.cta.href} 
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center w-full gap-2 px-5 py-3.5 text-sm font-bold text-white transition-all duration-300 ease-out rounded-full bg-[#0d0c22] hover:bg-[#3a3546] shadow-sm hover:shadow active:scale-95"
+              className="flex items-center justify-center w-full gap-2 px-5 py-3 text-sm font-bold text-[#0068A8] border-2 border-[#0068A8] bg-transparent hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-xs active:scale-95"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={16} aria-hidden="true" />

@@ -11,10 +11,10 @@ import content from './data/content.json';
 
 function App({ data = content }) {
   return (
-    <div className="overflow-x-hidden font-sans antialiased bg-white text-[#0d0c22] selection:bg-[#0d0c22] selection:text-white">
+    <div className="overflow-x-hidden font-sans antialiased bg-white text-[#0d0c22] selection:bg-[#0068A8] selection:text-white">
       <a 
         href="#main-content" 
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-[#0d0c22] focus:text-white focus:rounded-full focus:font-bold"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-[#0068A8] focus:text-white focus:rounded-full focus:font-bold"
       >
         Bỏ qua đến nội dung chính
       </a>

@@ -148,6 +148,14 @@ body {
   text-decoration-color: var(--color-accent, #0284c7);
 }
 
+/* Hover overrides: ensure hover transitions never produce green */
+.group:hover .group-hover\:text-\[\#059669\],
+.hover\:text-\[\#059669\]:hover,
+.group:hover .group-hover\:text-\[\#10b981\],
+.hover\:text-\[\#10b981\]:hover {
+  color: var(--color-accent, #0284c7) !important;
+}
+
 
 /* Section entrance animations & keyframes */
 @keyframes fadeInUp {
