@@ -187,7 +187,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                 <a 
                   href={data.specialPromotion.cta.href}
                   {...(data.specialPromotion.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="inline-flex items-center justify-center px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white border-2 border-sky-400 bg-sky-500/10 hover:bg-sky-400 hover:text-[#0c1f38] transition-all duration-300 ease-out rounded-full shadow-[0_0_24px_rgba(56,189,248,0.25)] hover:shadow-[0_0_36px_rgba(56,189,248,0.45)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c1f38]"
+                  className="inline-flex items-center justify-center px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-[#0068A8] border-2 border-sky-400 bg-white hover:bg-[#0068A8] hover:border-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c1f38]"
                 >
                   {data.specialPromotion.cta.text}
                 </a>
