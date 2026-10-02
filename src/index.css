@@ -128,24 +128,40 @@ body {
   border-color: var(--color-accent, #0284c7);
 }
 
-/* Aliases ensuring all component color references map to env variables */
-.text-\[\#059669\], .text-\[\#0068a8\], .text-\[\#0068A8\] {
-  color: var(--color-primary, #0068a8);
+/* Bulletproof Outline Button Utilities with guaranteed white text and children on hover */
+.btn-brand-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff !important;
+  color: var(--color-primary, #0068A8) !important;
+  border: 2px solid var(--color-primary, #0068A8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.text-\[\#10b981\], .text-\[\#0284c7\], .text-\[\#0284C7\] {
-  color: var(--color-accent, #0284c7);
+.btn-brand-outline:hover {
+  background-color: var(--color-primary, #0068A8) !important;
+  color: #ffffff !important;
 }
-.bg-\[\#059669\], .bg-\[\#0068a8\], .bg-\[\#0068A8\] {
-  background-color: var(--color-primary, #0068a8);
+.btn-brand-outline:hover * {
+  color: #ffffff !important;
 }
-.bg-\[\#10b981\], .bg-\[\#0284c7\], .bg-\[\#0284C7\] {
-  background-color: var(--color-accent, #0284c7);
+
+.btn-brand-outline-sky {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff !important;
+  color: var(--color-primary, #0068A8) !important;
+  border: 2px solid #38bdf8;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.decoration-\[\#059669\], .decoration-\[\#0068a8\], .decoration-\[\#0068A8\] {
-  text-decoration-color: var(--color-primary, #0068a8);
+.btn-brand-outline-sky:hover {
+  background-color: var(--color-primary, #0068A8) !important;
+  border-color: var(--color-primary, #0068A8) !important;
+  color: #ffffff !important;
 }
-.decoration-\[\#10b981\], .decoration-\[\#0284c7\], .decoration-\[\#0284C7\] {
-  text-decoration-color: var(--color-accent, #0284c7);
+.btn-brand-outline-sky:hover * {
+  color: #ffffff !important;
 }
 
 /* Hover overrides: ensure hover transitions never produce green */

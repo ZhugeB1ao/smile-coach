@@ -120,7 +120,8 @@ const Timeline = ({ data = defaultContent.timeline }) => {
             <div>
               <a 
                 href={data.pricingCard.cta.href} 
-                className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-3.5 text-base sm:text-lg font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
+                {...(data.pricingCard.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="btn-brand-outline w-full sm:w-auto px-10 py-3.5 text-base sm:text-lg font-bold rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
               >
                 {data.pricingCard.cta.text}
               </a>

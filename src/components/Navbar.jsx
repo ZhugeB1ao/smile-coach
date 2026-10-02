@@ -78,7 +78,8 @@ const Navbar = ({ data = defaultContent.navbar }) => {
           <div className="pl-3 ml-2 border-l border-[#e7e7ec]">
             <a 
               href={data.cta.href} 
-              className="inline-flex items-center gap-2 px-5 py-2 text-[13px] font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-xs hover:shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
+              {...(data.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="btn-brand-outline gap-2 px-5 py-2 text-[13px] font-bold rounded-full shadow-xs hover:shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={15} aria-hidden="true" />
@@ -123,7 +124,8 @@ const Navbar = ({ data = defaultContent.navbar }) => {
             <a 
               href={data.cta.href} 
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center w-full gap-2 px-5 py-3 text-sm font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-xs active:scale-95"
+              {...(data.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="btn-brand-outline w-full gap-2 px-5 py-3 text-sm font-bold rounded-full shadow-xs active:scale-95"
             >
               <span>{data.cta.text}</span>
               <ArrowRight size={16} aria-hidden="true" />

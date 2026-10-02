@@ -28,7 +28,8 @@ const Hero = ({ data = defaultContent.hero }) => {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:justify-start animate-fade-in-up animation-delay-200">
             <a 
               href={data.cta.href} 
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 text-base font-bold text-[#0068A8] border-2 border-[#0068A8] bg-white hover:bg-[#0068A8] hover:text-white transition-all duration-300 ease-out rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2 group"
+              {...(data.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="btn-brand-outline gap-2.5 px-8 py-3.5 text-base font-bold rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2 group"
             >
               <span>{data.cta.text}</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1.5" aria-hidden="true" />
