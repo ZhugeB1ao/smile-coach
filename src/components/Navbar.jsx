@@ -54,7 +54,7 @@ const Navbar = ({ data = defaultContent.navbar }) => {
       <Container className="flex items-center justify-between">
         <a href={data.brand.href} className="flex items-center gap-1.5 text-xl sm:text-2xl font-black tracking-tight text-[#0d0c22] group transition-transform duration-300 ease-out hover:scale-[1.02]">
           <span>{data.brand.prefix}</span>
-          <span className="text-[#ea4c89]">{data.brand.suffix}</span>
+          <span className="text-[#059669]">{data.brand.suffix}</span>
         </a>
 
         {/* Desktop Links */}

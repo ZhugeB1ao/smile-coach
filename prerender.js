@@ -76,10 +76,21 @@ async function prerender() {
   }
 
   // 4. Thay thế div#root rỗng bằng nội dung HTML đã được render sẵn
-  const finalHtml = template.replace(
+  let finalHtml = template.replace(
     '<div id="root"></div>',
     `<div id="root">${cleanAppHtml}</div>`
   );
+
+  // Chuẩn hóa fetchPriority thành fetchpriority theo chuẩn HTML5
+  finalHtml = finalHtml.replace(/fetchPriority="high"/g, 'fetchpriority="high"');
+
+  // Đảm bảo các biến môi trường màu sắc luôn có giá trị hợp lệ
+  finalHtml = finalHtml
+    .replace(/%VITE_COLOR_PRIMARY%/g, process.env.VITE_COLOR_PRIMARY || '#0068A8')
+    .replace(/%VITE_COLOR_ACCENT%/g, process.env.VITE_COLOR_ACCENT || '#0284C7')
+    .replace(/%VITE_COLOR_INDIGO%/g, process.env.VITE_COLOR_INDIGO || '#4C3B71')
+    .replace(/%VITE_COLOR_NAVY%/g, process.env.VITE_COLOR_NAVY || '#1E293B')
+    .replace(/%VITE_COLOR_WHITE%/g, process.env.VITE_COLOR_WHITE || '#FFFFFF');
 
   fs.writeFileSync(templatePath, finalHtml, 'utf-8');
 

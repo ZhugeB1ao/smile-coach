@@ -43,12 +43,12 @@ const Timeline = ({ data = defaultContent.timeline }) => {
                   
                   {/* Content Side */}
                   <div className="w-full lg:w-1/2">
-                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">
+                    <h3 className="mb-1 text-2xl font-bold text-[#0d0c22] leading-snug group-hover:text-[#059669] transition-colors duration-300 ease-out">
                       {step.title}
                     </h3>
                     
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-black tracking-widest uppercase text-[#ea4c89]">
+                      <span className="text-xs font-black tracking-widest uppercase text-[#059669]">
                         {step.week}
                       </span>
                       <span className="text-[#524b63]/40">•</span>
@@ -93,14 +93,14 @@ const Timeline = ({ data = defaultContent.timeline }) => {
               <h3 className="mb-2 text-2xl sm:text-3xl font-black text-[#0d0c22] tracking-tight">
                 {data.result.title}
               </h3>
-              <p className="mb-5 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]">
+              <p className="mb-5 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]">
                 KẾT QUẢ VƯỢT TRỘI
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
                 {data.result.descPrefix}
-                <span className="font-bold text-[#0d0c22] underline decoration-[#ea4c89] decoration-2 underline-offset-4">{data.result.highlight1}</span>
+                <span className="font-bold text-[#0d0c22] underline decoration-[#059669] decoration-2 underline-offset-4">{data.result.highlight1}</span>
                 {data.result.descMid}
-                <span className="font-bold text-[#0d0c22] underline decoration-[#ea4c89] decoration-2 underline-offset-4">{data.result.highlight2}</span>
+                <span className="font-bold text-[#0d0c22] underline decoration-[#059669] decoration-2 underline-offset-4">{data.result.highlight2}</span>
                 {data.result.descSuffix}
               </p>
             </div>
@@ -114,7 +114,7 @@ const Timeline = ({ data = defaultContent.timeline }) => {
           >
             <h3 className="mb-1 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0d0c22]">{data.pricingCard.specialPrice}</h3>
             <p className="mb-2 text-base sm:text-lg font-bold line-through text-[#524b63]/60">{data.pricingCard.originalPrice}</p>
-            <p className="mb-3 text-xs sm:text-sm font-black tracking-widest uppercase text-[#ea4c89]">{data.pricingCard.trialDesc}</p>
+            <p className="mb-3 text-xs sm:text-sm font-black tracking-widest uppercase text-[#059669]">{data.pricingCard.trialDesc}</p>
             <p className="mb-8 text-xs sm:text-sm font-bold text-rose-600 tracking-wide">{data.pricingCard.urgency}</p>
 
             <div>

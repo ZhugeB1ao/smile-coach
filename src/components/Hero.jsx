@@ -12,12 +12,12 @@ const Hero = ({ data = defaultContent.hero }) => {
       <Container className="grid items-center gap-10 lg:gap-14 md:grid-cols-12">
         <div className="text-center md:col-span-7 md:text-left">
           <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight text-[#0d0c22] text-balance animate-fade-in-up">
-            {data.title.line1} <span className="text-[#ea4c89]">{data.title.highlight}</span> <br />
+            {data.title.line1} <span className="text-[#059669]">{data.title.highlight}</span> <br />
             {data.title.line2} <br className="hidden sm:inline" />
             {data.title.line3}
           </h1>
 
-          <p className="mb-6 text-xs sm:text-sm font-black uppercase tracking-widest text-[#d62570] animate-fade-in-up animation-delay-100">
+          <p className="mb-6 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669] animate-fade-in-up animation-delay-100">
             SmileCoach 1:1 Experience
           </p>
 
@@ -60,7 +60,7 @@ const Hero = ({ data = defaultContent.hero }) => {
           {/* Clean Floating Badge with subtle indicator */}
           <div className="absolute items-center hidden gap-3.5 px-5 py-3.5 bg-white/95 backdrop-blur-md border border-[#e7e7ec] shadow-[0_12px_24px_rgba(6,3,24,0.08)] -bottom-6 -left-6 rounded-2xl sm:flex hover:scale-[1.05] hover:-translate-y-1.5 hover:shadow-[0_16px_32px_rgba(6,3,24,0.12)] transition-all duration-300 ease-out cursor-default animate-float-slow">
             <div className="flex items-center justify-center w-10 h-10 text-white rounded-xl bg-[#0d0c22] font-black text-sm">
-              <span className="text-[#ea4c89]">★</span>
+              <span className="text-[#10b981]">★</span>
             </div>
             <div>
               <p className="text-xl font-black tabular-nums text-[#0d0c22] leading-tight">{data.badge.stat}</p>

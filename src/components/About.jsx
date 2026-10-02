@@ -17,7 +17,7 @@ const About = ({ data = defaultContent.about }) => {
           </h2>
           {data.badge && (
             <p 
-              className="mt-3 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]"
+              className="mt-3 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]"
             >
               {data.badge}
             </p>
@@ -53,7 +53,7 @@ const About = ({ data = defaultContent.about }) => {
                   key={i} 
                   className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:shadow-[0_12px_28px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
                 >
-                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{st.value}</p>
+                  <p className="text-2xl lg:text-3xl font-black text-[#0d0c22] tracking-tight group-hover:text-[#059669] transition-colors duration-300 ease-out">{st.value}</p>
                   <p className="mt-1 text-xs font-bold tracking-wider uppercase text-[#524b63]">{st.label}</p>
                 </div>
               ))}
@@ -81,7 +81,7 @@ const About = ({ data = defaultContent.about }) => {
                   href={data.websiteUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="font-bold text-[#ea4c89] underline decoration-[#ea4c89] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors duration-300 ease-out"
+                  className="font-bold text-[#059669] underline decoration-[#059669] decoration-2 underline-offset-4 hover:text-[#0d0c22] transition-colors duration-300 ease-out"
                 >
                   {data.websiteLabel}
                   <span className="inline-block ml-1" aria-hidden="true">↗</span>
@@ -95,7 +95,7 @@ const About = ({ data = defaultContent.about }) => {
                     key={i} 
                     className="flex items-center gap-3 p-4 bg-[#f8f7fa] rounded-[18px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                   >
-                    <FiCheck className="w-5 h-5 text-[#ea4c89] shrink-0" strokeWidth={2.5} aria-hidden="true" />
+                    <FiCheck className="w-5 h-5 text-[#059669] shrink-0" strokeWidth={2.5} aria-hidden="true" />
                     <span className="text-sm sm:text-base font-bold text-[#0d0c22]">{goal.title}</span>
                   </div>
                 ))}
@@ -113,7 +113,7 @@ const About = ({ data = defaultContent.about }) => {
 
               <p className="text-base sm:text-lg leading-relaxed text-[#524b63]">
                 {data.turningPoint.content}
-                <span className="font-semibold text-[#ea4c89]">{data.turningPoint.highlight}</span>
+                <span className="font-semibold text-[#059669]">{data.turningPoint.highlight}</span>
               </p>
             </div>
           </div>
@@ -125,7 +125,7 @@ const About = ({ data = defaultContent.about }) => {
         >
           <h3 className="mb-8 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
             {data.mindsetHeading.prefix}
-            <span className="text-[#ea4c89]">{data.mindsetHeading.highlight}</span>
+            <span className="text-[#059669]">{data.mindsetHeading.highlight}</span>
           </h3>
 
           <div className="space-y-6 leading-relaxed text-[#524b63] max-w-4xl mx-auto">
@@ -164,7 +164,7 @@ const About = ({ data = defaultContent.about }) => {
         >
           <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
             {data.solutionHeading.prefix}
-            <span className="text-[#ea4c89]">{data.solutionHeading.highlight}</span>
+            <span className="text-[#059669]">{data.solutionHeading.highlight}</span>
           </h3>
 
           <p className="max-w-3xl mx-auto mb-10 leading-relaxed text-center text-sm sm:text-base text-[#524b63]">
@@ -180,7 +180,7 @@ const About = ({ data = defaultContent.about }) => {
                 key={i} 
                 className="p-5 text-center bg-[#f8f7fa] rounded-[20px] border border-[#e7e7ec] hover:border-[#0d0c22] hover:bg-white hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
-                <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <FiCheck className="w-5 h-5 text-[#059669] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
                 <p className="text-xs sm:text-sm font-bold text-[#0d0c22]">{item}</p>
               </div>
             ))}
@@ -194,8 +194,8 @@ const About = ({ data = defaultContent.about }) => {
                 key={i} 
                 className="p-5 text-center bg-white rounded-[20px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_12px_24px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
               >
-                <FiCheck className="w-5 h-5 text-[#ea4c89] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
-                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{item.label}</p>
+                <FiCheck className="w-5 h-5 text-[#059669] mx-auto mb-2" strokeWidth={2.5} aria-hidden="true" />
+                <p className="text-sm font-bold text-[#0d0c22] group-hover:text-[#059669] transition-colors duration-300 ease-out">{item.label}</p>
               </div>
             ))}
           </div>
@@ -207,9 +207,9 @@ const About = ({ data = defaultContent.about }) => {
         >
           <p className="mb-6 text-2xl sm:text-3xl font-black leading-snug tracking-tight text-white max-w-3xl mx-auto">
             {data.philosophyQuote.prefix}
-            <span className="text-[#ea4c89]">{data.philosophyQuote.highlight1}</span>
+            <span className="text-[#059669]">{data.philosophyQuote.highlight1}</span>
             {data.philosophyQuote.mid}
-            <span className="text-[#ea4c89]">{data.philosophyQuote.highlight2}</span>
+            <span className="text-[#059669]">{data.philosophyQuote.highlight2}</span>
             {data.philosophyQuote.suffix}
           </p>
           <p className="max-w-2xl mx-auto text-sm sm:text-base leading-relaxed text-[#ecebf0]/90">
@@ -224,7 +224,7 @@ const About = ({ data = defaultContent.about }) => {
           className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec] mb-16"
         >
           <h3 className="mb-6 text-2xl sm:text-3xl font-black text-center text-[#0d0c22] tracking-tight">
-            Tinh thần <span className="text-[#ea4c89]">{data.responsibility.title}</span>
+            Tinh thần <span className="text-[#059669]">{data.responsibility.title}</span>
           </h3>
 
           <div className="max-w-3xl mx-auto space-y-6 leading-relaxed text-sm sm:text-base text-[#524b63]">
@@ -256,7 +256,7 @@ const About = ({ data = defaultContent.about }) => {
           </p>
           <p className="max-w-3xl mx-auto leading-relaxed text-sm sm:text-base text-[#524b63]">
             {data.lifeValues.paragraph2}{' '}
-            <span className="font-bold text-[#ea4c89]">{data.lifeValues.mission}</span>
+            <span className="font-bold text-[#059669]">{data.lifeValues.mission}</span>
           </p>
         </div>
 
@@ -301,7 +301,7 @@ const About = ({ data = defaultContent.about }) => {
           <p className="text-2xl sm:text-3xl font-black leading-relaxed text-[#0d0c22] italic max-w-3xl mx-auto">
             &ldquo;{data.finalQuote.quote}&rdquo;
           </p>
-          <p className="mt-4 font-bold tracking-widest uppercase text-xs sm:text-sm text-[#ea4c89]">
+          <p className="mt-4 font-bold tracking-widest uppercase text-xs sm:text-sm text-[#059669]">
             {data.finalQuote.author}
           </p>
         </div>

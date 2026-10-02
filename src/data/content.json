@@ -281,7 +281,7 @@
       "cta": {
         "note": "Hãy nhanh chóng bấm vào nút bên dưới để trở thành một trong những người nhanh nhất giành vé tham dự!",
         "text": "ĐĂNG KÝ NGAY BÂY GIỜ",
-        "href": "#offer"
+        "href": "https://zalo.me/0938188019"
       }
     }
   },
@@ -474,32 +474,24 @@
         "icon": "MessageCircle",
         "title": "Zalo Tư vấn",
         "desc": "Giảm 4kg/ 3 tuần an toàn",
-        "href": "#",
-        "ariaLabel": "Zalo Tư vấn",
+        "href": "https://zalo.me/0938188019",
+        "ariaLabel": "Zalo Tư vấn - 0938188019",
         "color": "sky"
       },
       {
         "icon": "Users",
         "title": "Facebook",
         "desc": "Cộng đồng khỏe đẹp",
-        "href": "#",
+        "href": "https://www.facebook.com/share/1DTFrk2X9Z/",
         "ariaLabel": "Facebook - Cộng đồng khỏe đẹp",
         "color": "blue"
       },
       {
-        "icon": "Play",
-        "title": "Youtube",
-        "desc": "Bí mật dinh dưỡng",
-        "href": "#",
-        "ariaLabel": "Youtube - Bí mật dinh dưỡng",
-        "color": "red"
-      },
-      {
         "icon": "Calendar",
         "title": "Đặt lịch 1:1",
-        "desc": "Online & Offline",
-        "href": "#",
-        "ariaLabel": "Đặt lịch 1:1 - Online & Offline",
+        "desc": "Online & Offline qua Zalo",
+        "href": "https://zalo.me/0938188019",
+        "ariaLabel": "Đặt lịch 1:1 qua Zalo - 0938188019",
         "color": "primary"
       }
     ],

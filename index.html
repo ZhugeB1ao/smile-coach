@@ -2,13 +2,9 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" />
-    </noscript>
+    <!-- Preload critical self-hosted font subsets for immediate first-paint -->
+    <link rel="preload" href="/fonts/mona-sans-vietnamese-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/mona-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="SmileCoach - HLV Dinh Dưỡng Huỳnh Ngọc Mai. Chương trình thay đổi tư duy ăn uống, kiểm soát cân nặng trọn đời với hơn 16 năm kinh nghiệm." />
@@ -31,6 +27,15 @@
     <meta name="twitter:image" content="https://www.smilecoach.vn/thumbnail-share.jpg" />
 
     <title>SmileCoach - HLV Dinh Dưỡng Huỳnh Ngọc Mai | Design Body Theo Cách Bạn Mong Muốn</title>
+    <style id="theme-vars">
+      :root {
+        --color-primary: %VITE_COLOR_PRIMARY%;
+        --color-accent: %VITE_COLOR_ACCENT%;
+        --color-indigo: %VITE_COLOR_INDIGO%;
+        --color-navy: %VITE_COLOR_NAVY%;
+        --color-white: %VITE_COLOR_WHITE%;
+      }
+    </style>
     <style>
       .sr-only {
         position: absolute !important;

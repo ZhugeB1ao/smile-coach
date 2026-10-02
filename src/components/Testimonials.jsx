@@ -24,11 +24,11 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                       {feed.name[0]}
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{feed.name}</h3>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-[#ea4c89] mt-0.5">{feed.job}</p>
+                      <h3 className="text-base font-bold text-[#0d0c22] leading-tight group-hover:text-[#059669] transition-colors duration-300 ease-out">{feed.name}</h3>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-[#059669] mt-0.5">{feed.job}</p>
                     </div>
                   </div>
-                  <div className="flex gap-1 text-[#ea4c89]" role="img" aria-label="5 sao">
+                  <div className="flex gap-1 text-[#10b981]" role="img" aria-label="5 sao">
                     {Array(5).fill(0).map((_, starIndex) => (
                       <Star key={starIndex} size={15} fill="currentColor" aria-hidden="true" />
                     ))}
@@ -36,7 +36,7 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                 </div>
 
                 {/* Highlight text without border/bg */}
-                <p className="mb-3 text-xs font-black uppercase tracking-wider text-[#ea4c89]">
+                <p className="mb-3 text-xs font-black uppercase tracking-wider text-[#059669]">
                   {feed.highlight}
                 </p>
 
@@ -67,7 +67,7 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
                     <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
                   </div>
                   <div className="flex flex-col items-center justify-center border border-[#e7e7ec] bg-[#f8f7fa] rounded-[16px] aspect-4/3">
-                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#ea4c89]">Sau</p>
+                    <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#059669]">Sau</p>
                     <p className="text-xs italic text-[#524b63]/60">[Hình ảnh]</p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Testimonials = ({ data = defaultContent.testimonials }) => {
         >
           <p className="mb-6 text-lg sm:text-xl font-medium text-[#0d0c22]">
             {data.cta.descPrefix}
-            <span className="font-extrabold text-[#ea4c89]">{data.cta.highlight}</span>
+            <span className="font-extrabold text-[#059669]">{data.cta.highlight}</span>
             {data.cta.descSuffix}
           </p>
           <a 

@@ -14,10 +14,10 @@ const Benefits = ({ data = defaultContent.benefits }) => {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#0d0c22] leading-[1.15] mb-3">
             {data.heading}{' '}
-            <span className="text-[#ea4c89]">{data.headingHighlight}</span>
+            <span className="text-[#059669]">{data.headingHighlight}</span>
           </h2>
           {data.badge && (
-            <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#ea4c89]">
+            <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#059669]">
               {data.badge}
             </p>
           )}
@@ -59,9 +59,9 @@ const Benefits = ({ data = defaultContent.benefits }) => {
                   key={i}
                   className="flex items-start gap-3.5 p-4 rounded-[20px] border border-transparent hover:border-[#e7e7ec] hover:bg-[#f8f7fa] hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                 >
-                  <FiCheck className="w-5 h-5 text-[#ea4c89] shrink-0 mt-1 transition-transform duration-300 ease-out group-hover:scale-110" strokeWidth={2.5} aria-hidden="true" />
+                  <FiCheck className="w-5 h-5 text-[#059669] shrink-0 mt-1 transition-transform duration-300 ease-out group-hover:scale-110" strokeWidth={2.5} aria-hidden="true" />
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0d0c22] leading-snug group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0d0c22] leading-snug group-hover:text-[#059669] transition-colors duration-300 ease-out">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-sm sm:text-base text-[#524b63] leading-relaxed">
@@ -87,10 +87,10 @@ const Benefits = ({ data = defaultContent.benefits }) => {
                 key={i} 
                 className="p-6 sm:p-7 text-center bg-white rounded-[24px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0d0c22] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
               >
-                <span className="block text-2xl font-black text-[#ea4c89] mb-2 tracking-tight transition-transform duration-300 ease-out group-hover:scale-105">
+                <span className="block text-2xl font-black text-[#059669] mb-2 tracking-tight transition-transform duration-300 ease-out group-hover:scale-105">
                   0{i + 1}
                 </span>
-                <h4 className="mb-2 text-lg font-bold text-[#0d0c22] group-hover:text-[#ea4c89] transition-colors duration-300 ease-out">{aud.title}</h4>
+                <h4 className="mb-2 text-lg font-bold text-[#0d0c22] group-hover:text-[#059669] transition-colors duration-300 ease-out">{aud.title}</h4>
                 <p className="text-sm text-[#524b63] leading-relaxed">{aud.desc}</p>
               </div>
             ))}
