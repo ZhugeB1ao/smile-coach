@@ -261,7 +261,7 @@ const About = ({ data = defaultContent.about }) => {
         </div>
 
         {/* Photo Gallery - Tailored aspect ratio and focal framing so all photos display fully without excessive cropping */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 ${data.galleryNote ? 'mb-4 sm:mb-6' : 'mb-14'}`}>
           {(data.gallery || []).map((imgItem, i) => {
             const focalPositions = [
               'object-[center_15%]', // Photo 1: green top, thumbs up, smile
@@ -293,6 +293,12 @@ const About = ({ data = defaultContent.about }) => {
             );
           })}
         </div>
+
+        {data.galleryNote && (
+          <p className="text-center text-sm sm:text-base font-semibold text-[#524b63] italic mb-14">
+            {data.galleryNote}
+          </p>
+        )}
 
         {/* Final Quote */}
         <div 

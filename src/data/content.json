@@ -6,13 +6,34 @@
       "href": "#hero"
     },
     "navLinks": [
-      { "name": "Khởi đầu", "id": "hero" },
-      { "name": "Vấn đề", "id": "pain-points" },
-      { "name": "Giá trị", "id": "benefits" },
-      { "name": "Lộ trình", "id": "timeline" },
-      { "name": "Ưu đãi", "id": "offer" },
-      { "name": "Kết quả", "id": "testimonials" },
-      { "name": "Về Chị Mai", "id": "about" }
+      {
+        "name": "Khởi đầu",
+        "id": "hero"
+      },
+      {
+        "name": "Vấn đề",
+        "id": "pain-points"
+      },
+      {
+        "name": "Giá trị",
+        "id": "benefits"
+      },
+      {
+        "name": "Lộ trình",
+        "id": "timeline"
+      },
+      {
+        "name": "Ưu đãi",
+        "id": "offer"
+      },
+      {
+        "name": "Kết quả",
+        "id": "testimonials"
+      },
+      {
+        "name": "Về Chị Mai",
+        "id": "about"
+      }
     ],
     "cta": {
       "text": "Đăng ký ngay",
@@ -208,7 +229,7 @@
       "title": "1. PT Gym 1:1 đồng hành trong suốt",
       "titleBreak": "hành trình chuyển đổi vóc dáng",
       "coach": {
-        "name": "HLV Bùi Thái Châu",
+        "name": "Coach Bùi Thái Châu",
         "title": "Học trò chính quy của nhà vô địch Lý Đức",
         "highlight": "đến trọn đời",
         "descPrefix": "Sẵn sàng hỗ trợ đồng hành anh chị em ",
@@ -321,7 +342,7 @@
         "name": "TRẦN NHỰT TÂM",
         "job": "Sinh viên",
         "highlight": "Tăng 7kg & lối sống lành mạnh",
-        "content": "Là một sv, không biết tự chăm sóc bản thân, còn nghĩ mình biết tất cả... cuối cùng có 1 thân hình \"như xác kho di động\". May mắn, được biết đến chương trình Thay Đổi Tư Duy ăn uống của SM, kết hợp 3 yếu tố Dinh Dưỡng Cân Bằng + Lối Sống Năng Động + Tư Duy Tích Cực, tôi đã tăng được 7kg và từ bỏ được những thói quen không tốt không lành mạnh thời sinh viên. Biết ơn rất nhiều.",
+        "content": "Là một sv, không biết tự chăm sóc bản thân, còn nghĩ mình biết tất cả... cuối cùng có 1 thân hình \"như xác khô di động\". May mắn, được biết đến chương trình Thay Đổi Tư Duy ăn uống của SM, kết hợp 3 yếu tố Dinh Dưỡng Cân Bằng + Lối Sống Năng Động + Tư Duy Tích Cực, con đã tăng được 7kg và từ bỏ được những thói quen không tốt không lành mạnh thời sinh viên. Biết ơn rất nhiều.",
         "image": "hv-tam.webp"
       },
       {
@@ -347,14 +368,20 @@
     "photoAlt": "HLV Huỳnh Ngọc Mai - U50 Năng Lượng",
     "photoPlaceholder": "[Placeholder: Ảnh Chị Huỳnh Ngọc Mai - U50 Năng Lượng]",
     "stats": [
-      { "value": "1,000+", "label": "Học viên toàn cầu" },
-      { "value": "16+", "label": "Năm kinh nghiệm" }
+      {
+        "value": "1,000+",
+        "label": "Học viên toàn cầu"
+      },
+      {
+        "value": "16+",
+        "label": "Năm kinh nghiệm"
+      }
     ],
     "greeting": "Xin chào các bạn,",
     "intro": {
       "prefix": "Tôi là ",
       "author": "Huỳnh Ngọc Mai",
-      "details": ", 48 tuổi (1978), tôi đã có gia đình và 3 con. Hiện tại đang sinh sống và làm việc tại ",
+      "details": ", là doanh nhân, chủ 1 chuỗi CLB chăm sóc sức khỏe chủ động SMILECOACH và chuỗi phòng tập M.Bodyfit trên toàn quốc. Năm nay 48 tuổi (1978), tôi đã có gia đình và 3 con. Hiện tại đang sinh sống và làm việc tại ",
       "location": "Tri Tôn, An Giang",
       "suffix": "."
     },
@@ -363,17 +390,23 @@
     "websiteLabel": "“www.smilecoach.vn”",
     "websiteGoals": ", tôi có 2 mục tiêu chính:",
     "goals": [
-      { "icon": "Target", "title": "1. TÁI CẤU TRÚC CƠ THỂ" },
-      { "icon": "Sparkles", "title": "2. TRUYỀN CẢM HỨNG" }
+      {
+        "icon": "Target",
+        "title": "1. TÁI CẤU TRÚC CƠ THỂ"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "2. TRUYỀN CẢM HỨNG"
+      }
     ],
     "currentStatus": "Hiện tại, tôi không thừa hay thiếu cân, sức khỏe và năng lượng tuyệt vời. Và cũng bởi vì là một HLV sức khỏe cá nhân, nên việc kiểm soát cân nặng và sức khỏe thì không vấn đề gì phải lo lắng.",
     "pastStory": {
-      "prefix": "Cách nay hơn 16 năm, là một nhân viên văn phòng, với tính chất và thói quen ăn uống không lành mạnh, thời điểm 32 tuổi tôi cũng gặp khá nhiều vấn đề sức khỏe như ",
+      "prefix": "Cách nay hơn 16 năm, là một nhân viên văn phòng, với tính chất công việc và thói quen ăn uống không lành mạnh, thời điểm 32 tuổi tôi cũng gặp khá nhiều vấn đề sức khỏe như ",
       "healthIssue": "ĐẠI TRÀNG (táo bón)",
-      "suffix": ", thiếu năng lượng trầm trọng, mệt mỏi uể oải hay ngáp vặt, khớp nhẹ, đặc biệt làn da cực kỳ xấu nên ảnh hưởng đến năng suất làm việc."
+      "suffix": ", thiếu năng lượng trầm trọng, mệt mỏi uể oải hay ngáp vặt, khớp kêu lụp cụp, đặc biệt làn da cực kỳ xấu."
     },
     "turningPoint": {
-      "content": "May mắn, biết đến cộng đồng sống khỏe sống lành mạnh, tôi đã học và điều chỉnh thói quen ăn uống, thay đổi lối sống sinh hoạt không tốt của mình theo hướng lành mạnh hơn. Sau một thời gian ngắn tôi đã cải thiện khá nhiều: năng lượng hơn, làn da tươi sáng hơn... từ đó tôi đã chung tay lan tỏa thông điệp, kiến thức, sự trải nghiệm để giúp nhiều người hơn nữa trong việc kiểm soát cân nặng và vóc dáng trong hơn 16 năm qua! ",
+      "content": "May mắn, biết đến cộng đồng sống khỏe sống lành mạnh, tôi đã học và điều chỉnh thói quen ăn uống, thay đổi lối sống sinh hoạt không tốt của mình theo hướng lành mạnh hơn kết hợp chế độ dinh dưỡng cân bằng + vận động hợp lý. Sau một thời gian ngắn tôi đã cải thiện hoàn toàn vấn đề sức khỏe, riêng làn da cải thiện được khoản hơn 90%, từ kết quả tuyệt vời của mình, tôi nhận ra giá trị to lớn của chương trình mang lại. ",
       "highlight": "Tôi biết ơn và yêu công việc này."
     },
     "mindsetHeading": {
@@ -410,10 +443,22 @@
     ],
     "habitRequirementsIntro": "Và để thay đổi thói quen, cần có:",
     "habitRequirements": [
-      { "icon": "Target", "label": "1. Kiến thức" },
-      { "icon": "Users", "label": "2. Môi trường" },
-      { "icon": "Heart", "label": "3. Người đồng hành" },
-      { "icon": "Clock", "label": "4. Thời gian" }
+      {
+        "icon": "Target",
+        "label": "1. Kiến thức"
+      },
+      {
+        "icon": "Users",
+        "label": "2. Môi trường"
+      },
+      {
+        "icon": "Heart",
+        "label": "3. Người đồng hành"
+      },
+      {
+        "icon": "Clock",
+        "label": "4. Thời gian"
+      }
     ],
     "philosophyQuote": {
       "prefix": "\"Tập luyện là ",
@@ -455,6 +500,7 @@
         "alt": "HLV Huỳnh Ngọc Mai rạng rỡ về đích Marathon"
       }
     ],
+    "galleryNote": "Trước đây 32t và Hiện tại 48t",
     "galleryPlaceholders": [
       "[Ảnh 1]",
       "[Ảnh 2]",

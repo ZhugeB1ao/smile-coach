@@ -9,12 +9,12 @@ const Benefits = ({ data = defaultContent.benefits }) => {
     <AnimatedSection id="benefits" className="py-20 lg:py-28 bg-white">
       <Container>
         {/* Header Section */}
-        <div 
+        <div
           className="max-w-3xl mx-auto mb-16 text-center"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#0d0c22] leading-[1.15] mb-3">
             {data.heading}{' '}
-            <span className="text-[#0068A8]">{data.headingHighlight}</span>
+            <span className="text-[#0068A8] sm:text-3xl lg:text-4xl inline-block">{data.headingHighlight}</span>
           </h2>
           {data.badge && (
             <p className="mb-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#0068A8]">
@@ -55,7 +55,7 @@ const Benefits = ({ data = defaultContent.benefits }) => {
             <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
             <div className="mt-8 space-y-4">
               {data.benefitsList.map((item, i) => (
-                <div 
+                <div
                   key={i}
                   className="flex items-start gap-3.5 p-4 rounded-[20px] border border-transparent hover:border-[#e7e7ec] hover:bg-[#f8f7fa] hover:-translate-y-0.5 transition-all duration-300 ease-out group"
                 >
@@ -75,7 +75,7 @@ const Benefits = ({ data = defaultContent.benefits }) => {
         </div>
 
         {/* Target Audience Section: Light Dribbble Surface */}
-        <div 
+        <div
           className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec]"
         >
           <h3 className="mb-8 text-2xl sm:text-3xl font-extrabold text-center text-[#0d0c22] tracking-tight">
@@ -83,8 +83,8 @@ const Benefits = ({ data = defaultContent.benefits }) => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {data.targetAudiences.map((aud, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="p-6 sm:p-7 text-center bg-white rounded-[24px] border border-[#e7e7ec] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0068A8] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1.5 transition-all duration-300 ease-out group"
               >
                 <span className="block text-2xl font-black text-[#0068A8] mb-2 tracking-tight transition-transform duration-300 ease-out group-hover:scale-105">
@@ -112,8 +112,8 @@ const Benefits = ({ data = defaultContent.benefits }) => {
 
         {/* CTA Button */}
         <div className="mt-12 text-center">
-          <a 
-            href={data.cta.href} 
+          <a
+            href={data.cta.href}
             {...(data.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             className="btn-brand-outline px-10 py-3.5 text-base font-bold rounded-full shadow-sm hover:shadow-[0_8px_24px_rgba(0,104,168,0.25)] hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0068A8] focus-visible:ring-offset-2"
           >

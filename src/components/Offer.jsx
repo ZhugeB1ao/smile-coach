@@ -8,22 +8,22 @@ const Offer = ({ data = defaultContent.offer }) => {
     <AnimatedSection id="offer" className="py-20 lg:py-28 bg-white">
       <Container>
         <SectionTitle subtitle={data.subtitle}>{data.title}</SectionTitle>
-        
+
         {/* Bonus Section - PT Gym */}
-        <div 
+        <div
           className="bg-[#f8f7fa] rounded-[32px] p-6 sm:p-8 lg:p-12 border border-[#e7e7ec] shadow-[0_4px_20px_rgba(6,3,24,0.03)] mb-16 relative overflow-hidden"
         >
           <div className="relative z-10">
             <h3 className="mb-2 text-2xl sm:text-3xl lg:text-4xl font-black leading-snug text-[#0d0c22] tracking-tight">
               {data.bonus.title}<br className="hidden lg:block" /> {data.bonus.titleBreak}
             </h3>
-            
+
             <div className="flex flex-wrap items-center gap-2 mb-8 text-xs font-black tracking-widest uppercase text-[#0068A8]">
               <span>{data.bonus.badge1}</span>
               <span className="text-[#524b63]/40">•</span>
               <span>{data.bonus.badge2}</span>
             </div>
-            
+
             <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-10">
               {/* Coach Info */}
               <div className="w-full lg:w-1/2">
@@ -54,7 +54,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Coach Images - Adjusted aspect ratio to 4/5 with object-top and object-contain container so coach is fully visible */}
               <div className="grid w-full grid-cols-2 gap-4 lg:w-1/2">
                 <div className="group relative flex items-center justify-center overflow-hidden bg-[#f3f3f6] border border-[#e7e7ec] rounded-[24px] aspect-4/5 shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:shadow-[0_16px_32px_rgba(6,3,24,0.1)] hover:border-[#0d0c22] hover:-translate-y-1 transition-all duration-300 ease-out">
@@ -76,7 +76,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                     <img
                       src={getImage(data.bonus.coach.image2)}
                       alt={`${data.bonus.coach.name} 2`}
-                      className="object-cover object-top w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="object-cover object-center w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
                       loading="lazy"
                       width="400"
                       height="500"
@@ -92,7 +92,7 @@ const Offer = ({ data = defaultContent.offer }) => {
             {data.bonus.extraBonuses && data.bonus.extraBonuses.length > 0 && (
               <div className="grid grid-cols-1 gap-6 pt-8 mt-10 border-t border-[#e7e7ec] md:grid-cols-2">
                 {data.bonus.extraBonuses.map((item, i) => (
-                  <div 
+                  <div
                     key={i}
                     className="p-6 lg:p-8 bg-white border border-[#e7e7ec] rounded-[24px] shadow-[0_2px_8px_rgba(6,3,24,0.03)] hover:border-[#0068A8] hover:shadow-[0_16px_36px_rgba(6,3,24,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out group"
                   >
@@ -118,7 +118,7 @@ const Offer = ({ data = defaultContent.offer }) => {
 
         {/* Pricing Section */}
         <div className="max-w-4xl mx-auto">
-          <div 
+          <div
             className="bg-[#f8f7fa] p-8 lg:p-10 rounded-[32px] border border-[#e7e7ec] text-center mb-10 hover:shadow-[0_12px_28px_rgba(6,3,24,0.06)] hover:-translate-y-0.5 transition-all duration-300 ease-out"
           >
             <p className="mb-2 text-3xl sm:text-4xl lg:text-5xl font-black line-through text-[#524b63]/40 tracking-tight">{data.tuition.originalPrice}</p>
@@ -129,7 +129,7 @@ const Offer = ({ data = defaultContent.offer }) => {
           </div>
 
           {/* Special Offer Box */}
-          <div 
+          <div
             className="bg-gradient-to-br from-[#0c1f38] via-[#102a4e] to-[#152a47] rounded-[36px] p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden border border-sky-500/20 shadow-[0_20px_50px_rgba(12,31,56,0.3)]"
           >
             <div className="relative z-10">
@@ -145,8 +145,8 @@ const Offer = ({ data = defaultContent.offer }) => {
               {/* Offer Items with clean typography, no circular wrappers */}
               <div className="grid grid-cols-1 gap-5 mb-10 md:grid-cols-3">
                 {data.specialPromotion.options.map((opt, i) => (
-                  <div 
-                    key={i} 
+                  <div
+                    key={i}
                     className="p-6 text-center border bg-white/5 backdrop-blur-sm rounded-[24px] border-white/10 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 ease-out group"
                   >
                     <h4 className="mb-1 text-base font-bold text-white group-hover:text-sky-300 transition-colors duration-300 ease-out">{opt.title}</h4>
@@ -184,7 +184,7 @@ const Offer = ({ data = defaultContent.offer }) => {
                 <p className="mb-6 text-sm sm:text-base text-[#ecebf0]/80">
                   {data.specialPromotion.cta.note}
                 </p>
-                <a 
+                <a
                   href={data.specialPromotion.cta.href}
                   {...(data.specialPromotion.cta.href?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className="btn-brand-outline-sky px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c1f38]"
